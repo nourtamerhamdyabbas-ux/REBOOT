@@ -10,7 +10,17 @@
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_cp0ys"]
 [ext_resource type="Script" uid="uid://bj53jxx0im5ux" path="res://Scripts/first_appearance_button.gd" id="9_16hvj"]
 [ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="9_vr1f0"]
+[ext_resource type="Script" uid="uid://df1q6qvsb2y8o" path="res://Scenes/start_button_control.gd" id="11_8dnnj"]
+[ext_resource type="Script" uid="uid://dklu8t2vfbduc" path="res://Scenes/start_button.gd" id="11_t1dhk"]
 [ext_resource type="Shader" uid="uid://cfl0oci7ro5q" path="res://Scripts/Bar.gdshader" id="11_vr1f0"]
+[ext_resource type="Texture2D" uid="uid://bj1b4j00usoif" path="res://Assets/icons/chevron-right (1).png" id="13_m3bi6"]
+[ext_resource type="Texture2D" uid="uid://s4fenw8frbxf" path="res://Assets/icons/chevron-left (1).png" id="14_wyh8j"]
+[ext_resource type="Script" uid="uid://bl3e4tkx1jjry" path="res://Scenes/settings_button_control.gd" id="15_m3bi6"]
+[ext_resource type="Script" uid="uid://dmjaqf3bbjh0p" path="res://Scenes/guide_button_control.gd" id="16_mkpwh"]
+[ext_resource type="Script" uid="uid://cpjx7nqqvihxg" path="res://Scenes/credits_control_button.gd" id="17_4nkqq"]
+[ext_resource type="Script" uid="uid://ds6l60mluanli" path="res://Scenes/leave_button_control.gd" id="18_ehtkc"]
+[ext_resource type="Texture2D" uid="uid://c4ki2h4ht71g0" path="res://Assets/icons/droplet (1).png" id="19_ehtkc"]
+[ext_resource type="Texture2D" uid="uid://bhvblid1k8nbm" path="res://Assets/icons/droplet.png" id="20_6dk6o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_opfnp")
@@ -79,15 +89,15 @@ shadow_size = 14
 
 [sub_resource type="Animation" id="Animation_16hvj"]
 resource_name = "After press main menu animation"
-length = 1.2
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("MainPanel:modulate")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"times": PackedFloat32Array(0.23333333, 0.3, 0.36666667, 0.43333334, 0.5, 0.56666666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -96,10 +106,226 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Main panel border:modulate")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 0.99999994, 1.2),
+"times": PackedFloat32Array(0.23333333, 0.3, 0.36666667, 0.43333334, 0.5, 0.5667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainPanel/Start Button Control/Start Button:modulate")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9, 0.947114, 1.0137806, 1.0804473, 1.147114, 1.2138),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainPanel/Settings button control/Settings Button:modulate")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2138, 1.2594137, 1.3260804, 1.392747, 1.4594138, 1.5261),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainPanel/Guide Button control/Guide Button:modulate")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.5333333, 1.5787247, 1.6453913, 1.7120581, 1.7714914, 1.8453914),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainPanel/Credits button control/Credits Button:modulate")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.8666667, 1.9120581, 1.9787248, 2.0453916, 2.0907915, 2.1787),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainPanel/leave button control/Leave Button:modulate")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.1787, 2.2262619, 2.2929285, 2.359595, 2.4262617, 2.4929285),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainPanel/decorations/TextureRect:modulate")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.6666667, 0.7, 0.73333335, 0.76666665, 0.8, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MainPanel/decorations/TextureRect2:modulate")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.72980064, 0.7631006, 0.796434, 0.8297673, 0.86310065, 0.89643395),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MainPanel/glow title2/GlowOuter:modulate")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.5667, 0.6, 0.6333333, 0.6666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.25100002), Color(1, 1, 1, 0), Color(1, 1, 1, 0.25100002), Color(1, 1, 1, 0.25100002)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MainPanel/glow title2/GlowInner:modulate")
+tracks/10/interp = 0
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.6123, 0.6455727, 0.678906, 0.7122394, 0.7455727, 0.77890605),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.549), Color(1, 1, 1, 0), Color(1, 1, 1, 0.549), Color(1, 1, 1, 0), Color(1, 1, 1, 0.549)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MainPanel/glow title2/Title Label3:modulate")
+tracks/11/interp = 0
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.6688436, 0.689877, 0.75654364, 0.789877, 0.85654366, 0.88987696),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MainPanel/decorations/ColorRect:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10, 0), Vector2(2, 590)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MainPanel/decorations/ColorRect:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(133, 943), Vector2(133, 353)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MainPanel/decorations/ColorRect:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MainPanel/decorations/ColorRect2:size")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(2.8, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(14, 0), Vector2(2, 590)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MainPanel/decorations/ColorRect2:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(2.8, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(635, 943), Vector2(635, 353)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MainPanel/decorations/ColorRect2:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(2.8, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MainPanel/decorations/DecorativePanel:modulate")
+tracks/18/interp = 0
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(3, 3.0666666, 3.1333334, 3.2, 3.2666667, 3.3333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MainPanel/decorations/Panel:modulate")
+tracks/19/interp = 0
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(3.3333, 3.4, 3.4666667, 3.5333333, 3.6, 3.6666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -158,10 +384,238 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainPanel/Start Button Control/Start Button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainPanel/Settings button control/Settings Button:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainPanel/Guide Button control/Guide Button:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainPanel/Credits button control/Credits Button:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainPanel/leave button control/Leave Button:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MainPanel/decorations/TextureRect:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MainPanel/decorations/TextureRect2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MainPanel/glow title2/GlowOuter:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MainPanel/glow title2/GlowInner:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MainPanel/glow title2/Title Label3:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MainPanel/decorations/ColorRect:size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MainPanel/decorations/ColorRect:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(133, 943)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MainPanel/decorations/ColorRect:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MainPanel/decorations/ColorRect2:size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(14, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MainPanel/decorations/ColorRect2:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(635, 943)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MainPanel/decorations/ColorRect2:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MainPanel/decorations/DecorativePanel:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MainPanel/decorations/Panel:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("glow title3:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_trj04"]
 resource_name = "press appearance button anim"
-length = 0.2
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -169,10 +623,22 @@ tracks/0/path = NodePath("first appearance button:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0.23333335, 0.36666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("glow title3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.16666667, 0.23333333, 0.3, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yhxw7"]
@@ -196,6 +662,24 @@ expand_margin_bottom = 12.0
 shadow_color = Color(0.8509804, 0, 1, 1)
 shadow_size = 8
 shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(1, 0.1764706, 0.58431375, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 0.1764706, 0.58431375, 0.65882355)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
+bg_color = Color(0.6627451, 0.92941177, 0.99607843, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.6629296, 0.92947316, 0.9960334, 0.65900004)
+shadow_size = 8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b6uar"]
 shader = ExtResource("11_vr1f0")
@@ -257,6 +741,89 @@ mouse_filter = 2
 texture = ExtResource("3_n45e2")
 expand_mode = 1
 
+[node name="glow title3" type="Control" parent="." unique_id=200683649]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -110.0
+offset_top = -232.0
+offset_right = -110.0
+offset_bottom = -232.0
+grow_horizontal = 2
+
+[node name="GlowOuter" type="Label" parent="glow title3" unique_id=1299971932]
+modulate = Color(1, 1, 1, 0.25100002)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 154.0
+offset_top = 246.0
+offset_right = 80.0
+offset_bottom = 325.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0.8509804, 0, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 65
+text = "REBOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GlowInner" type="Label" parent="glow title3" unique_id=31748758]
+modulate = Color(1, 1, 1, 0.549)
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 154.0
+offset_top = 246.0
+offset_right = 72.0
+offset_bottom = 323.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_shadow_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_outline_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 65
+text = "REBOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title Label3" type="Label" parent="glow title3" unique_id=698637161]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 154.0
+offset_top = 246.0
+offset_right = 64.0
+offset_bottom = 322.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 65
+text = "REBOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=38425548]
 layout_mode = 1
 anchors_preset = 15
@@ -265,70 +832,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.3137255)
-
-[node name="glow title" type="Control" parent="." unique_id=743869783]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
-
-[node name="GlowOuter" type="Label" parent="glow title" unique_id=1239859519]
-modulate = Color(1, 1, 1, 0.2509804)
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 89.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.8980392, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0.8980392, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("7_cp0ys")
-theme_override_font_sizes/font_size = 71
-text = "REBOOT"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="GlowInner" type="Label" parent="glow title" unique_id=1565508353]
-modulate = Color(1, 1, 1, 0.54901963)
-z_index = 1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 89.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 0.1764706, 0.58431375, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.1764706, 0.58431375, 1)
-theme_override_colors/font_outline_color = Color(1, 0.1764706, 0.58431375, 1)
-theme_override_constants/shadow_offset_x = 6
-theme_override_constants/shadow_offset_y = 6
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("7_cp0ys")
-theme_override_font_sizes/font_size = 71
-text = "REBOOT"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Title Label3" type="Label" parent="glow title" unique_id=1769845084]
-z_index = 2
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 89.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.3529412, 0.98039216, 1, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.1764706, 0.58431375, 1)
-theme_override_colors/font_outline_color = Color(0, 0.8980392, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("7_cp0ys")
-theme_override_font_sizes/font_size = 72
-text = "REBOOT"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="first appearance button" type="Button" parent="." unique_id=812990427]
 modulate = Color(1, 1, 1, 0)
@@ -351,7 +854,7 @@ script = ExtResource("9_16hvj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783091491]
 libraries/ = SubResource("AnimationLibrary_yhxw7")
-autoplay = &"Main menu animation"
+autoplay = &"press appearance button anim"
 
 [node name="MainPanel" type="Panel" parent="." unique_id=459387996]
 modulate = Color(1, 1, 1, 0)
@@ -359,9 +862,395 @@ texture_filter = 1
 layout_mode = 0
 offset_left = 108.0
 offset_top = 178.0
-offset_right = 717.0
-offset_bottom = 980.0
+offset_right = 662.0
+offset_bottom = 1028.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5egv6")
+
+[node name="glow title2" type="Control" parent="MainPanel" unique_id=433911272]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -108.0
+offset_top = -178.0
+offset_right = -108.0
+offset_bottom = -178.0
+grow_horizontal = 2
+
+[node name="GlowOuter" type="Label" parent="MainPanel/glow title2" unique_id=339344494]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 154.0
+offset_top = 246.0
+offset_right = 80.0
+offset_bottom = 325.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0.8509804, 0, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 43
+text = "CONTROL CENTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GlowInner" type="Label" parent="MainPanel/glow title2" unique_id=751462967]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 154.0
+offset_top = 246.0
+offset_right = 72.0
+offset_bottom = 323.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_shadow_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_outline_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 43
+text = "CONTROL CENTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title Label3" type="Label" parent="MainPanel/glow title2" unique_id=2125181664]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 154.0
+offset_top = 246.0
+offset_right = 64.0
+offset_bottom = 322.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 43
+text = "CONTROL CENTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start Button Control" type="Control" parent="MainPanel" unique_id=144723039]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_8dnnj")
+
+[node name="Start Button" type="Button" parent="MainPanel/Start Button Control" unique_id=1922162371]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 95.0
+offset_top = 201.0
+offset_right = 460.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "START"
+script = ExtResource("11_t1dhk")
+
+[node name="LEFT ICON" type="TextureRect" parent="MainPanel/Start Button Control" unique_id=621864594]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 224.0
+offset_right = 148.0
+offset_bottom = 264.0
+mouse_filter = 2
+texture = ExtResource("13_m3bi6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON" type="TextureRect" parent="MainPanel/Start Button Control" unique_id=1009190841]
+texture_filter = 1
+layout_mode = 0
+offset_left = 407.0
+offset_top = 226.0
+offset_right = 447.0
+offset_bottom = 266.0
+mouse_filter = 2
+texture = ExtResource("14_wyh8j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Settings button control" type="Control" parent="MainPanel" unique_id=532609466]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("15_m3bi6")
+
+[node name="Settings Button" type="Button" parent="MainPanel/Settings button control" unique_id=520748341]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 95.0
+offset_top = 335.0
+offset_right = 460.0
+offset_bottom = 429.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "SETTINGS"
+script = ExtResource("11_t1dhk")
+
+[node name="LEFT ICON2" type="TextureRect" parent="MainPanel/Settings button control" unique_id=1132323055]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 360.0
+offset_right = 148.0
+offset_bottom = 400.0
+mouse_filter = 2
+texture = ExtResource("13_m3bi6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON2" type="TextureRect" parent="MainPanel/Settings button control" unique_id=1475266457]
+texture_filter = 1
+layout_mode = 0
+offset_left = 407.0
+offset_top = 360.0
+offset_right = 447.0
+offset_bottom = 400.0
+mouse_filter = 2
+texture = ExtResource("14_wyh8j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Guide Button control" type="Control" parent="MainPanel" unique_id=192687373]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("16_mkpwh")
+
+[node name="Guide Button" type="Button" parent="MainPanel/Guide Button control" unique_id=901719099]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 95.0
+offset_top = 469.0
+offset_right = 460.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "Guide"
+script = ExtResource("11_t1dhk")
+
+[node name="LEFT ICON3" type="TextureRect" parent="MainPanel/Guide Button control" unique_id=1002306788]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 493.0
+offset_right = 148.0
+offset_bottom = 533.0
+mouse_filter = 2
+texture = ExtResource("13_m3bi6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON3" type="TextureRect" parent="MainPanel/Guide Button control" unique_id=314779909]
+texture_filter = 1
+layout_mode = 0
+offset_left = 407.0
+offset_top = 493.0
+offset_right = 447.0
+offset_bottom = 533.0
+mouse_filter = 2
+texture = ExtResource("14_wyh8j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Credits button control" type="Control" parent="MainPanel" unique_id=516817561]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_4nkqq")
+
+[node name="Credits Button" type="Button" parent="MainPanel/Credits button control" unique_id=1381877444]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 95.0
+offset_top = 597.0
+offset_right = 460.0
+offset_bottom = 691.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "CREDITS"
+script = ExtResource("11_t1dhk")
+
+[node name="LEFT ICON4" type="TextureRect" parent="MainPanel/Credits button control" unique_id=1536683740]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 620.0
+offset_right = 148.0
+offset_bottom = 660.0
+mouse_filter = 2
+texture = ExtResource("13_m3bi6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON4" type="TextureRect" parent="MainPanel/Credits button control" unique_id=1967992876]
+texture_filter = 1
+layout_mode = 0
+offset_left = 407.0
+offset_top = 620.0
+offset_right = 447.0
+offset_bottom = 660.0
+mouse_filter = 2
+texture = ExtResource("14_wyh8j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="leave button control" type="Control" parent="MainPanel" unique_id=1419463914]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("18_ehtkc")
+
+[node name="Leave Button" type="Button" parent="MainPanel/leave button control" unique_id=1602655016]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 95.0
+offset_top = 723.0
+offset_right = 460.0
+offset_bottom = 817.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "LEAVE"
+script = ExtResource("11_t1dhk")
+
+[node name="LEFT ICON5" type="TextureRect" parent="MainPanel/leave button control" unique_id=615487507]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 749.0
+offset_right = 148.0
+offset_bottom = 789.0
+mouse_filter = 2
+texture = ExtResource("13_m3bi6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON5" type="TextureRect" parent="MainPanel/leave button control" unique_id=220686666]
+texture_filter = 1
+layout_mode = 0
+offset_left = 407.0
+offset_top = 749.0
+offset_right = 447.0
+offset_bottom = 789.0
+mouse_filter = 2
+texture = ExtResource("14_wyh8j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="decorations" type="Node" parent="MainPanel" unique_id=1453541903]
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/decorations" unique_id=1304092855]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 102.0
+offset_top = 261.0
+offset_right = 144.0
+offset_bottom = 307.0
+texture = ExtResource("19_ehtkc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MainPanel/decorations" unique_id=1943735003]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 627.0
+offset_top = 261.0
+offset_right = 669.0
+offset_bottom = 307.0
+texture = ExtResource("20_6dk6o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/decorations" unique_id=1848923982]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 133.0
+offset_top = 943.0
+offset_right = 143.0
+offset_bottom = 943.0
+color = Color(0.6627451, 0.92941177, 0.99607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="MainPanel/decorations" unique_id=535895746]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = 635.0
+offset_top = 943.0
+offset_right = 649.0
+offset_bottom = 943.0
+color = Color(1, 0.1764706, 0.58431375, 1)
+
+[node name="DecorativePanel" type="Panel" parent="MainPanel/decorations" unique_id=1134609268]
+modulate = Color(1, 1, 1, 0)
+offset_left = 172.0
+offset_top = 229.0
+offset_right = 607.0
+offset_bottom = 232.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
+
+[node name="Panel" type="Panel" parent="MainPanel/decorations" unique_id=1386985783]
+modulate = Color(1, 1, 1, 0)
+offset_left = 172.0
+offset_top = 334.0
+offset_right = 607.0
+offset_bottom = 337.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ralei")
 
 [node name="Main panel border" type="ColorRect" parent="." unique_id=603486613]
 modulate = Color(1, 1, 1, 0)
@@ -369,7 +1258,8 @@ material = SubResource("ShaderMaterial_b6uar")
 layout_mode = 0
 offset_left = 92.0
 offset_top = 166.0
-offset_right = 733.0
-offset_bottom = 992.0
+offset_right = 678.0
+offset_bottom = 1040.0
+mouse_filter = 2
 
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
