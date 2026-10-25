@@ -21,6 +21,10 @@
 [ext_resource type="Script" uid="uid://ds6l60mluanli" path="res://Scenes/leave_button_control.gd" id="18_ehtkc"]
 [ext_resource type="Texture2D" uid="uid://c4ki2h4ht71g0" path="res://Assets/icons/droplet (1).png" id="19_ehtkc"]
 [ext_resource type="Texture2D" uid="uid://bhvblid1k8nbm" path="res://Assets/icons/droplet.png" id="20_6dk6o"]
+[ext_resource type="Script" uid="uid://c5fskgaqf7kk0" path="res://Scenes/message_button_control.gd" id="22_84iac"]
+[ext_resource type="Script" uid="uid://xh500e01ry23" path="res://Scenes/message_show_button.gd" id="23_5n0dv"]
+[ext_resource type="Texture2D" uid="uid://857gg6cyytw1" path="res://Assets/icons/message-square-text (1).png" id="24_ne6ao"]
+[ext_resource type="Texture2D" uid="uid://8x4kq0i3te1p" path="res://Assets/icons/message-square-text.png" id="25_tt8ml"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_opfnp")
@@ -321,7 +325,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("MainPanel/decorations/Panel:modulate")
+tracks/19/path = NodePath("MainPanel/decorations/DecorativePanel1:modulate")
 tracks/19/interp = 0
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -330,9 +334,22 @@ tracks/19/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Message Button Control:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(3.8, 3.8666666, 3.9333334, 4, 4.0666666, 4.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_cp0ys"]
 resource_name = "Main menu animation"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -340,10 +357,22 @@ tracks/0/path = NodePath("first appearance button:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(1.0333333, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("glow title3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.34507692, 0.4450769, 0.5117436, 0.57841027, 0.64507693, 0.7117436),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_yhxw7"]
@@ -591,7 +620,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("MainPanel/decorations/Panel:modulate")
+tracks/20/path = NodePath("MainPanel/decorations/DecorativePanel1:modulate")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -612,10 +641,22 @@ tracks/21/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Message Button Control:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_trj04"]
 resource_name = "press appearance button anim"
-length = 0.8
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -623,22 +664,10 @@ tracks/0/path = NodePath("first appearance button:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.23333335, 0.36666667),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("glow title3:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.16666667, 0.23333333, 0.3, 0.36666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yhxw7"]
@@ -854,7 +883,7 @@ script = ExtResource("9_16hvj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=783091491]
 libraries/ = SubResource("AnimationLibrary_yhxw7")
-autoplay = &"press appearance button anim"
+autoplay = &"Main menu animation"
 
 [node name="MainPanel" type="Panel" parent="." unique_id=459387996]
 modulate = Color(1, 1, 1, 0)
@@ -951,8 +980,9 @@ vertical_alignment = 1
 
 [node name="Start Button Control" type="Control" parent="MainPanel" unique_id=144723039]
 anchors_preset = 0
+offset_top = -6.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 34.0
 script = ExtResource("11_8dnnj")
 
 [node name="Start Button" type="Button" parent="MainPanel/Start Button Control" unique_id=1922162371]
@@ -1000,8 +1030,9 @@ stretch_mode = 5
 
 [node name="Settings button control" type="Control" parent="MainPanel" unique_id=532609466]
 anchors_preset = 0
+offset_top = -10.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 30.0
 script = ExtResource("15_m3bi6")
 
 [node name="Settings Button" type="Button" parent="MainPanel/Settings button control" unique_id=520748341]
@@ -1049,8 +1080,9 @@ stretch_mode = 5
 
 [node name="Guide Button control" type="Control" parent="MainPanel" unique_id=192687373]
 anchors_preset = 0
+offset_top = -14.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 26.0
 script = ExtResource("16_mkpwh")
 
 [node name="Guide Button" type="Button" parent="MainPanel/Guide Button control" unique_id=901719099]
@@ -1098,8 +1130,9 @@ stretch_mode = 5
 
 [node name="Credits button control" type="Control" parent="MainPanel" unique_id=516817561]
 anchors_preset = 0
+offset_top = -10.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 30.0
 script = ExtResource("17_4nkqq")
 
 [node name="Credits Button" type="Button" parent="MainPanel/Credits button control" unique_id=1381877444]
@@ -1147,8 +1180,9 @@ stretch_mode = 5
 
 [node name="leave button control" type="Control" parent="MainPanel" unique_id=1419463914]
 anchors_preset = 0
+offset_top = -6.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 34.0
 script = ExtResource("18_ehtkc")
 
 [node name="Leave Button" type="Button" parent="MainPanel/leave button control" unique_id=1602655016]
@@ -1238,17 +1272,17 @@ color = Color(1, 0.1764706, 0.58431375, 1)
 
 [node name="DecorativePanel" type="Panel" parent="MainPanel/decorations" unique_id=1134609268]
 modulate = Color(1, 1, 1, 0)
-offset_left = 172.0
+offset_left = 165.0
 offset_top = 229.0
-offset_right = 607.0
+offset_right = 600.0
 offset_bottom = 232.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
 
-[node name="Panel" type="Panel" parent="MainPanel/decorations" unique_id=1386985783]
+[node name="DecorativePanel1" type="Panel" parent="MainPanel/decorations" unique_id=1386985783]
 modulate = Color(1, 1, 1, 0)
-offset_left = 172.0
+offset_left = 165.0
 offset_top = 334.0
-offset_right = 607.0
+offset_right = 600.0
 offset_bottom = 337.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ralei")
 
@@ -1261,5 +1295,53 @@ offset_top = 166.0
 offset_right = 678.0
 offset_bottom = 1040.0
 mouse_filter = 2
+
+[node name="Message Button Control" type="Control" parent="." unique_id=1497131662]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 1213.0
+offset_top = 850.0
+offset_right = 1253.0
+offset_bottom = 890.0
+script = ExtResource("22_84iac")
+
+[node name="Message show Button" type="Button" parent="Message Button Control" unique_id=1275654900]
+layout_mode = 0
+offset_right = 390.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "MESSAGE TO ECHO"
+script = ExtResource("23_5n0dv")
+
+[node name="LEFT ICON6" type="TextureRect" parent="Message Button Control" unique_id=472862582]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 32.0
+offset_right = 45.0
+offset_bottom = 72.0
+mouse_filter = 2
+texture = ExtResource("24_ne6ao")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON6" type="TextureRect" parent="Message Button Control" unique_id=859775496]
+texture_filter = 1
+layout_mode = 0
+offset_left = 347.0
+offset_top = 32.0
+offset_right = 387.0
+offset_bottom = 72.0
+mouse_filter = 2
+texture = ExtResource("25_tt8ml")
+expand_mode = 1
+stretch_mode = 5
 
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
