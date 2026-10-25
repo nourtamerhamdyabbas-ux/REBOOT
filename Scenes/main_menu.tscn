@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://cysoyobus45ho"]
+
+[ext_resource type="Texture2D" uid="uid://doik1xvox17tl" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/back.png" id="1_1ehe0"]
+[ext_resource type="Shader" uid="uid://mlavm373mqkc" path="res://Scripts/Far Back.gdshader" id="1_opfnp"]
+[ext_resource type="Texture2D" uid="uid://dubsdv8knat7g" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/buildings.png" id="2_ce3w2"]
+[ext_resource type="Shader" uid="uid://cv8vaiyjmfyr8" path="res://Scripts/Mid Back.gdshader" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://cusunotbr36j7" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/front.png" id="3_n45e2"]
+[ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="5_yhxw7"]
+[ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_cp0ys"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_opfnp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kuey"]
+shader = ExtResource("3_cp0ys")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ralei"]
+shader = ExtResource("5_yhxw7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.11764706, 0.16470589, 0.2901961, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.8980392, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 40.0
+expand_margin_top = 7.0
+expand_margin_right = 40.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.3529412, 0.98039216, 1, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(0.05882353, 0.101960786, 0.20784314, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.18039216, 0.84705883, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
+bg_color = Color(0.3764706, 0.14901961, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.18039216, 0.84705883, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 30.0
+expand_margin_top = 6.0
+expand_margin_right = 30.0
+expand_margin_bottom = 6.0
+
+[node name="Main menu" type="Control" unique_id=29520096]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background Far" type="TextureRect" parent="." unique_id=1845472435]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_1ehe0")
+expand_mode = 1
+
+[node name="Background Mid" type="TextureRect" parent="." unique_id=1287956779]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5kuey")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_ce3w2")
+expand_mode = 1
+
+[node name="Background Near" type="TextureRect" parent="." unique_id=137628054]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ralei")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_n45e2")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=38425548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="glow title" type="Control" parent="." unique_id=743869783]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="GlowOuter" type="Label" parent="glow title" unique_id=1239859519]
+modulate = Color(1, 1, 1, 0.2509804)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.8980392, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.8980392, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.8980392, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 71
+text = "REBOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GlowInner" type="Label" parent="glow title" unique_id=1565508353]
+modulate = Color(1, 1, 1, 0.54901963)
+z_index = 1
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.1764706, 0.58431375, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.1764706, 0.58431375, 1)
+theme_override_colors/font_outline_color = Color(1, 0.1764706, 0.58431375, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 71
+text = "REBOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title Label3" type="Label" parent="glow title" unique_id=1769845084]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.3529412, 0.98039216, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.1764706, 0.58431375, 1)
+theme_override_colors/font_outline_color = Color(0, 0.8980392, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 72
+text = "REBOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="first appearance button" type="Button" parent="." unique_id=812990427]
+texture_filter = 1
+layout_mode = 0
+offset_left = 796.0
+offset_top = 476.0
+offset_right = 1099.0
+offset_bottom = 557.0
+theme_override_colors/font_color = Color(0.627451, 0.9019608, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.627451, 0.9019608, 1, 1)
+theme_override_colors/font_hover_color = Color(0.627451, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "SHOW MAIN MENU"
