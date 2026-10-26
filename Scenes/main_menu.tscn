@@ -693,6 +693,54 @@ tracks/24/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("QuitpopPanel/QuitLabel:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("QuitpopPanel/QuitSubLabel:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("QuitpopPanel/Disconnect Control Button:modulate")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("QuitpopPanel/Not Yet Control button:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_trj04"]
 resource_name = "press appearance button anim"
@@ -712,7 +760,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_43km2"]
 resource_name = "quitanimation"
-length = 0.82
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -732,7 +780,55 @@ tracks/1/path = NodePath("QuitpopPanel:modulate")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335),
+"times": PackedFloat32Array(0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("QuitpopPanel/QuitLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7333, 0.8, 0.8666667, 0.93333334, 1, 1.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("QuitpopPanel/QuitSubLabel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0667, 1.1, 1.1666666, 1.2333333, 1.3, 1.3667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("QuitpopPanel/Disconnect Control Button:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.3667, 1.4, 1.4666667, 1.5333333, 1.6, 1.6667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("QuitpopPanel/Not Yet Control button:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.6667, 1.7, 1.7666667, 1.8333334, 1.9, 1.9666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -845,6 +941,7 @@ script = ExtResource("1_yhxw7")
 [node name="DarkQuit" type="ColorRect" parent="." unique_id=1791961732]
 visible = false
 z_index = 4
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -980,6 +1077,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=38425548]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1105,6 +1203,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Start Button Control" type="Control" parent="MainPanel" unique_id=144723039]
+texture_filter = 1
 anchors_preset = 0
 offset_top = -6.0
 offset_right = 40.0
@@ -1155,6 +1254,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Settings button control" type="Control" parent="MainPanel" unique_id=532609466]
+texture_filter = 1
 anchors_preset = 0
 offset_top = -10.0
 offset_right = 40.0
@@ -1205,6 +1305,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Guide Button control" type="Control" parent="MainPanel" unique_id=192687373]
+texture_filter = 1
 anchors_preset = 0
 offset_top = -14.0
 offset_right = 40.0
@@ -1255,6 +1356,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Credits button control" type="Control" parent="MainPanel" unique_id=516817561]
+texture_filter = 1
 anchors_preset = 0
 offset_top = -10.0
 offset_right = 40.0
@@ -1305,6 +1407,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="leave button control" type="Control" parent="MainPanel" unique_id=1419463914]
+texture_filter = 1
 anchors_preset = 0
 offset_top = -6.0
 offset_right = 40.0
@@ -1398,6 +1501,7 @@ color = Color(1, 0.1764706, 0.58431375, 1)
 
 [node name="DecorativePanel" type="Panel" parent="MainPanel/decorations" unique_id=1134609268]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 offset_left = 165.0
 offset_top = 229.0
 offset_right = 600.0
@@ -1406,6 +1510,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
 
 [node name="DecorativePanel1" type="Panel" parent="MainPanel/decorations" unique_id=1386985783]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 offset_left = 165.0
 offset_top = 334.0
 offset_right = 600.0
@@ -1414,6 +1519,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ralei")
 
 [node name="Main panel border" type="ColorRect" parent="." unique_id=603486613]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 material = SubResource("ShaderMaterial_b6uar")
 layout_mode = 0
 offset_left = 92.0
@@ -1424,6 +1530,7 @@ mouse_filter = 2
 
 [node name="Message Button Control" type="Control" parent="." unique_id=1497131662]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 anchors_preset = 0
 offset_left = 1213.0
 offset_top = 850.0
@@ -1432,6 +1539,7 @@ offset_bottom = 890.0
 script = ExtResource("22_84iac")
 
 [node name="Message show Button" type="Button" parent="Message Button Control" unique_id=1275654900]
+texture_filter = 1
 layout_mode = 0
 offset_right = 390.0
 offset_bottom = 104.0
@@ -1471,6 +1579,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Message Panel" type="Panel" parent="." unique_id=975218762]
+texture_filter = 1
 layout_mode = 0
 offset_left = 1035.0
 offset_top = 270.0
@@ -1490,6 +1599,7 @@ texture = ExtResource("26_hkdq0")
 stretch_mode = 5
 
 [node name="message panel main header" type="Label" parent="Message Panel" unique_id=620993175]
+texture_filter = 1
 layout_mode = 0
 offset_left = 126.0
 offset_top = 21.0
@@ -1515,6 +1625,7 @@ theme_override_font_sizes/font_size = 24
 text = "SECURE CHANNEL // 01"
 
 [node name="Space bar color Panel" type="Panel" parent="Message Panel" unique_id=1066427826]
+texture_filter = 1
 layout_mode = 0
 offset_left = 68.0
 offset_top = 110.0
@@ -1625,6 +1736,7 @@ script = ExtResource("32_jw7lb")
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 5
+texture_filter = 1
 layout_mode = 0
 offset_left = 640.0
 offset_top = 381.0
@@ -1633,6 +1745,7 @@ offset_bottom = 710.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
 
 [node name="QuitLabel" type="Label" parent="QuitpopPanel" unique_id=768258623]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_left = 129.0
@@ -1645,6 +1758,7 @@ theme_override_font_sizes/font_size = 45
 text = "LEAVING SO SOON?"
 
 [node name="QuitSubLabel" type="Label" parent="QuitpopPanel" unique_id=118713617]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_left = 70.0
@@ -1659,6 +1773,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Disconnect Control Button" type="Control" parent="QuitpopPanel" unique_id=272259626]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 anchors_preset = 0
 offset_left = -61.0
@@ -1709,6 +1824,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Not Yet Control button" type="Control" parent="QuitpopPanel" unique_id=1676195879]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 anchors_preset = 0
 offset_right = 40.0
