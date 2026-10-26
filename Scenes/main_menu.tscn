@@ -33,6 +33,14 @@
 [ext_resource type="FontFile" uid="uid://dwlvpg5e3unuu" path="res://Assets/Rajdhani/Rajdhani-Medium.ttf" id="30_1xund"]
 [ext_resource type="Script" uid="uid://dg4k6ipkgaiud" path="res://Scenes/previous_button.gd" id="31_xcoo4"]
 [ext_resource type="Script" uid="uid://curulv23nn3oq" path="res://Scenes/next_button.gd" id="32_jw7lb"]
+[ext_resource type="Script" uid="uid://cdvsi6aj6ldit" path="res://Scenes/disconnect_control_button.gd" id="34_y82t1"]
+[ext_resource type="Script" uid="uid://co128h5whhtb0" path="res://Scenes/disconnect_button.gd" id="35_bmhhk"]
+[ext_resource type="Texture2D" uid="uid://cn1b4nmfe0fej" path="res://Assets/icons/globe-off.png" id="36_pddej"]
+[ext_resource type="Texture2D" uid="uid://dkoifoh6dymm8" path="res://Assets/icons/globe-off (1).png" id="37_ko05x"]
+[ext_resource type="Script" uid="uid://dsor3x8252dke" path="res://Scenes/not_yet_control_button.gd" id="38_43km2"]
+[ext_resource type="Script" uid="uid://db3yfjk5ulkut" path="res://Scenes/not_yet_button.gd" id="39_3533h"]
+[ext_resource type="Texture2D" uid="uid://c35vnk8ajn2ad" path="res://Assets/icons/circle-x (1).png" id="40_dp8uv"]
+[ext_resource type="Texture2D" uid="uid://can1bjurm5kwp" path="res://Assets/icons/circle-x.png" id="41_uu0lx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_opfnp")
@@ -661,6 +669,30 @@ tracks/22/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("DarkQuit:color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("QuitpopPanel:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_trj04"]
 resource_name = "press appearance button anim"
@@ -678,12 +710,41 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_43km2"]
+resource_name = "quitanimation"
+length = 0.82
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DarkQuit:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.61600006)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("QuitpopPanel:modulate")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yhxw7"]
 _data = {
 &"After press main menu animation": SubResource("Animation_16hvj"),
 &"Main menu animation": SubResource("Animation_cp0ys"),
 &"RESET": SubResource("Animation_yhxw7"),
-&"press appearance button anim": SubResource("Animation_trj04")
+&"press appearance button anim": SubResource("Animation_trj04"),
+&"quitanimation": SubResource("Animation_43km2")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5egv6"]
@@ -780,6 +841,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yhxw7")
+
+[node name="DarkQuit" type="ColorRect" parent="." unique_id=1791961732]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [node name="Background Far" type="TextureRect" parent="." unique_id=1845472435]
 texture_filter = 1
@@ -1548,5 +1621,144 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "NEXT"
 script = ExtResource("32_jw7lb")
 
+[node name="QuitpopPanel" type="Panel" parent="." unique_id=224078825]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+layout_mode = 0
+offset_left = 640.0
+offset_top = 381.0
+offset_right = 1246.0
+offset_bottom = 710.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+
+[node name="QuitLabel" type="Label" parent="QuitpopPanel" unique_id=768258623]
+texture_filter = 1
+layout_mode = 0
+offset_left = 129.0
+offset_top = 22.0
+offset_right = 474.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.85105014, 0, 0.5281222, 1)
+theme_override_fonts/font = ExtResource("30_1xund")
+theme_override_font_sizes/font_size = 45
+text = "LEAVING SO SOON?"
+
+[node name="QuitSubLabel" type="Label" parent="QuitpopPanel" unique_id=118713617]
+texture_filter = 1
+layout_mode = 0
+offset_left = 70.0
+offset_top = 80.0
+offset_right = 538.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("27_xcoo4")
+theme_override_font_sizes/font_size = 25
+text = "ECHO: You're about to disconnect. Are you sure you want to leave?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Disconnect Control Button" type="Control" parent="QuitpopPanel" unique_id=272259626]
+texture_filter = 1
+anchors_preset = 0
+offset_left = -61.0
+offset_right = -21.0
+offset_bottom = 40.0
+script = ExtResource("34_y82t1")
+
+[node name="Disconnect Button" type="Button" parent="QuitpopPanel/Disconnect Control Button" unique_id=1478494513]
+texture_filter = 1
+layout_mode = 0
+offset_left = 122.0
+offset_top = 221.0
+offset_right = 317.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "DISCONNECT"
+script = ExtResource("35_bmhhk")
+
+[node name="LEFT ICON7" type="TextureRect" parent="QuitpopPanel/Disconnect Control Button" unique_id=2094736740]
+texture_filter = 1
+layout_mode = 0
+offset_left = 126.0
+offset_top = 237.0
+offset_right = 151.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("36_pddej")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON7" type="TextureRect" parent="QuitpopPanel/Disconnect Control Button" unique_id=1005617759]
+texture_filter = 1
+layout_mode = 0
+offset_left = 292.0
+offset_top = 237.0
+offset_right = 317.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("37_ko05x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Not Yet Control button" type="Control" parent="QuitpopPanel" unique_id=1676195879]
+texture_filter = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("38_43km2")
+
+[node name="Not Yet Button" type="Button" parent="QuitpopPanel/Not Yet Control button" unique_id=467519585]
+texture_filter = 1
+layout_mode = 0
+offset_left = 341.0
+offset_top = 221.0
+offset_right = 536.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "NOT YET"
+script = ExtResource("39_3533h")
+
+[node name="LEFT ICON8" type="TextureRect" parent="QuitpopPanel/Not Yet Control button" unique_id=1378152396]
+texture_filter = 1
+layout_mode = 0
+offset_left = 347.0
+offset_top = 237.0
+offset_right = 372.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("40_dp8uv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RIGHT ICON8" type="TextureRect" parent="QuitpopPanel/Not Yet Control button" unique_id=1123556469]
+texture_filter = 1
+layout_mode = 0
+offset_left = 506.0
+offset_top = 237.0
+offset_right = 531.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("41_uu0lx")
+expand_mode = 1
+stretch_mode = 5
+
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/leave button control/Leave Button" to="." method="_on_leave_button_pressed"]
 [connection signal="pressed" from="Message Button Control/Message show Button" to="." method="_on_message_show_button_pressed"]
+[connection signal="pressed" from="QuitpopPanel/Disconnect Control Button/Disconnect Button" to="." method="_on_disconnect_button_pressed"]
+[connection signal="pressed" from="QuitpopPanel/Not Yet Control button/Not Yet Button" to="." method="_on_not_yet_button_pressed"]

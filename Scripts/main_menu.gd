@@ -18,3 +18,16 @@ func _on_first_appearance_button_pressed() -> void:
 
 func _on_message_show_button_pressed() -> void:
 	message_panel.open_panel()
+
+
+func _on_leave_button_pressed() -> void:
+	$QuitpopPanel.show()
+	$DarkQuit.show()
+	$AnimationPlayer.play("quitanimation")
+
+func _on_disconnect_button_pressed() -> void:
+	get_tree().quit()
+
+func _on_not_yet_button_pressed() -> void:
+	$QuitpopPanel.hide()
+	$DarkQuit.hide()
