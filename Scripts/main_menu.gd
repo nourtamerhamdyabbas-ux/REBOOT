@@ -1,5 +1,6 @@
 extends Control
 
+@onready var message_panel = $"Message Panel"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,3 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_first_appearance_button_pressed() -> void:
 	$AnimationPlayer.play("press appearance button anim")
+
+
+func _on_message_show_button_pressed() -> void:
+	message_panel.open_panel()

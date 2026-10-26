@@ -25,6 +25,14 @@
 [ext_resource type="Script" uid="uid://xh500e01ry23" path="res://Scenes/message_show_button.gd" id="23_5n0dv"]
 [ext_resource type="Texture2D" uid="uid://857gg6cyytw1" path="res://Assets/icons/message-square-text (1).png" id="24_ne6ao"]
 [ext_resource type="Texture2D" uid="uid://8x4kq0i3te1p" path="res://Assets/icons/message-square-text.png" id="25_tt8ml"]
+[ext_resource type="Script" uid="uid://cs41cxvmcpkpq" path="res://Scenes/message_panel.gd" id="26_6vfk8"]
+[ext_resource type="Texture2D" uid="uid://be7ngo6y4qbbp" path="res://Assets/icons/square-terminal.png" id="26_hkdq0"]
+[ext_resource type="FontFile" uid="uid://bsjf7b1bujy7m" path="res://Assets/Rajdhani/Rajdhani-Bold.ttf" id="27_xcoo4"]
+[ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="28_jw7lb"]
+[ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="29_6vfk8"]
+[ext_resource type="FontFile" uid="uid://dwlvpg5e3unuu" path="res://Assets/Rajdhani/Rajdhani-Medium.ttf" id="30_1xund"]
+[ext_resource type="Script" uid="uid://dg4k6ipkgaiud" path="res://Scenes/previous_button.gd" id="31_xcoo4"]
+[ext_resource type="Script" uid="uid://curulv23nn3oq" path="res://Scenes/next_button.gd" id="32_jw7lb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_opfnp")
@@ -36,60 +44,60 @@ shader = ExtResource("3_cp0ys")
 shader = ExtResource("5_yhxw7")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
-bg_color = Color(0.08627451, 0.050980393, 0.1882353, 1)
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(1, 0.18039216, 0.67058825, 1)
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
-expand_margin_left = 40.0
+expand_margin_left = 25.0
 expand_margin_top = 7.0
-expand_margin_right = 40.0
+expand_margin_right = 25.0
 expand_margin_bottom = 7.0
 shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
 shadow_size = 8
 shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
-bg_color = Color(0, 0.4862745, 0.5686275, 1)
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
-border_color = Color(1, 0.18039216, 0.67058825, 1)
+border_color = Color(0, 0.3647059, 0.4392157, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-expand_margin_left = 20.0
+expand_margin_left = 17.0
 expand_margin_top = 5.0
-expand_margin_right = 20.0
+expand_margin_right = 17.0
 expand_margin_bottom = 5.0
-shadow_color = Color(0, 0.89827347, 1, 0.65000004)
-shadow_size = 4
-shadow_offset = Vector2(0, 1)
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
-bg_color = Color(0.16470589, 0.105882354, 0.23921569, 1)
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 6
-border_color = Color(1, 0.33333334, 0.77254903, 1)
+border_color = Color(0, 0.6509804, 0.7372549, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-expand_margin_left = 30.0
+expand_margin_left = 21.0
 expand_margin_top = 6.0
-expand_margin_right = 30.0
+expand_margin_right = 21.0
 expand_margin_bottom = 6.0
-shadow_color = Color(0.85105014, 0, 1, 0.8)
-shadow_size = 14
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
 
 [sub_resource type="Animation" id="Animation_16hvj"]
 resource_name = "After press main menu animation"
@@ -719,6 +727,51 @@ shader_parameter/border_width_px = 3.0
 shader_parameter/corner_radius = 12.0
 shader_parameter/edge_softness_px = 0.8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6uar"]
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 1, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.4, 0, 0.6666667, 1)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oamur"]
+bg_color = Color(1, 0, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 0, 1, 0.77000004)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsxxd"]
+bg_color = Color(0, 0.9920456, 0, 0.112)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
+bg_color = Color(0, 0.4862745, 0.5686275, 1)
+border_color = Color(0, 0.4862745, 0.5686275, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
 [node name="Main menu" type="Control" unique_id=29520096]
 layout_mode = 3
 anchors_preset = 15
@@ -1317,15 +1370,15 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
-text = "MESSAGE TO ECHO"
+text = "MESSAGE ECHO"
 script = ExtResource("23_5n0dv")
 
 [node name="LEFT ICON6" type="TextureRect" parent="Message Button Control" unique_id=472862582]
 texture_filter = 1
 layout_mode = 0
-offset_left = 5.0
+offset_left = 10.0
 offset_top = 32.0
-offset_right = 45.0
+offset_right = 50.0
 offset_bottom = 72.0
 mouse_filter = 2
 texture = ExtResource("24_ne6ao")
@@ -1335,13 +1388,165 @@ stretch_mode = 5
 [node name="RIGHT ICON6" type="TextureRect" parent="Message Button Control" unique_id=859775496]
 texture_filter = 1
 layout_mode = 0
-offset_left = 347.0
+offset_left = 342.0
 offset_top = 32.0
-offset_right = 387.0
+offset_right = 382.0
 offset_bottom = 72.0
 mouse_filter = 2
 texture = ExtResource("25_tt8ml")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Message Panel" type="Panel" parent="." unique_id=975218762]
+layout_mode = 0
+offset_left = 1035.0
+offset_top = 270.0
+offset_right = 1776.0
+offset_bottom = 733.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+script = ExtResource("26_6vfk8")
+
+[node name="MessageTextureRect" type="TextureRect" parent="Message Panel" unique_id=1068790622]
+texture_filter = 1
+layout_mode = 0
+offset_left = 26.0
+offset_top = 16.0
+offset_right = 105.0
+offset_bottom = 89.0
+texture = ExtResource("26_hkdq0")
+stretch_mode = 5
+
+[node name="message panel main header" type="Label" parent="Message Panel" unique_id=620993175]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 21.0
+offset_right = 318.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_fonts/font = ExtResource("27_xcoo4")
+theme_override_font_sizes/font_size = 30
+text = "ECHO TERMINAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubTitle for the panel main header" type="Label" parent="Message Panel" unique_id=1722894481]
+texture_filter = 1
+layout_mode = 0
+offset_left = 126.0
+offset_top = 52.0
+offset_right = 349.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.26479155, 0.3133042, 0.66668326, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 24
+text = "SECURE CHANNEL // 01"
+
+[node name="Space bar color Panel" type="Panel" parent="Message Panel" unique_id=1066427826]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 110.0
+offset_right = 687.0
+offset_bottom = 115.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oamur")
+
+[node name="OnlinePanel" type="Panel" parent="Message Panel" unique_id=883653375]
+texture_filter = 1
+layout_mode = 0
+offset_left = 608.0
+offset_top = 34.0
+offset_right = 707.0
+offset_bottom = 74.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="Online Label" type="Label" parent="Message Panel/OnlinePanel" unique_id=1526754950]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.13335153, 0.81812185, 0, 1)
+text = "Online"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message main Label" type="Label" parent="Message Panel" unique_id=145203183]
+texture_filter = 1
+layout_mode = 0
+offset_left = 39.0
+offset_top = 139.0
+offset_right = 399.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0.13335153, 1, 0.3623615, 1)
+theme_override_fonts/font = ExtResource("28_jw7lb")
+theme_override_font_sizes/font_size = 22
+text = "CONNECTION  ESTABLISHED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Core Message Label" type="Label" parent="Message Panel" unique_id=31396014]
+texture_filter = 1
+layout_mode = 0
+offset_left = 45.0
+offset_top = 194.0
+offset_right = 716.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("29_6vfk8")
+theme_override_font_sizes/font_size = 19
+text = "Hello, Player. This is ECHO, your onboard system assistant. I've detected an unusual signal nearby, and I need your help investigating it."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Counting message Label" type="Label" parent="Message Panel" unique_id=1167792223]
+texture_filter = 1
+layout_mode = 0
+offset_left = 29.0
+offset_top = 368.0
+offset_right = 210.0
+offset_bottom = 426.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_fonts/font = ExtResource("30_1xund")
+theme_override_font_sizes/font_size = 23
+text = "MESSAGE 01 / 05"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PreviousButton" type="Button" parent="Message Panel" unique_id=1250454520]
+texture_filter = 1
+layout_mode = 0
+offset_left = 412.0
+offset_top = 373.0
+offset_right = 518.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "PREVIOUS"
+script = ExtResource("31_xcoo4")
+
+[node name="NextButton" type="Button" parent="Message Panel" unique_id=914305063]
+texture_filter = 1
+layout_mode = 0
+offset_left = 589.0
+offset_top = 373.0
+offset_right = 695.0
+offset_bottom = 425.0
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_vr1f0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xdnm8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "NEXT"
+script = ExtResource("32_jw7lb")
+
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
+[connection signal="pressed" from="Message Button Control/Message show Button" to="." method="_on_message_show_button_pressed"]
