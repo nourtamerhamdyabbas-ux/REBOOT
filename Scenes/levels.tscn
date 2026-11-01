@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://8fmgpbewi2e4"]
 
+[ext_resource type="Script" uid="uid://c36bogqvmrmhx" path="res://Scenes/levels.gd" id="1_byaam"]
 [ext_resource type="Shader" uid="uid://mlavm373mqkc" path="res://Scripts/Far Back.gdshader" id="1_uotyi"]
 [ext_resource type="Texture2D" uid="uid://doik1xvox17tl" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/back.png" id="2_p1uqq"]
 [ext_resource type="Shader" uid="uid://cv8vaiyjmfyr8" path="res://Scripts/Mid Back.gdshader" id="3_j0k6p"]
@@ -9,6 +10,11 @@
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_bku7o"]
 [ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="8_c4nq2"]
 [ext_resource type="Texture2D" uid="uid://be7ngo6y4qbbp" path="res://Assets/icons/square-terminal.png" id="9_dlt5w"]
+[ext_resource type="Script" uid="uid://c1sj4dxqxuqda" path="res://Scenes/hind_button_control.gd" id="10_x2875"]
+[ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="11_byaam"]
+[ext_resource type="Script" uid="uid://cj4kxmg6an1pf" path="res://Scenes/hint_button.gd" id="12_iolxa"]
+[ext_resource type="Texture2D" uid="uid://lpj5347lmd56" path="res://Assets/icons/lightbulb.png" id="13_88fv2"]
+[ext_resource type="Texture2D" uid="uid://bttcurossddma" path="res://Assets/icons/lightbulb (1).png" id="14_l7l1h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_uotyi")
@@ -92,6 +98,54 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h57o"]
+bg_color = Color(0.08627451, 0.050980393, 0.1882353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28627452, 0.19215687, 0.42745098, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_left = 12.0
+expand_margin_top = 8.0
+expand_margin_right = 12.0
+expand_margin_bottom = 8.0
+shadow_color = Color(0.4, 0, 0.6666667, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krxxg"]
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0.4862745, 0.5686275, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
+bg_color = Color(0.16470589, 0.105882354, 0.23921569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.18039216, 0.67058825, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.8509804, 0, 1, 1)
+shadow_size = 12
+
 [node name="Levels" type="Control" unique_id=1037239281]
 texture_filter = 1
 layout_mode = 3
@@ -100,6 +154,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_byaam")
 
 [node name="Backgrounds" type="Control" parent="." unique_id=2096801402]
 layout_mode = 1
@@ -342,3 +397,48 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_b6uar")
 theme_override_styles/focus = SubResource("StyleBoxFlat_oamur")
 placeholder_text = "Type a command..."
 clear_button_enabled = true
+
+[node name="Hind Button Control" type="Control" parent="." unique_id=1851782621]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 1526.0
+offset_top = 419.0
+offset_right = 1566.0
+offset_bottom = 459.0
+script = ExtResource("10_x2875")
+
+[node name="HintButton" type="Button" parent="Hind Button Control" unique_id=1522937405]
+texture_filter = 1
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1h57o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_krxxg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xdnm8")
+text = "COMMAND HELP "
+script = ExtResource("12_iolxa")
+
+[node name="Left icon" type="TextureRect" parent="Hind Button Control" unique_id=2143681513]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 45.0
+offset_bottom = 53.0
+texture = ExtResource("13_88fv2")
+
+[node name="Right icon" type="TextureRect" parent="Hind Button Control" unique_id=1640264773]
+texture_filter = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 53.0
+texture = ExtResource("14_l7l1h")
