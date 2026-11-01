@@ -62,6 +62,18 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_636m2"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
 bg_color = Color(0.06666667, 0, 0.73333335, 0.13333334)
 border_width_left = 2
@@ -79,12 +91,12 @@ expand_margin_right = 16.0
 expand_margin_bottom = 14.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6uar"]
-bg_color = Color(0.101960786, 0.07058824, 0.19607843, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.28627452, 0.19215687, 0.8039216, 1)
+bg_color = Color(0.09985284, 0.07016479, 0.19641912, 0.731)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28707156, 0.67263305, 0.7923846, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -95,11 +107,7 @@ expand_margin_right = 18.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oamur"]
-bg_color = Color(0.101960786, 0.07058824, 0.19607843, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+bg_color = Color(0.09985284, 0.07016479, 0.19641912, 0.836)
 border_color = Color(0.5529412, 0.96862745, 1, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -285,18 +293,6 @@ tracks/9/keys = {
 "update": 0,
 "values": [Vector2(1446, 795)]
 }
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Hint Panel/HideButton:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(188, 418)]
-}
 
 [sub_resource type="Animation" id="Animation_gtydc"]
 resource_name = "hide button animation"
@@ -400,26 +396,26 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Hint Panel/HideButton:position")
+tracks/8/path = NodePath("Hint Panel/HideButton:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(3, 3.5),
+"times": PackedFloat32Array(2.5, 2.5333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(188, 418), Vector2(1507, 493)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Hint Panel/HideButton:modulate")
+tracks/9/path = NodePath("Hind Button Control:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(2.5, 3),
+"times": PackedFloat32Array(3.1, 3.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(1507, 261), Vector2(1507, 493)]
 }
 
 [sub_resource type="Animation" id="Animation_yf5lt"]
@@ -610,9 +606,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -275.0
 offset_top = 6.0
-offset_right = -275.0
 offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -694,7 +688,7 @@ anchor_bottom = 0.5
 offset_left = -425.0
 offset_top = -280.0
 offset_right = 425.0
-offset_bottom = 280.0
+offset_bottom = 354.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -772,19 +766,139 @@ text = "ONLINE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Chat History" type="RichTextLabel" parent="Terminal" unique_id=1187152103]
+[node name="Node" type="Node" parent="Terminal" unique_id=477817867]
+
+[node name="ColorRect" type="ColorRect" parent="Terminal/Node" unique_id=879734803]
+offset_left = 609.0
+offset_top = 379.0
+offset_right = 613.0
+offset_bottom = 479.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Terminal/Node" unique_id=748394309]
+offset_left = 609.0
+offset_top = 696.0
+offset_right = 613.0
+offset_bottom = 796.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Terminal/Node" unique_id=1388105079]
+offset_left = 1303.0
+offset_top = 695.0
+offset_right = 1307.0
+offset_bottom = 795.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Terminal/Node" unique_id=991251464]
+offset_left = 1303.0
+offset_top = 379.0
+offset_right = 1307.0
+offset_bottom = 479.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Terminal/Node" unique_id=1644775145]
+offset_left = 1206.0
+offset_top = 379.0
+offset_right = 1306.0
+offset_bottom = 383.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Terminal/Node" unique_id=2046679362]
+offset_left = 613.0
+offset_top = 379.0
+offset_right = 713.0
+offset_bottom = 383.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Terminal/Node" unique_id=707444577]
+offset_left = 609.0
+offset_top = 795.0
+offset_right = 709.0
+offset_bottom = 799.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Terminal/Node" unique_id=769966812]
+offset_left = 1207.0
+offset_top = 795.0
+offset_right = 1307.0
+offset_bottom = 799.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Terminal/Node" unique_id=1128165401]
+offset_left = 1189.0
+offset_top = 805.0
+offset_right = 1289.0
+offset_bottom = 809.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Terminal/Node" unique_id=732942314]
+offset_left = 629.0
+offset_top = 805.0
+offset_right = 729.0
+offset_bottom = 809.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Terminal/Node" unique_id=182773524]
+offset_left = 627.0
+offset_top = 368.0
+offset_right = 727.0
+offset_bottom = 372.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Terminal/Node" unique_id=664016540]
+offset_left = 1187.0
+offset_top = 369.0
+offset_right = 1287.0
+offset_bottom = 373.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Terminal/Node" unique_id=1940185548]
+offset_left = 1313.0
+offset_top = 398.0
+offset_right = 1317.0
+offset_bottom = 498.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Terminal/Node" unique_id=1346083275]
+offset_left = 1314.0
+offset_top = 677.0
+offset_right = 1318.0
+offset_bottom = 777.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Terminal/Node" unique_id=1769362342]
+offset_left = 600.0
+offset_top = 680.0
+offset_right = 604.0
+offset_bottom = 780.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Terminal/Node" unique_id=968035050]
+offset_left = 598.0
+offset_top = 397.0
+offset_right = 602.0
+offset_bottom = 497.0
+color = Color(1, 0, 1, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="Terminal" unique_id=1558611129]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 127.0
+offset_right = 764.0
+offset_bottom = 531.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_636m2")
+
+[node name="Chat History" type="RichTextLabel" parent="Terminal/PanelContainer" unique_id=1187152103]
+texture_filter = 1
 custom_minimum_size = Vector2(0, 350)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 13.0
-offset_top = 139.0
-offset_right = -15.0
-offset_bottom = -13.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 theme_override_colors/default_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 0.8)
+theme_override_constants/table_h_separation = 6
+theme_override_constants/table_v_separation = 7
+theme_override_fonts/normal_font = ExtResource("18_1hb6l")
+theme_override_font_sizes/normal_font_size = 23
 theme_override_styles/normal = SubResource("StyleBoxFlat_ralei")
 bbcode_enabled = true
 scroll_following = true
@@ -792,17 +906,19 @@ scroll_following = true
 [node name="Command Line" type="LineEdit" parent="Terminal" unique_id=1415971446]
 custom_minimum_size = Vector2(0, 52)
 layout_mode = 0
-offset_left = 179.0
-offset_top = 447.0
-offset_right = 694.0
-offset_bottom = 499.0
+offset_left = 207.0
+offset_top = 563.0
+offset_right = 639.0
+offset_bottom = 615.0
 theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
 theme_override_colors/font_placeholder_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
 theme_override_colors/caret_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_b6uar")
 theme_override_styles/focus = SubResource("StyleBoxFlat_oamur")
-placeholder_text = "Type a command..."
+placeholder_text = "Enter command...."
 clear_button_enabled = true
 
 [node name="Hind Button Control" type="Control" parent="." unique_id=1851782621]
@@ -932,7 +1048,7 @@ offset_right = 162.0
 offset_bottom = 49.0
 theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
 theme_override_fonts/font = ExtResource("18_1hb6l")
-text = "OPEN LEVEL 1"
+text = "OPEN LEVEL 01"
 
 [node name="Open level 1 command2" type="Label" parent="Hint Panel/Level access control" unique_id=1086562826]
 layout_mode = 0
@@ -942,7 +1058,7 @@ offset_right = 162.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
 theme_override_fonts/font = ExtResource("18_1hb6l")
-text = "OPEN LEVEL 2"
+text = "OPEN LEVEL 02"
 
 [node name="Open level 1 command3" type="Label" parent="Hint Panel/Level access control" unique_id=492351474]
 layout_mode = 0
@@ -952,7 +1068,7 @@ offset_right = 169.0
 offset_bottom = 129.0
 theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
 theme_override_fonts/font = ExtResource("18_1hb6l")
-text = "OPEN LEVEL 3"
+text = "OPEN LEVEL 03"
 
 [node name="open leve; 1 command sub" type="Label" parent="Hint Panel/Level access control" unique_id=1273234939]
 texture_filter = 1
@@ -961,9 +1077,9 @@ offset_left = 30.0
 offset_top = 46.0
 offset_right = 129.0
 offset_bottom = 63.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Access the first level"
 
 [node name="open leve; 1 command sub2" type="Label" parent="Hint Panel/Level access control" unique_id=498688182]
@@ -973,9 +1089,9 @@ offset_left = 30.0
 offset_top = 86.0
 offset_right = 144.0
 offset_bottom = 103.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Access the second level"
 
 [node name="open leve; 1 command sub3" type="Label" parent="Hint Panel/Level access control" unique_id=189845377]
@@ -985,9 +1101,9 @@ offset_left = 30.0
 offset_top = 127.0
 offset_right = 144.0
 offset_bottom = 144.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Access the third level"
 
 [node name="open level icon" type="TextureRect" parent="Hint Panel/Level access control" unique_id=81447601]
@@ -1095,9 +1211,9 @@ offset_left = 49.0
 offset_top = 43.0
 offset_right = 148.0
 offset_bottom = 60.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Display all three levels"
 
 [node name="system status command sub" type="Label" parent="Hint Panel/System commands control" unique_id=1622615863]
@@ -1107,9 +1223,9 @@ offset_left = 49.0
 offset_top = 88.0
 offset_right = 157.0
 offset_bottom = 105.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Check ECHO system status"
 
 [node name="Player information command sub" type="Label" parent="Hint Panel/System commands control" unique_id=1867247998]
@@ -1119,9 +1235,9 @@ offset_left = 49.0
 offset_top = 135.0
 offset_right = 179.0
 offset_bottom = 152.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Display player information"
 
 [node name="Clear command sub" type="Label" parent="Hint Panel/System commands control" unique_id=1527905934]
@@ -1131,9 +1247,9 @@ offset_left = 49.0
 offset_top = 177.0
 offset_right = 179.0
 offset_bottom = 194.0
-theme_override_colors/font_color = Color(0.6262097, 0, 1, 1)
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_mgyhi")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 15
 text = "Clear terminal history"
 
 [node name="command icon" type="TextureRect" parent="Hint Panel/System commands control" unique_id=130049622]
@@ -1173,7 +1289,7 @@ modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_left = 188.0
-offset_top = 418.0
+offset_top = 421.0
 offset_right = 238.0
 offset_bottom = 444.0
 theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
@@ -1181,7 +1297,7 @@ theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
 theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
 theme_override_fonts/font = ExtResource("11_byaam")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_1h57o")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_krxxg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xdnm8")
