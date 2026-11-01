@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://857gg6cyytw1" path="res://Assets/icons/message-square-text (1).png" id="24_ne6ao"]
 [ext_resource type="Texture2D" uid="uid://8x4kq0i3te1p" path="res://Assets/icons/message-square-text.png" id="25_tt8ml"]
 [ext_resource type="Script" uid="uid://cs41cxvmcpkpq" path="res://Scripts/message_panel.gd" id="26_6vfk8"]
-[ext_resource type="Texture2D" uid="uid://be7ngo6y4qbbp" path="res://Assets/icons/square-terminal.png" id="26_hkdq0"]
+[ext_resource type="Texture2D" uid="uid://ddp38nfgdhvl7" path="res://Assets/icons/cyan square.png" id="27_43km2"]
 [ext_resource type="FontFile" uid="uid://bsjf7b1bujy7m" path="res://Assets/Rajdhani/Rajdhani-Bold.ttf" id="27_xcoo4"]
 [ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="28_jw7lb"]
 [ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="29_6vfk8"]
@@ -51,7 +51,7 @@ shader = ExtResource("3_cp0ys")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ralei"]
 shader = ExtResource("5_yhxw7")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiuxy"]
 bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
 border_width_left = 4
 border_width_top = 4
@@ -1099,7 +1099,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "SHOW MAIN MENU"
@@ -1223,7 +1223,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "START"
@@ -1274,7 +1274,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "SETTINGS"
@@ -1325,7 +1325,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "Guide"
@@ -1376,7 +1376,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "CREDITS"
@@ -1427,7 +1427,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "LEAVE"
@@ -1548,7 +1548,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "MESSAGE ECHO"
@@ -1595,7 +1595,7 @@ offset_left = 26.0
 offset_top = 16.0
 offset_right = 105.0
 offset_bottom = 89.0
-texture = ExtResource("26_hkdq0")
+texture = ExtResource("27_43km2")
 stretch_mode = 5
 
 [node name="message panel main header" type="Label" parent="Message Panel" unique_id=620993175]
@@ -1709,7 +1709,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "PREVIOUS"
@@ -1793,7 +1793,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "DISCONNECT"
@@ -1843,7 +1843,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_al4r6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "NOT YET"

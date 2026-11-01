@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://ddp38nfgdhvl7" path="res://Assets/icons/cyan square.png" id="29_7faff"]
 [ext_resource type="Script" uid="uid://dhf8pfiaqepxb" path="res://Scenes/power_off_button.gd" id="29_eiuxy"]
 [ext_resource type="Texture2D" uid="uid://d3tkl1p1v6yc0" path="res://Assets/icons/globe-x.png" id="30_nh00u"]
+[ext_resource type="Script" uid="uid://duvispwipnw28" path="res://Scenes/level_page_transition.gd" id="32_tgh34"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_uotyi")
@@ -175,12 +176,7 @@ shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
 shadow_size = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h57o"]
-bg_color = Color(0, 0.41960785, 0.47058824, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.5529412, 0.96862745, 1, 1)
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
@@ -189,12 +185,11 @@ expand_margin_left = 12.0
 expand_margin_top = 8.0
 expand_margin_right = 12.0
 expand_margin_bottom = 8.0
-shadow_color = Color(0, 0.8745098, 1, 1)
 shadow_size = 5
 shadow_offset = Vector2(0, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krxxg"]
-bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
+bg_color = Color(0, 0.6509804, 0.72156864, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -209,7 +204,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
-bg_color = Color(0, 0.6509804, 0.72156864, 1)
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -230,6 +225,62 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 shadow_color = Color(1, 1, 1, 0.739)
 shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgh34"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 14.0
+expand_margin_top = 5.0
+expand_margin_right = 14.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sowmt"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e30r"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 5.0
+expand_margin_right = 21.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
 
 [sub_resource type="Animation" id="Animation_mgyhi"]
 length = 0.001
@@ -776,7 +827,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Terminal" type="Panel" parent="." unique_id=541891591]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1132,7 +1182,6 @@ offset_bottom = 53.0
 texture = ExtResource("18_dupmk")
 
 [node name="Open Terminal Button control" type="Control" parent="." unique_id=951004053]
-visible = false
 texture_filter = 1
 anchors_preset = 0
 offset_left = 813.0
@@ -1500,18 +1549,18 @@ modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_left = 188.0
-offset_top = 421.0
-offset_right = 238.0
-offset_bottom = 444.0
+offset_top = 423.0
+offset_right = 239.0
+offset_bottom = 452.0
 theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
 theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
 theme_override_fonts/font = ExtResource("11_byaam")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
-theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tgh34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sowmt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0e30r")
 text = "HIDE"
 script = ExtResource("23_gtydc")
 
@@ -1519,7 +1568,6 @@ script = ExtResource("23_gtydc")
 libraries/ = SubResource("AnimationLibrary_gtydc")
 
 [node name="Offline system Panel" type="Panel" parent="." unique_id=1675065455]
-visible = false
 layout_mode = 0
 offset_left = 576.0
 offset_top = 240.0
@@ -1576,6 +1624,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_4hl1e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_57lgl")
 text = "⏻"
 script = ExtResource("29_eiuxy")
+
+[node name="Level Page Transition" type="Node" parent="." unique_id=1698321129]
+script = ExtResource("32_tgh34")
 
 [connection signal="pressed" from="Hind Button Control/HintButton" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Back Button Control2/BackButton" to="." method="_on_back_button_pressed"]

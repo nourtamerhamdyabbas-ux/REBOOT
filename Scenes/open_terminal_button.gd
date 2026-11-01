@@ -12,11 +12,11 @@ var normal_bg: Color
 var normal_border: Color
 var normal_shadow: Color
 
-var hover_bg: Color = Color("#00a6b8")
+var hover_bg: Color = Color("#100B2A")
 var hover_border: Color = Color("#b8fbff")
 var hover_shadow: Color = Color("#8df7ff")
 
-var pressed_bg: Color = Color("#100B2A")
+var pressed_bg: Color = Color("#00a6b8")
 var pressed_border: Color = Color("#5cebfa")
 var pressed_shadow: Color = Color("#00bfd6")
 

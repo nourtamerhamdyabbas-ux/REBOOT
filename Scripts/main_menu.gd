@@ -34,4 +34,6 @@ func _on_not_yet_button_pressed() -> void:
 
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/levels.tscn")
+	SceneTransition.change_scene_with_transition(
+		"res://Scenes/levels.tscn"
+	)
