@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cusunotbr36j7" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/front.png" id="6_dlt5w"]
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_bku7o"]
 [ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="8_c4nq2"]
-[ext_resource type="Texture2D" uid="uid://be7ngo6y4qbbp" path="res://Assets/icons/square-terminal.png" id="9_dlt5w"]
 [ext_resource type="Script" uid="uid://c1sj4dxqxuqda" path="res://Scenes/hind_button_control.gd" id="10_x2875"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="11_byaam"]
 [ext_resource type="Script" uid="uid://cj4kxmg6an1pf" path="res://Scenes/hint_button.gd" id="12_iolxa"]
@@ -17,12 +16,21 @@
 [ext_resource type="Texture2D" uid="uid://bttcurossddma" path="res://Assets/icons/lightbulb (1).png" id="14_l7l1h"]
 [ext_resource type="Texture2D" uid="uid://iu1syoi7n4e7" path="res://Assets/icons/user-key.png" id="16_i0ogj"]
 [ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="17_40tkv"]
+[ext_resource type="Script" uid="uid://p27nahdiiruu" path="res://Scenes/back_button_control_2.gd" id="17_e1hhb"]
+[ext_resource type="Texture2D" uid="uid://bj1b4j00usoif" path="res://Assets/icons/chevron-right (1).png" id="17_gtydc"]
 [ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="18_1hb6l"]
+[ext_resource type="Texture2D" uid="uid://s4fenw8frbxf" path="res://Assets/icons/chevron-left (1).png" id="18_dupmk"]
+[ext_resource type="Texture2D" uid="uid://ew7ddtnx0eu3" path="res://Assets/icons/power (1).png" id="19_e1hhb"]
 [ext_resource type="FontFile" uid="uid://byqgy07qgv003" path="res://Assets/Rajdhani/Rajdhani-Light.ttf" id="19_mgyhi"]
+[ext_resource type="Script" uid="uid://vukmepkmkvae" path="res://Scenes/power_button_control_3.gd" id="20_jwu1x"]
 [ext_resource type="Texture2D" uid="uid://cop3eqwvm3tuo" path="res://Assets/icons/box.png" id="20_yf5lt"]
+[ext_resource type="Script" uid="uid://dplpx3xh17830" path="res://Scenes/open_terminal_button.gd" id="21_eiuxy"]
 [ext_resource type="Texture2D" uid="uid://b800uak53w7ny" path="res://Assets/icons/square-letter-i.png" id="21_mgyhi"]
 [ext_resource type="Texture2D" uid="uid://bjrwwtpbry6t4" path="res://Assets/icons/command.png" id="22_yf5lt"]
 [ext_resource type="Script" uid="uid://dsqgvr75gkt18" path="res://Scenes/hide_button2.gd" id="23_gtydc"]
+[ext_resource type="Texture2D" uid="uid://ddp38nfgdhvl7" path="res://Assets/icons/cyan square.png" id="29_7faff"]
+[ext_resource type="Script" uid="uid://dhf8pfiaqepxb" path="res://Scenes/power_off_button.gd" id="29_eiuxy"]
+[ext_resource type="Texture2D" uid="uid://d3tkl1p1v6yc0" path="res://Assets/icons/globe-x.png" id="30_nh00u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_uotyi")
@@ -35,10 +43,6 @@ shader = ExtResource("5_c4nq2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
 bg_color = Color(0.086104214, 0.050708726, 0.1897483, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
 border_color = Color(0.8509804, 0, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
@@ -114,13 +118,69 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiuxy"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 6.0
+expand_margin_right = 21.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h57o"]
-bg_color = Color(0.08627451, 0.050980393, 0.1882353, 1)
+bg_color = Color(0, 0.41960785, 0.47058824, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.28627452, 0.19215687, 0.42745098, 1)
+border_color = Color(0.5529412, 0.96862745, 1, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
@@ -129,7 +189,7 @@ expand_margin_left = 12.0
 expand_margin_top = 8.0
 expand_margin_right = 12.0
 expand_margin_bottom = 8.0
-shadow_color = Color(0.4, 0, 0.6666667, 1)
+shadow_color = Color(0, 0.8745098, 1, 1)
 shadow_size = 5
 shadow_offset = Vector2(0, 2)
 
@@ -139,27 +199,27 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.5529412, 0.96862745, 1, 1)
+border_color = Color(0.36078432, 0.92156863, 0.98039216, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_color = Color(0, 0.4862745, 0.5686275, 1)
+shadow_color = Color(0, 0.7490196, 0.8392157, 1)
 shadow_size = 5
 shadow_offset = Vector2(0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
-bg_color = Color(0.16470589, 0.105882354, 0.23921569, 1)
+bg_color = Color(0, 0.6509804, 0.72156864, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 0.18039216, 0.67058825, 1)
+border_color = Color(0.72156864, 0.9843137, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
-shadow_color = Color(0.8509804, 0, 1, 1)
+shadow_color = Color(0.5529412, 0.96862745, 1, 1)
 shadow_size = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ps6"]
@@ -549,6 +609,44 @@ _data = {
 &"hint panel animation": SubResource("Animation_yf5lt")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg1du"]
+bg_color = Color(0.72156864, 0, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.32156864, 0.47843137, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 21
+shadow_color = Color(1, 0.09320182, 0.30943933, 0.45000002)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hl1e"]
+bg_color = Color(0.52156866, 0, 0.14117648, 1)
+border_color = Color(1, 0.09019608, 0.30980393, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(1, 0, 0.23529412, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57lgl"]
+bg_color = Color(1, 0.09019608, 0.30980393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.60784316, 0.69803923, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(1, 0.09019608, 0.30980393, 1)
+shadow_size = 20
+
 [node name="Levels" type="Control" unique_id=1037239281]
 texture_filter = 1
 layout_mode = 3
@@ -737,7 +835,7 @@ offset_left = 19.0
 offset_top = 13.0
 offset_right = 100.0
 offset_bottom = 89.0
-texture = ExtResource("9_dlt5w")
+texture = ExtResource("29_7faff")
 expand_mode = 1
 
 [node name="status panel" type="Panel" parent="Terminal" unique_id=2018837775]
@@ -766,9 +864,15 @@ text = "ONLINE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Node" type="Node" parent="Terminal" unique_id=477817867]
+[node name="Node" type="Control" parent="Terminal" unique_id=917590791]
+anchors_preset = 0
+offset_left = -535.0
+offset_top = -260.0
+offset_right = -535.0
+offset_bottom = -260.0
 
 [node name="ColorRect" type="ColorRect" parent="Terminal/Node" unique_id=879734803]
+layout_mode = 0
 offset_left = 609.0
 offset_top = 379.0
 offset_right = 613.0
@@ -776,6 +880,7 @@ offset_bottom = 479.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Terminal/Node" unique_id=748394309]
+layout_mode = 0
 offset_left = 609.0
 offset_top = 696.0
 offset_right = 613.0
@@ -783,6 +888,7 @@ offset_bottom = 796.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Terminal/Node" unique_id=1388105079]
+layout_mode = 0
 offset_left = 1303.0
 offset_top = 695.0
 offset_right = 1307.0
@@ -790,6 +896,7 @@ offset_bottom = 795.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Terminal/Node" unique_id=991251464]
+layout_mode = 0
 offset_left = 1303.0
 offset_top = 379.0
 offset_right = 1307.0
@@ -797,6 +904,7 @@ offset_bottom = 479.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Terminal/Node" unique_id=1644775145]
+layout_mode = 0
 offset_left = 1206.0
 offset_top = 379.0
 offset_right = 1306.0
@@ -804,6 +912,7 @@ offset_bottom = 383.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Terminal/Node" unique_id=2046679362]
+layout_mode = 0
 offset_left = 613.0
 offset_top = 379.0
 offset_right = 713.0
@@ -811,6 +920,7 @@ offset_bottom = 383.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="Terminal/Node" unique_id=707444577]
+layout_mode = 0
 offset_left = 609.0
 offset_top = 795.0
 offset_right = 709.0
@@ -818,6 +928,7 @@ offset_bottom = 799.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="Terminal/Node" unique_id=769966812]
+layout_mode = 0
 offset_left = 1207.0
 offset_top = 795.0
 offset_right = 1307.0
@@ -825,6 +936,7 @@ offset_bottom = 799.0
 color = Color(0.4, 0, 0.6666667, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="Terminal/Node" unique_id=1128165401]
+layout_mode = 0
 offset_left = 1189.0
 offset_top = 805.0
 offset_right = 1289.0
@@ -832,6 +944,7 @@ offset_bottom = 809.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="Terminal/Node" unique_id=732942314]
+layout_mode = 0
 offset_left = 629.0
 offset_top = 805.0
 offset_right = 729.0
@@ -839,6 +952,7 @@ offset_bottom = 809.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="Terminal/Node" unique_id=182773524]
+layout_mode = 0
 offset_left = 627.0
 offset_top = 368.0
 offset_right = 727.0
@@ -846,6 +960,7 @@ offset_bottom = 372.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="Terminal/Node" unique_id=664016540]
+layout_mode = 0
 offset_left = 1187.0
 offset_top = 369.0
 offset_right = 1287.0
@@ -853,6 +968,7 @@ offset_bottom = 373.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="Terminal/Node" unique_id=1940185548]
+layout_mode = 0
 offset_left = 1313.0
 offset_top = 398.0
 offset_right = 1317.0
@@ -860,6 +976,7 @@ offset_bottom = 498.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="Terminal/Node" unique_id=1346083275]
+layout_mode = 0
 offset_left = 1314.0
 offset_top = 677.0
 offset_right = 1318.0
@@ -867,6 +984,7 @@ offset_bottom = 777.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="Terminal/Node" unique_id=1769362342]
+layout_mode = 0
 offset_left = 600.0
 offset_top = 680.0
 offset_right = 604.0
@@ -874,6 +992,7 @@ offset_bottom = 780.0
 color = Color(1, 0, 1, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="Terminal/Node" unique_id=968035050]
+layout_mode = 0
 offset_left = 598.0
 offset_top = 397.0
 offset_right = 602.0
@@ -942,9 +1061,9 @@ theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
 theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
 theme_override_fonts/font = ExtResource("11_byaam")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_1h57o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_krxxg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_xdnm8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "COMMAND HELP "
 script = ExtResource("12_iolxa")
 
@@ -965,6 +1084,96 @@ offset_top = 24.0
 offset_right = 290.0
 offset_bottom = 53.0
 texture = ExtResource("14_l7l1h")
+
+[node name="Back Button Control2" type="Control" parent="." unique_id=624205964]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 105.0
+offset_top = 493.0
+offset_right = 145.0
+offset_bottom = 533.0
+script = ExtResource("17_e1hhb")
+
+[node name="BackButton" type="Button" parent="Back Button Control2" unique_id=1605934495]
+texture_filter = 1
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "BACK TO MAIN"
+script = ExtResource("12_iolxa")
+
+[node name="Left icon1" type="TextureRect" parent="Back Button Control2" unique_id=1591546963]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 45.0
+offset_bottom = 53.0
+texture = ExtResource("17_gtydc")
+
+[node name="Right icon1" type="TextureRect" parent="Back Button Control2" unique_id=699925272]
+texture_filter = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 53.0
+texture = ExtResource("18_dupmk")
+
+[node name="Open Terminal Button control" type="Control" parent="." unique_id=951004053]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 813.0
+offset_top = 720.0
+offset_right = 853.0
+offset_bottom = 760.0
+script = ExtResource("20_jwu1x")
+
+[node name="Open Terminal Button" type="Button" parent="Open Terminal Button control" unique_id=519248593]
+texture_filter = 1
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1h57o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_krxxg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xdnm8")
+text = "POWER ON"
+script = ExtResource("21_eiuxy")
+
+[node name="Left icon2" type="TextureRect" parent="Open Terminal Button control" unique_id=2070986556]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 45.0
+offset_bottom = 53.0
+texture = ExtResource("19_e1hhb")
+
+[node name="Right icon2" type="TextureRect" parent="Open Terminal Button control" unique_id=1230118238]
+texture_filter = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 53.0
+texture = ExtResource("19_e1hhb")
 
 [node name="Hint Panel" type="Panel" parent="." unique_id=171465074]
 modulate = Color(1, 1, 1, 0)
@@ -1298,14 +1507,73 @@ theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
 theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
 theme_override_fonts/font = ExtResource("11_byaam")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_1h57o")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_krxxg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_xdnm8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "HIDE"
 script = ExtResource("23_gtydc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1663559518]
 libraries/ = SubResource("AnimationLibrary_gtydc")
 
+[node name="Offline system Panel" type="Panel" parent="." unique_id=1675065455]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 240.0
+offset_right = 1368.0
+offset_bottom = 672.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Offline icon" type="TextureRect" parent="Offline system Panel" unique_id=199393909]
+texture_filter = 1
+layout_mode = 0
+offset_left = 306.0
+offset_top = 37.0
+offset_right = 480.0
+offset_bottom = 188.0
+texture = ExtResource("30_nh00u")
+expand_mode = 1
+
+[node name="Name label" type="Label" parent="Offline system Panel" unique_id=81310665]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 232.0
+offset_right = 579.0
+offset_bottom = 283.0
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 40
+text = "ECHO TERMINAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Offline label" type="Label" parent="Offline system Panel" unique_id=289444945]
+texture_filter = 1
+layout_mode = 0
+offset_left = 220.0
+offset_top = 390.0
+offset_right = 553.0
+offset_bottom = 429.0
+theme_override_colors/font_color = Color(0.3882353, 0.34117648, 0.52156866, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 30
+text = "TERMINAL OFFLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Power Off Button" type="Button" parent="." unique_id=922590535]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1321.0
+offset_top = 574.0
+offset_right = 1372.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bg1du")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4hl1e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57lgl")
+text = "⏻"
+script = ExtResource("29_eiuxy")
+
 [connection signal="pressed" from="Hind Button Control/HintButton" to="." method="_on_hint_button_pressed"]
+[connection signal="pressed" from="Back Button Control2/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Hint Panel/HideButton" to="." method="_on_hide_button_pressed"]

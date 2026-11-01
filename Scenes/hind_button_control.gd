@@ -2,8 +2,8 @@
 extends Control
 
 @onready var left_icon: TextureRect = $"Left icon"
-@onready var right_icon: TextureRect = $"Right icon"
-@onready var hint_button: Button =  $HintButton
+@onready var right_icon: TextureRect =  $"Right icon"
+@onready var hint_button: Button =   $HintButton
 
 var icon_tween: Tween
 
