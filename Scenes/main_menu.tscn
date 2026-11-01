@@ -1874,6 +1874,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
+[connection signal="pressed" from="MainPanel/Start Button Control/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MainPanel/leave button control/Leave Button" to="." method="_on_leave_button_pressed"]
 [connection signal="pressed" from="Message Button Control/Message show Button" to="." method="_on_message_show_button_pressed"]
 [connection signal="pressed" from="QuitpopPanel/Disconnect Control Button/Disconnect Button" to="." method="_on_disconnect_button_pressed"]
