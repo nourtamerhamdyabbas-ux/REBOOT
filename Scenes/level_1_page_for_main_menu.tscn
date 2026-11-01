@@ -1,0 +1,585 @@
+[gd_scene format=3 uid="uid://de830gwrn1t4h"]
+
+[ext_resource type="Script" uid="uid://d1xee2c1rs2x8" path="res://Scenes/level_1_page_for_main_menu.gd" id="1_b03ua"]
+[ext_resource type="Texture2D" uid="uid://d3ppnwq6bduan" path="res://Assets/images (1).jpg" id="1_kkxn4"]
+[ext_resource type="FontFile" uid="uid://c3gqgjpdlnspa" path="res://Assets/Orbitron/static/Orbitron-ExtraBold.ttf" id="2_4xeep"]
+[ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="3_pv5cw"]
+[ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="4_be2f2"]
+[ext_resource type="FontFile" uid="uid://ctetu74prtc1r" path="res://Assets/Rajdhani/Rajdhani-SemiBold.ttf" id="5_pv5cw"]
+[ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="7_q0u5u"]
+[ext_resource type="Script" uid="uid://bwsuoakafu0ec" path="res://Scenes/initiate_mission_button_control.gd" id="8_v7scm"]
+[ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="9_eqsjm"]
+[ext_resource type="Script" uid="uid://cmakj0fsmcsoe" path="res://Scenes/initiate_mission_button.gd" id="10_4kjny"]
+[ext_resource type="Texture2D" uid="uid://dvnsxs63r5iol" path="res://Assets/icons/play.png" id="11_it8ma"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="12_yqfl8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0, 0, 0.07016479, 0.70000005)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.15967038, 0.15967038, 0.15967035, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsxxd"]
+bg_color = Color(0, 0.9920456, 0, 0.112)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(0.24272746, 0.15416798, 0.31114417, 1)
+border_width_bottom = 1
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0.24313726, 0.15294118, 0.30980393, 1)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr68u"]
+bg_color = Color(0.39095727, 0.26014552, 0.48827827, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0.24313726, 0.15294118, 0.30980393, 1)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
+bg_color = Color(0, 0.09320182, 0.16409835, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2716998, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0.8745098, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4oh2"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0d53"]
+bg_color = Color(0, 0.41960785, 0.47058824, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_left = 12.0
+expand_margin_top = 8.0
+expand_margin_right = 12.0
+expand_margin_bottom = 8.0
+shadow_color = Color(0, 0.8745098, 1, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg7lr"]
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.36078432, 0.92156863, 0.98039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0.7490196, 0.8392157, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1yid"]
+bg_color = Color(0, 0.6509804, 0.72156864, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.9843137, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.5529412, 0.96862745, 1, 1)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiuxy"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 6.0
+expand_margin_right = 21.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
+
+[node name="Level1 Page for main menu" type="Control" unique_id=1349275319]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b03ua")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=357556024]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_kkxn4")
+expand_mode = 1
+
+[node name="DarkOverLay" type="ColorRect" parent="." unique_id=1290294310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.025840001, 0.03876, 0.09320182, 0.65000004)
+
+[node name="Main container" type="Control" parent="." unique_id=445284597]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = 97.0
+offset_right = -87.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Main level page panel" type="Panel" parent="Main container" unique_id=482032382]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="main level page Label" type="Label" parent="Main container/Main level page panel" unique_id=1290630053]
+texture_filter = 1
+layout_mode = 0
+offset_left = 15.0
+offset_top = 50.0
+offset_right = 531.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0.643)
+theme_override_fonts/font = ExtResource("2_4xeep")
+theme_override_font_sizes/font_size = 45
+text = "ECHO // DATABASE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="connection active status" type="Panel" parent="Main container/Main level page panel" unique_id=1548433013]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1437.0
+offset_top = 50.0
+offset_right = 1693.0
+offset_bottom = 126.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="connection activeLabel" type="Label" parent="Main container/Main level page panel/connection active status" unique_id=1290516346]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_font_sizes/font_size = 20
+text = "CONNECTION ACTIVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DecorativePanel" type="Panel" parent="Main container/Main level page panel" unique_id=2132092068]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 172.0
+offset_right = 1674.0
+offset_bottom = 176.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
+
+[node name="DecorativePanel2" type="Panel" parent="Main container/Main level page panel" unique_id=963189599]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 514.0
+offset_right = 1704.0
+offset_bottom = 518.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gr68u")
+
+[node name="DecorativePanel3" type="Panel" parent="Main container/Main level page panel" unique_id=1687896138]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 857.0
+offset_right = 1697.0
+offset_bottom = 861.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gr68u")
+
+[node name="Mission archive Label" type="Label" parent="Main container/Main level page panel" unique_id=549290622]
+texture_filter = 1
+layout_mode = 0
+offset_left = 15.0
+offset_top = 180.0
+offset_right = 478.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("3_pv5cw")
+theme_override_font_sizes/font_size = 45
+text = "MISSION ARCHIVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mission file label" type="Label" parent="Main container/Main level page panel" unique_id=727307851]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1353.0
+offset_top = 206.0
+offset_right = 1686.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.2986094, 0.4134765, 0.58786505, 1)
+theme_override_fonts/font = ExtResource("4_be2f2")
+theme_override_font_sizes/font_size = 30
+text = "MISSION FILE // 001"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="perview panel" type="Panel" parent="Main container/Main level page panel" unique_id=1888598244]
+clip_children = 2
+clip_contents = true
+layout_mode = 0
+offset_left = 60.0
+offset_top = 263.0
+offset_right = 638.0
+offset_bottom = 793.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ralei")
+
+[node name="PanelContainer" type="PanelContainer" parent="Main container/Main level page panel/perview panel" unique_id=259331900]
+clip_children = 1
+clip_contents = true
+layout_mode = 0
+offset_left = 23.0
+offset_top = 25.0
+offset_right = 557.0
+offset_bottom = 401.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4oh2")
+
+[node name="TextureRect" type="TextureRect" parent="Main container/Main level page panel/perview panel/PanelContainer" unique_id=654352083]
+layout_mode = 2
+texture = ExtResource("1_kkxn4")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Environment scan Label" type="Label" parent="Main container/Main level page panel/perview panel" unique_id=1062655548]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 474.0
+offset_right = 271.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0.27058825, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_pv5cw")
+theme_override_font_sizes/font_size = 30
+text = "ENVIRONMENT SCAN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="online active status2" type="Panel" parent="Main container/Main level page panel/perview panel" unique_id=1166487127]
+texture_filter = 1
+layout_mode = 0
+offset_left = 431.0
+offset_top = 468.0
+offset_right = 567.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="online activeLabel" type="Label" parent="Main container/Main level page panel/perview panel/online active status2" unique_id=149539116]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_font_sizes/font_size = 20
+text = "ONLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="white decorative panel" type="Panel" parent="Main container/Main level page panel" unique_id=831553704]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 228.0
+offset_right = 972.0
+offset_bottom = 825.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xdnm8")
+
+[node name="white decorative panel2" type="Panel" parent="Main container/Main level page panel" unique_id=464181912]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 228.0
+offset_right = 898.0
+offset_bottom = 825.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xdnm8")
+
+[node name="Mission 1Label" type="Label" parent="Main container/Main level page panel" unique_id=1477166509]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 265.0
+offset_right = 1247.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0, 0.8745098, 1, 1)
+theme_override_fonts/font = ExtResource("3_pv5cw")
+theme_override_font_sizes/font_size = 40
+text = "MISSION 01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mission 1Label4" type="Label" parent="Main container/Main level page panel" unique_id=1413385378]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 535.0
+offset_right = 1220.0
+offset_bottom = 624.0
+theme_override_colors/font_color = Color(0.27058825, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_q0u5u")
+theme_override_font_sizes/font_size = 33
+text = "DIFFICULTY
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mission 1Label6" type="Label" parent="Main container/Main level page panel" unique_id=150114787]
+layout_mode = 0
+offset_left = 999.0
+offset_top = 635.0
+offset_right = 1242.0
+offset_bottom = 678.0
+theme_override_colors/font_color = Color(0.27058825, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_q0u5u")
+theme_override_font_sizes/font_size = 25
+text = "MISSION STATUS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mission 1Label2" type="Label" parent="Main container/Main level page panel" unique_id=1507892057]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 331.0
+offset_right = 1598.0
+offset_bottom = 388.0
+theme_override_fonts/font = ExtResource("4_be2f2")
+theme_override_font_sizes/font_size = 45
+text = "THE LAST SIGNAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mission 1Label3" type="Label" parent="Main container/Main level page panel" unique_id=199682442]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 384.0
+offset_right = 1733.0
+offset_bottom = 507.0
+theme_override_colors/font_color = Color(0.72156864, 0.7058824, 0.8, 1)
+theme_override_fonts/font = ExtResource("4_be2f2")
+theme_override_font_sizes/font_size = 30
+text = "Investigate the abandoned district and locate the source of the mysterious transmission."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mission 1Label5" type="Label" parent="Main container/Main level page panel" unique_id=1198001235]
+layout_mode = 0
+offset_left = 1013.0
+offset_top = 587.0
+offset_right = 1189.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("4_be2f2")
+theme_override_font_sizes/font_size = 35
+text = "NORMAL"
+
+[node name="availability active status3" type="Panel" parent="Main container/Main level page panel" unique_id=1024233903]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 686.0
+offset_right = 1147.0
+offset_bottom = 737.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="availability activeLabel" type="Label" parent="Main container/Main level page panel/availability active status3" unique_id=1104298864]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_font_sizes/font_size = 20
+text = "AVAILABLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Initiate mission Button Control" type="Control" parent="Main container/Main level page panel" unique_id=1164685735]
+anchors_preset = 0
+offset_left = 1130.0
+offset_top = 747.0
+offset_right = 1170.0
+offset_bottom = 787.0
+script = ExtResource("8_v7scm")
+
+[node name="Initiate mission Button" type="Button" parent="Main container/Main level page panel/Initiate mission Button Control" unique_id=169867496]
+layout_mode = 0
+offset_right = 470.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("9_eqsjm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_o0d53")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mg7lr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1yid")
+text = "INITIATE MISSION"
+script = ExtResource("10_4kjny")
+
+[node name="TextureRect" type="TextureRect" parent="Main container/Main level page panel/Initiate mission Button Control" unique_id=1845927986]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 15.0
+offset_right = 73.0
+offset_bottom = 55.0
+texture = ExtResource("11_it8ma")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Main container/Main level page panel/Initiate mission Button Control" unique_id=694185282]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 15.0
+offset_right = 430.0
+offset_bottom = 55.0
+texture = ExtResource("11_it8ma")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FooterLabel" type="Label" parent="Main container/Main level page panel" unique_id=328963749]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 886.0
+offset_right = 1715.0
+offset_bottom = 933.0
+theme_override_colors/font_color = Color(0.72156864, 0.7058824, 0.8, 1)
+theme_override_fonts/font = ExtResource("4_be2f2")
+theme_override_font_sizes/font_size = 30
+text = "ECHO SYSTEMS // 01.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FooterButton" type="Button" parent="Main container/Main level page panel" unique_id=220469519]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 885.0
+offset_right = 498.0
+offset_bottom = 926.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_yqfl8")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "<-- RETURN TO TERMINAL"
+
+[connection signal="pressed" from="Main container/Main level page panel/FooterButton" to="." method="_on_footer_button_pressed"]

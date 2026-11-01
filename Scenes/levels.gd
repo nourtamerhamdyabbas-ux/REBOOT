@@ -1,12 +1,6 @@
-
 extends Control
 
 signal level_open_requested(level_number: int)
-
-
-# =========================================================
-# TERMINAL COLORS
-# =========================================================
 
 @export_group("Terminal Colors")
 
@@ -22,39 +16,19 @@ signal level_open_requested(level_number: int)
 @export var error_color: Color = Color("#FF3D67")
 @export var success_color: Color = Color("#00E89B")
 
-
-# =========================================================
-# TERMINAL SETTINGS
-# =========================================================
-
 @export_group("Terminal Settings")
 
 @export var typing_speed: float = 0.025
 @export var output_font_size: int = 16
 
-
-# =========================================================
-# FONTS
-# =========================================================
-
 @export_group("Fonts")
 
 @export var terminal_font: Font
-
-
-# =========================================================
-# TERMINAL ANIMATION
-# =========================================================
 
 @export_group("Terminal Animation")
 
 @export var terminal_open_duration: float = 0.45
 @export var terminal_close_duration: float = 0.40
-
-
-# =========================================================
-# NODE REFERENCES
-# =========================================================
 
 @onready var terminal: Panel = $Terminal
 
@@ -72,11 +46,6 @@ var animation_player: AnimationPlayer
 var open_terminal_button: Button
 var power_off_button: Button
 
-
-# =========================================================
-# VARIABLES
-# =========================================================
-
 var terminal_started: bool = false
 var terminal_opening: bool = false
 var terminal_powering_off: bool = false
@@ -90,11 +59,6 @@ var level_status := {
 }
 
 var command_history: Array[String] = []
-
-
-# =========================================================
-# READY
-# =========================================================
 
 func _ready() -> void:
 
@@ -110,29 +74,20 @@ func _ready() -> void:
 	_setup_hint_animation()
 	_setup_power_off_button()
 
-	# Initial state: SYSTEM OFFLINE.
 	terminal.hide()
 
 	offline_system_panel.show()
 	offline_system_panel.modulate.a = 1.0
 	offline_system_panel.scale = Vector2.ONE
 
-	# Prepare the Power On button.
 	open_terminal_button.show()
 	open_terminal_button.disabled = false
 
-	# IMPORTANT: Connect the Power On button.
 	if not open_terminal_button.pressed.is_connected(_on_open_terminal_pressed):
 		open_terminal_button.pressed.connect(_on_open_terminal_pressed)
 
-	# Power Off button stays hidden while offline.
 	power_off_button.hide()
 	power_off_button.disabled = true
-
-
-# =========================================================
-# FIND NODES
-# =========================================================
 
 func _find_nodes() -> void:
 
@@ -190,11 +145,6 @@ func _find_nodes() -> void:
 		false
 	) as Button
 
-
-# =========================================================
-# VALIDATE NODES
-# =========================================================
-
 func _validate_nodes() -> bool:
 
 	var valid := true
@@ -225,11 +175,6 @@ func _validate_nodes() -> bool:
 
 	return valid
 
-
-# =========================================================
-# TERMINAL SETUP
-# =========================================================
-
 func _setup_terminal() -> void:
 
 	var panel_style := StyleBoxFlat.new()
@@ -252,11 +197,6 @@ func _setup_terminal() -> void:
 		"panel",
 		panel_style
 	)
-
-
-# =========================================================
-# HEADER SETUP
-# =========================================================
 
 func _setup_header() -> void:
 
@@ -295,11 +235,6 @@ func _setup_header() -> void:
 				terminal_font
 			)
 
-
-# =========================================================
-# CHAT HISTORY SETUP
-# =========================================================
-
 func _setup_chat_history() -> void:
 
 	chat_history.bbcode_enabled = true
@@ -328,23 +263,12 @@ func _setup_chat_history() -> void:
 		StyleBoxEmpty.new()
 	)
 
-
-# =========================================================
-# COMMAND LINE SETUP
-# =========================================================
-
 func _setup_command_line() -> void:
 
-	# Preserve Inspector styles.
 	command_line.focus_mode = Control.FOCUS_ALL
 
 	if not command_line.text_submitted.is_connected(_on_command_submitted):
 		command_line.text_submitted.connect(_on_command_submitted)
-
-
-# =========================================================
-# POWER OFF BUTTON SETUP
-# =========================================================
 
 func _setup_power_off_button() -> void:
 
@@ -353,11 +277,6 @@ func _setup_power_off_button() -> void:
 
 	if not power_off_button.pressed.is_connected(_on_power_off_button_pressed):
 		power_off_button.pressed.connect(_on_power_off_button_pressed)
-
-
-# =========================================================
-# HINT ANIMATION SETUP
-# =========================================================
 
 func _setup_hint_animation() -> void:
 
@@ -371,11 +290,6 @@ func _setup_hint_animation() -> void:
 
 	animation_player.active = true
 
-
-# =========================================================
-# POWER ON BUTTON / TERMINAL OPENING
-# =========================================================
-
 func _on_open_terminal_pressed() -> void:
 
 	if terminal_started or terminal_opening or terminal_powering_off:
@@ -386,21 +300,16 @@ func _on_open_terminal_pressed() -> void:
 
 	terminal_session_id += 1
 
-	# Hide and disable Power On.
 	open_terminal_button.hide()
 	open_terminal_button.disabled = true
 
-	# Keep Power Off hidden during opening.
 	power_off_button.hide()
 	power_off_button.disabled = true
 
-	# Hide offline panel.
 	offline_system_panel.hide()
 
-	# Show terminal.
 	terminal.show()
 
-	# Original opening animation.
 	await get_tree().process_frame
 
 	terminal.pivot_offset = terminal.size / 2.0
@@ -435,20 +344,13 @@ func _on_open_terminal_pressed() -> void:
 	if not terminal_started:
 		return
 
-	# Terminal is now online: show Power Off.
 	power_off_button.show()
 	power_off_button.disabled = false
 
-	# Run startup sequence.
 	await _run_startup_sequence()
 
 	if terminal_started and not terminal_powering_off:
 		command_line.grab_focus()
-
-
-# =========================================================
-# POWER OFF BUTTON / TERMINAL SHUTDOWN
-# =========================================================
 
 func _on_power_off_button_pressed() -> void:
 
@@ -461,16 +363,13 @@ func _on_power_off_button_pressed() -> void:
 	terminal_powering_off = true
 	terminal_started = false
 
-	# Invalidate ongoing typing.
 	terminal_session_id += 1
 
-	# Hide and disable Power Off immediately.
 	power_off_button.hide()
 	power_off_button.disabled = true
 
 	command_line.release_focus()
 
-	# Show offline panel for its entrance animation.
 	offline_system_panel.show()
 
 	await get_tree().process_frame
@@ -488,7 +387,6 @@ func _on_power_off_button_pressed() -> void:
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_IN_OUT)
 
-	# Terminal disappears.
 	tween.tween_property(
 		terminal,
 		"scale",
@@ -505,7 +403,6 @@ func _on_power_off_button_pressed() -> void:
 
 	chat_history.clear()
 
-	# Offline panel appears.
 	tween.tween_property(
 		offline_system_panel,
 		"scale",
@@ -522,23 +419,15 @@ func _on_power_off_button_pressed() -> void:
 
 	await tween.finished
 
-	# Hide terminal.
 	terminal.hide()
 
-	# Restore original terminal appearance.
 	terminal.scale = Vector2.ONE
 	terminal.modulate.a = 1.0
 
-	# Restore Power On.
 	open_terminal_button.show()
 	open_terminal_button.disabled = false
 
 	terminal_powering_off = false
-
-
-# =========================================================
-# STARTUP SEQUENCE
-# =========================================================
 
 func _run_startup_sequence() -> void:
 
@@ -565,11 +454,6 @@ func _run_startup_sequence() -> void:
 			return
 
 		await get_tree().create_timer(0.15).timeout
-
-
-# =========================================================
-# TYPEWRITER EFFECT
-# =========================================================
 
 func _type_message(message: String) -> void:
 
@@ -602,11 +486,6 @@ func _type_message(message: String) -> void:
 
 	chat_history.scroll_to_line(chat_history.get_line_count())
 
-
-# =========================================================
-# PLAYER COMMAND INPUT
-# =========================================================
-
 func _on_command_submitted(command: String) -> void:
 
 	if not terminal_started or terminal_powering_off:
@@ -622,8 +501,7 @@ func _on_command_submitted(command: String) -> void:
 	command_history.append(clean_command)
 
 	await _type_message(
-		"[color=#8DF7FF]player@echo:~$ [/color]" + clean_command
-	)
+		"[color=#8DF7FF]player@echo:~$ [/color]" + clean_command)
 
 	if not terminal_started:
 		return
@@ -632,11 +510,6 @@ func _on_command_submitted(command: String) -> void:
 
 	if terminal_started and not terminal_powering_off:
 		command_line.grab_focus()
-
-
-# =========================================================
-# PROCESS COMMANDS
-# =========================================================
 
 func _process_command(command: String) -> void:
 
@@ -665,23 +538,15 @@ func _process_command(command: String) -> void:
 
 		_:
 			await _type_message(
-				"[color=#FF3D67]ECHO ERROR: Unknown command.[/color]"
-			)
+				"[color=#FF3D67]ECHO ERROR: Unknown command.[/color]")
 
 			await _type_message(
-				"[color=#8B83AC]Check the command and try again.[/color]"
-			)
-
-
-# =========================================================
-# LIST LEVELS
-# =========================================================
+				"[color=#8B83AC]Check the command and try again.[/color]")
 
 func _list_levels() -> void:
 
 	await _type_message(
-		"[color=#FF2EAB]AVAILABLE MISSIONS[/color]"
-	)
+		"[color=#FF2EAB]AVAILABLE MISSIONS[/color]")
 
 	await _type_message("")
 
@@ -709,14 +574,7 @@ func _list_levels() -> void:
 	await _type_message("")
 
 	await _type_message(
-		"[color=#8B83AC]Use OPEN LEVEL 01 to access an available mission.[/color]"
-	)
-
-
-# =========================================================
-# SYSTEM STATUS
-# =========================================================
-
+		"[color=#8B83AC]Use OPEN LEVEL 01 to access an available mission.[/color]")
 func _system_status() -> void:
 
 	await _type_message(
@@ -736,37 +594,24 @@ func _system_status() -> void:
 	)
 
 	await _type_message(
-		"[color=#00E89B][OK][/color] Connection: SECURE"
-	)
-
-
-# =========================================================
-# PLAYER INFORMATION
-# =========================================================
+		"[color=#00E89B][OK][/color] Connection: SECURE")
 
 func _player_info() -> void:
 
 	await _type_message(
-		"[color=#FF2EAB]OPERATOR INFORMATION[/color]"
-	)
+		"[color=#FF2EAB]OPERATOR INFORMATION[/color]")
 
 	await _type_message("Operator: PLAYER")
 	await _type_message("Access level: STANDARD")
 	await _type_message("Connection: ACTIVE")
 	await _type_message("Mission access: RESTRICTED")
 
-
-# =========================================================
-# OPEN LEVEL
-# =========================================================
-
 func _open_level(level_number: int) -> void:
 
 	if not level_status.has(level_number):
 
 		await _type_message(
-			"[color=#FF3D67]ECHO ERROR: Level does not exist.[/color]"
-		)
+			"[color=#FF3D67]ECHO ERROR: Level does not exist.[/color]")
 
 		return
 
@@ -785,12 +630,10 @@ func _open_level(level_number: int) -> void:
 		return
 
 	await _type_message(
-		"[color=#00E89B]ACCESS GRANTED[/color]"
-	)
+		"[color=#00E89B]ACCESS GRANTED[/color]")
 
 	await _type_message(
-		"[color=#8DF7FF]Opening LEVEL %02d...[/color]" % level_number
-	)
+		"[color=#8DF7FF]Opening LEVEL %02d...[/color]" % level_number)
 
 	await get_tree().create_timer(0.5).timeout
 
@@ -799,33 +642,17 @@ func _open_level(level_number: int) -> void:
 
 	level_open_requested.emit(level_number)
 
-
-# =========================================================
-# HINT BUTTON
-# =========================================================
-
 func _on_hint_button_pressed() -> void:
 
 	if animation_player:
 		animation_player.play("hint panel animation")
-
-
-# =========================================================
-# HIDE HINT BUTTON
-# =========================================================
 
 func _on_hide_button_pressed() -> void:
 
 	if animation_player:
 		animation_player.play("hide button animation")
 
-
-# =========================================================
-# BACK BUTTON
-# =========================================================
-
 func _on_back_button_pressed() -> void:
 
 	get_tree().change_scene_to_file(
-		"res://Scenes/main_menu.tscn"
-	)
+		"res://Scenes/main_menu.tscn")

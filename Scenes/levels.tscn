@@ -776,6 +776,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Terminal" type="Panel" parent="." unique_id=541891591]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1131,6 +1132,7 @@ offset_bottom = 53.0
 texture = ExtResource("18_dupmk")
 
 [node name="Open Terminal Button control" type="Control" parent="." unique_id=951004053]
+visible = false
 texture_filter = 1
 anchors_preset = 0
 offset_left = 813.0
@@ -1517,6 +1519,7 @@ script = ExtResource("23_gtydc")
 libraries/ = SubResource("AnimationLibrary_gtydc")
 
 [node name="Offline system Panel" type="Panel" parent="." unique_id=1675065455]
+visible = false
 layout_mode = 0
 offset_left = 576.0
 offset_top = 240.0
