@@ -1,0 +1,344 @@
+[gd_scene format=3 uid="uid://8fmgpbewi2e4"]
+
+[ext_resource type="Shader" uid="uid://mlavm373mqkc" path="res://Scripts/Far Back.gdshader" id="1_uotyi"]
+[ext_resource type="Texture2D" uid="uid://doik1xvox17tl" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/back.png" id="2_p1uqq"]
+[ext_resource type="Shader" uid="uid://cv8vaiyjmfyr8" path="res://Scripts/Mid Back.gdshader" id="3_j0k6p"]
+[ext_resource type="Texture2D" uid="uid://dubsdv8knat7g" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/buildings.png" id="4_bku7o"]
+[ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="5_c4nq2"]
+[ext_resource type="Texture2D" uid="uid://cusunotbr36j7" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/front.png" id="6_dlt5w"]
+[ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_bku7o"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="8_c4nq2"]
+[ext_resource type="Texture2D" uid="uid://be7ngo6y4qbbp" path="res://Assets/icons/square-terminal.png" id="9_dlt5w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_uotyi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kuey"]
+shader = ExtResource("3_j0k6p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ralei"]
+shader = ExtResource("5_c4nq2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.08627451, 0.050980393, 0.1882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8509804, 0, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.4, 0, 0.6666667, 1)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsxxd"]
+bg_color = Color(0, 0.9920456, 0, 0.112)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
+bg_color = Color(0.06666667, 0, 0.73333335, 0.13333334)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28627452, 0.19215687, 0.42745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 16.0
+expand_margin_top = 14.0
+expand_margin_right = 16.0
+expand_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6uar"]
+bg_color = Color(0.101960786, 0.07058824, 0.19607843, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28627452, 0.19215687, 0.8039216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 18.0
+expand_margin_top = 10.0
+expand_margin_right = 18.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oamur"]
+bg_color = Color(0.101960786, 0.07058824, 0.19607843, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Levels" type="Control" unique_id=1037239281]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgrounds" type="Control" parent="." unique_id=2096801402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background further" type="TextureRect" parent="Backgrounds" unique_id=1621352384]
+modulate = Color(0.6627451, 0.6117647, 0.7490196, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_p1uqq")
+expand_mode = 1
+
+[node name="Background mid" type="TextureRect" parent="Backgrounds" unique_id=1592736976]
+modulate = Color(0.6627451, 0.6117647, 0.7490196, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5kuey")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_bku7o")
+expand_mode = 1
+
+[node name="Background closer" type="TextureRect" parent="Backgrounds" unique_id=1409088535]
+modulate = Color(0.6627451, 0.6117647, 0.7490196, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ralei")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = 6.0
+offset_right = -275.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_dlt5w")
+expand_mode = 1
+
+[node name="Scene title" type="Control" parent="." unique_id=588314051]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+
+[node name="glow outer" type="Label" parent="Scene title" unique_id=1108233274]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0.8509804, 0, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 65
+text = "Terminal
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="glow inner" type="Label" parent="Scene title" unique_id=408944679]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_shadow_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_outline_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 65
+text = "Terminal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main title" type="Label" parent="Scene title" unique_id=989229864]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 65
+text = "Terminal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Terminal" type="Panel" parent="." unique_id=541891591]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -280.0
+offset_right = 425.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Title label" type="Label" parent="Terminal" unique_id=1242104491]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 24.0
+offset_right = 387.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 23
+text = "ECHO // TERMINAL >>"
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Terminal" unique_id=280649260]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 52.0
+offset_right = 372.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.26479155, 0.3133042, 0.66668326, 1)
+theme_override_fonts/font = ExtResource("8_c4nq2")
+theme_override_font_sizes/font_size = 22
+text = "System-Critical Operations !!"
+
+[node name="white bar" type="Panel" parent="Terminal" unique_id=2081337025]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 97.0
+offset_right = 300.0
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
+
+[node name="Terminal Icon" type="TextureRect" parent="Terminal" unique_id=554565163]
+texture_filter = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 100.0
+offset_bottom = 89.0
+texture = ExtResource("9_dlt5w")
+expand_mode = 1
+
+[node name="status panel" type="Panel" parent="Terminal" unique_id=2018837775]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -141.0
+offset_top = 24.0
+offset_right = -39.0
+offset_bottom = 77.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="status title" type="Label" parent="Terminal/status panel" unique_id=850476078]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_font_sizes/font_size = 13
+text = "ONLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Chat History" type="RichTextLabel" parent="Terminal" unique_id=1187152103]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 139.0
+offset_right = -15.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ralei")
+bbcode_enabled = true
+scroll_following = true
+
+[node name="Command Line" type="LineEdit" parent="Terminal" unique_id=1415971446]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 0
+offset_left = 179.0
+offset_top = 447.0
+offset_right = 694.0
+offset_bottom = 499.0
+theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_colors/caret_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_oamur")
+placeholder_text = "Type a command..."
+clear_button_enabled = true
