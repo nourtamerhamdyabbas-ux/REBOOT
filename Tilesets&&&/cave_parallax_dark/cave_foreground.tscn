@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://cave_parallax_dark/cave_near.png" id="1_near"]
+
+[node name="CaveForeground" type="ParallaxBackground"]
+layer = 1
+
+[node name="Near" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Near"]
+texture_filter = 1
+texture = ExtResource("1_near")
+centered = false

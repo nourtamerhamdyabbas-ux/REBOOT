@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://cave_parallax_dark/cave_back.png" id="1_back"]
+[ext_resource type="Texture2D" path="res://cave_parallax_dark/cave_far.png" id="2_far"]
+[ext_resource type="Texture2D" path="res://cave_parallax_dark/cave_mid.png" id="3_mid"]
+[ext_resource type="Texture2D" path="res://cave_parallax_dark/cave_mist.png" id="4_mist"]
+
+[node name="CaveBackground" type="ParallaxBackground"]
+
+[node name="Back" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Back"]
+texture_filter = 1
+texture = ExtResource("1_back")
+centered = false
+
+[node name="Far" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.25, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Far"]
+texture_filter = 1
+texture = ExtResource("2_far")
+centered = false
+
+[node name="Mid" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.45, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Mid"]
+texture_filter = 1
+texture = ExtResource("3_mid")
+centered = false
+
+[node name="Mist" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Mist"]
+texture_filter = 1
+texture = ExtResource("4_mist")
+centered = false
