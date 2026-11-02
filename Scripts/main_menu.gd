@@ -31,3 +31,9 @@ func _on_disconnect_button_pressed() -> void:
 func _on_not_yet_button_pressed() -> void:
 	$QuitpopPanel.hide()
 	$DarkQuit.hide()
+
+
+func _on_start_button_pressed() -> void:
+	SceneTransition.change_scene_with_transition(
+		"res://Scenes/levels.tscn"
+	)
