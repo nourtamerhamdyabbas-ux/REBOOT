@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://de830gwrn1t4h"]
 
-[ext_resource type="Script" uid="uid://d1xee2c1rs2x8" path="res://Scenes/level_1_page_for_main_menu.gd" id="1_b03ua"]
+[ext_resource type="Script" uid="uid://d1xee2c1rs2x8" path="res://Scripts/level_1_page_for_main_menu.gd" id="1_b03ua"]
 [ext_resource type="Texture2D" uid="uid://d3ppnwq6bduan" path="res://Assets/images (1).jpg" id="1_kkxn4"]
 [ext_resource type="FontFile" uid="uid://c3gqgjpdlnspa" path="res://Assets/Orbitron/static/Orbitron-ExtraBold.ttf" id="2_4xeep"]
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="3_pv5cw"]
 [ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="4_be2f2"]
 [ext_resource type="FontFile" uid="uid://ctetu74prtc1r" path="res://Assets/Rajdhani/Rajdhani-SemiBold.ttf" id="5_pv5cw"]
 [ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="7_q0u5u"]
-[ext_resource type="Script" uid="uid://bwsuoakafu0ec" path="res://Scenes/initiate_mission_button_control.gd" id="8_v7scm"]
+[ext_resource type="Script" uid="uid://bwsuoakafu0ec" path="res://Scripts/initiate_mission_button_control.gd" id="8_v7scm"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="9_eqsjm"]
-[ext_resource type="Script" uid="uid://cmakj0fsmcsoe" path="res://Scenes/initiate_mission_button.gd" id="10_4kjny"]
+[ext_resource type="Script" uid="uid://cmakj0fsmcsoe" path="res://Scripts/initiate_mission_button.gd" id="10_4kjny"]
 [ext_resource type="Texture2D" uid="uid://dvnsxs63r5iol" path="res://Assets/icons/play.png" id="11_it8ma"]
 [ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="12_yqfl8"]
 

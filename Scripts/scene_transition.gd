@@ -23,8 +23,6 @@ func change_scene_with_transition(scene_path: String) -> void:
 
 	transitioning = true
 	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
-
-	# 1. Gradually fade to black
 	var fade_out := create_tween()
 	fade_out.set_trans(Tween.TRANS_CUBIC)
 	fade_out.set_ease(Tween.EASE_IN_OUT)
@@ -36,11 +34,7 @@ func change_scene_with_transition(scene_path: String) -> void:
 	)
 
 	await fade_out.finished
-
-	# 2. Keep the screen black briefly
 	await get_tree().create_timer(BLACK_SCREEN_DURATION).timeout
-
-	# 3. Change scene
 	var error := get_tree().change_scene_to_file(scene_path)
 
 	if error != OK:
@@ -50,8 +44,6 @@ func change_scene_with_transition(scene_path: String) -> void:
 		return
 
 	await get_tree().scene_changed
-
-	# 4. Gradually reveal the new scene
 	var fade_in := create_tween()
 	fade_in.set_trans(Tween.TRANS_CUBIC)
 	fade_in.set_ease(Tween.EASE_IN_OUT)
