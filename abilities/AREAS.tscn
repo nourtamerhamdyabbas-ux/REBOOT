@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://du84r4a8munp3"]
+
+[ext_resource type="Script" uid="uid://chrqidm3yjmnc" path="res://abilities/attack_area.gd" id="1_v82dt"]
+[ext_resource type="Script" uid="uid://bs3f202rvla4j" path="res://abilities/damage_area.gd" id="2_85ei4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpdn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nv6n"]
+
+[node name="Areas" type="Node2D" unique_id=2085553619]
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=184308292]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("1_v82dt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=387068837]
+position = Vector2(-14, 0)
+shape = SubResource("RectangleShape2D_cpdn7")
+debug_color = Color(0.70196074, 0.061096366, 0, 0.41960785)
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1388932405]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("2_85ei4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=561974705]
+position = Vector2(19, 1)
+shape = SubResource("RectangleShape2D_6nv6n")
