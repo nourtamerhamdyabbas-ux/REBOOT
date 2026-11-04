@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bwsuoakafu0ec" path="res://Scripts/initiate_mission_button_control.gd" id="8_v7scm"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="9_eqsjm"]
 [ext_resource type="Script" uid="uid://cmakj0fsmcsoe" path="res://Scripts/initiate_mission_button.gd" id="10_4kjny"]
-[ext_resource type="Texture2D" uid="uid://dvnsxs63r5iol" path="res://Assets/icons/play.png" id="11_it8ma"]
+[ext_resource type="Texture2D" uid="uid://bj1b4j00usoif" path="res://Assets/icons/chevron-right (1).png" id="10_b03ua"]
 [ext_resource type="Script" uid="uid://eku4do2ohvam" path="res://Scripts/panel.gd" id="12_b03ua"]
 [ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="12_yqfl8"]
 
@@ -546,7 +546,7 @@ offset_left = 33.0
 offset_top = 15.0
 offset_right = 73.0
 offset_bottom = 55.0
-texture = ExtResource("11_it8ma")
+texture = ExtResource("10_b03ua")
 expand_mode = 1
 stretch_mode = 5
 
@@ -556,7 +556,7 @@ offset_left = 390.0
 offset_top = 15.0
 offset_right = 430.0
 offset_bottom = 55.0
-texture = ExtResource("11_it8ma")
+texture = ExtResource("10_b03ua")
 expand_mode = 1
 stretch_mode = 5
 

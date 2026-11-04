@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dxeprexxhw1ne"]
 
+[ext_resource type="Script" uid="uid://b6cpdfn1s7wu6" path="res://Scenes/level_2_page_for_the_main_menu.gd" id="1_fvf8l"]
 [ext_resource type="Texture2D" uid="uid://d3ppnwq6bduan" path="res://Assets/images (1).jpg" id="1_rtrc0"]
 [ext_resource type="FontFile" uid="uid://c3gqgjpdlnspa" path="res://Assets/Orbitron/static/Orbitron-ExtraBold.ttf" id="2_rhcsy"]
 [ext_resource type="Texture2D" uid="uid://dbnwultlx0ghn" path="res://Assets/icons/cpu.png" id="3_03i80"]
@@ -8,6 +9,9 @@
 [ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="6_fvf8l"]
 [ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="7_f5yxm"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="8_rhcsy"]
+[ext_resource type="Script" uid="uid://dsfr30rbv01x0" path="res://Scenes/initiate_page_2_control.gd" id="9_3h8hv"]
+[ext_resource type="Script" uid="uid://lgcyn075ngh8" path="res://Scenes/initiate_button.gd" id="10_2gls1"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="12_f5yxm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
 bg_color = Color(0.15170373, 0.086104214, 0.25278953, 0.48200002)
@@ -73,6 +77,20 @@ corner_radius_bottom_left = 16
 shadow_color = Color(0.33333334, 0.8666667, 0.9607843, 1)
 shadow_size = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gls1"]
+bg_color = Color(0.019607844, 0.05882353, 0.105882354, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.33333334, 0.8666667, 0.9607843, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.33333334, 0.8666667, 0.9607843, 1)
+shadow_size = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03i80"]
 bg_color = Color(0.0627451, 0.15686275, 0.22745098, 1)
 corner_radius_top_left = 20
@@ -86,6 +104,134 @@ corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oamur"]
+bg_color = Color(0.14901961, 0.22745098, 0.29411766, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h57o"]
+bg_color = Color(0.33333334, 0.8666667, 0.9607843, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvf8l"]
+bg_color = Color(0, 0.9920456, 0, 0.23300001)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsxxd"]
+bg_color = Color(1, 0.33333334, 0.46666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krxxg"]
+bg_color = Color(1, 0.33333334, 0.46666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9098039, 0.3019608, 0.52156866, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.4, 0.101960786, 0.22745098, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4oh2"]
+bg_color = Color(0.39215687, 0.105882354, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7882353, 0.21176471, 0.4392157, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.23921569, 0.0627451, 0.15294118, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ps6"]
+bg_color = Color(0.7882353, 0.21176471, 0.4392157, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.5019608, 0.6784314, 1)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+shadow_color = Color(0.6392157, 0.13725491, 0.32941177, 1)
+shadow_size = 9
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fvf8l"]
+load_path = "res://.godot/imported/play.png-e55f92690377c76b12b6c017bdf4df18.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f5yxm"]
+load_path = "res://.godot/imported/play.png-e55f92690377c76b12b6c017bdf4df18.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiuxy"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 6.0
+expand_margin_right = 21.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
+
 [node name="Level 2 page for the main menu" type="Control" unique_id=2042086840]
 layout_mode = 3
 anchors_preset = 15
@@ -93,6 +239,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fvf8l")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=364480484]
 texture_filter = 1
@@ -126,7 +273,7 @@ layout_mode = 1
 offset_left = 87.0
 offset_top = 60.0
 offset_right = 1828.0
-offset_bottom = 1017.0
+offset_bottom = 1054.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="Main level page title" type="Label" parent="Main level page panel/main level page panel" unique_id=1900729643]
@@ -340,9 +487,9 @@ stretch_mode = 6
 [node name="Mission objective Panel" type="Panel" parent="Main level page panel/main level page panel" unique_id=89405562]
 layout_mode = 0
 offset_left = 988.0
-offset_top = 215.0
+offset_top = 196.0
 offset_right = 1686.0
-offset_bottom = 374.0
+offset_bottom = 342.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rhcsy")
 
 [node name="activity display Panel2" type="Panel" parent="Main level page panel/main level page panel/Mission objective Panel" unique_id=84984801]
@@ -399,10 +546,10 @@ autowrap_mode = 3
 [node name="Difficulty Panel2" type="Panel" parent="Main level page panel/main level page panel" unique_id=1848478610]
 layout_mode = 0
 offset_left = 659.0
-offset_top = 393.0
+offset_top = 367.0
 offset_right = 1357.0
-offset_bottom = 552.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_rhcsy")
+offset_bottom = 522.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2gls1")
 
 [node name="difficulty" type="Panel" parent="Main level page panel/main level page panel/Difficulty Panel2" unique_id=285970701]
 layout_mode = 0
@@ -520,13 +667,241 @@ text = "3 / 5 — Moderate navigation and signal interference"
 [node name="Echo Diagnostics Panel3" type="Panel" parent="Main level page panel/main level page panel" unique_id=923784986]
 layout_mode = 0
 offset_left = 988.0
-offset_top = 566.0
+offset_top = 546.0
 offset_right = 1686.0
-offset_bottom = 725.0
+offset_bottom = 695.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2gls1")
+
+[node name="Echo diagnostic title" type="Label" parent="Main level page panel/main level page panel/Echo Diagnostics Panel3" unique_id=19390464]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 352.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("2_rhcsy")
+theme_override_font_sizes/font_size = 30
+text = "ECHO DIAGNOSTICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Echo diagnostic title2" type="Label" parent="Main level page panel/main level page panel/Echo Diagnostics Panel3" unique_id=493432844]
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 48.0
+offset_right = 195.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.25495633, 0.47950935, 0.64445204, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("2_rhcsy")
+theme_override_font_sizes/font_size = 18
+text = "DATA RECOVERY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Signal diagnostic title3" type="Label" parent="Main level page panel/main level page panel/Echo Diagnostics Panel3" unique_id=683600461]
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 116.0
+offset_right = 230.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0.25495633, 0.47950935, 0.64445204, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("2_rhcsy")
+theme_override_font_sizes/font_size = 18
+text = "SIGNAL CONNECTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Main level page panel/main level page panel/Echo Diagnostics Panel3" unique_id=1104430300]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 81.0
+offset_right = 691.0
+offset_bottom = 102.0
+theme_override_styles/background = SubResource("StyleBoxFlat_oamur")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1h57o")
+value = 37.0
+show_percentage = false
+
+[node name="UNSTABLE Label" type="Label" parent="Main level page panel/main level page panel/Echo Diagnostics Panel3" unique_id=1851777278]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 117.0
+offset_right = 687.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(1, 0.7058824, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("8_rhcsy")
+text = "UNSTABLE"
+
+[node name="Percentage Label" type="Label" parent="Main level page panel/main level page panel/Echo Diagnostics Panel3" unique_id=200686080]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.112
+anchor_bottom = 0.23300001
+offset_left = 637.0
+offset_top = 46.0
+offset_right = 608.824
+offset_bottom = 34.953
+theme_override_fonts/font = ExtResource("6_fvf8l")
+theme_override_font_sizes/font_size = 20
+text = "37%"
 
 [node name="Transmission log Panel4" type="Panel" parent="Main level page panel/main level page panel" unique_id=539396176]
 layout_mode = 0
 offset_left = 658.0
-offset_top = 741.0
+offset_top = 719.0
 offset_right = 1356.0
-offset_bottom = 900.0
+offset_bottom = 865.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2gls1")
+
+[node name="TransmissionLabel" type="Label" parent="Main level page panel/main level page panel/Transmission log Panel4" unique_id=1739348265]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 360.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("2_rhcsy")
+theme_override_font_sizes/font_size = 30
+text = "TRANSMISSION LOG"
+
+[node name="UNKNOWN Label2" type="Label" parent="Main level page panel/main level page panel/Transmission log Panel4" unique_id=457204732]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 415.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("7_f5yxm")
+theme_override_font_sizes/font_size = 17
+text = "[10:42:08]  UNKNOWN SIGNAL DETECTED"
+
+[node name="interference Label3" type="Label" parent="Main level page panel/main level page panel/Transmission log Panel4" unique_id=1489529281]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 85.0
+offset_right = 415.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 0.7058824, 0.36862746, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("7_f5yxm")
+theme_override_font_sizes/font_size = 17
+text = "[10:42:16]  INTERFERENCE DETECTED"
+
+[node name="source Label4" type="Label" parent="Main level page panel/main level page panel/Transmission log Panel4" unique_id=188238294]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 114.0
+offset_right = 415.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0.33333334, 0.8666667, 0.9607843, 1)
+theme_override_colors/font_shadow_color = Color(0.5526029, 0.96857667, 1, 0)
+theme_override_fonts/font = ExtResource("7_f5yxm")
+theme_override_font_sizes/font_size = 17
+text = "[10:42:23]  SOURCE LOCATION UNKNOWN"
+
+[node name="LIVE feedPanel" type="Panel" parent="Main level page panel/main level page panel/Transmission log Panel4" unique_id=1319599091]
+texture_filter = 1
+layout_mode = 0
+offset_left = 570.0
+offset_top = 12.0
+offset_right = 684.0
+offset_bottom = 52.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fvf8l")
+
+[node name="live feed Label" type="Label" parent="Main level page panel/main level page panel/Transmission log Panel4/LIVE feedPanel" unique_id=1919957917]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.48000664, 1)
+text = "LIVE FEED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Main level page panel/main level page panel" unique_id=1662541072]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 885.0
+offset_right = 1709.0
+offset_bottom = 889.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="Initiate page 2Control" type="Control" parent="Main level page panel/main level page panel" unique_id=551224895]
+anchors_preset = 0
+offset_left = 1236.0
+offset_top = 907.0
+offset_right = 1276.0
+offset_bottom = 947.0
+script = ExtResource("9_3h8hv")
+
+[node name="Initiate Button" type="Button" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=879357312]
+layout_mode = 0
+offset_right = 428.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_krxxg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j4oh2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h2ps6")
+text = "INITIATE MISSION"
+script = ExtResource("10_2gls1")
+
+[node name="TextureRect" type="TextureRect" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=1778772169]
+texture_filter = 1
+layout_mode = 0
+offset_left = 54.0
+offset_top = 14.0
+offset_right = 94.0
+offset_bottom = 54.0
+texture = SubResource("CompressedTexture2D_fvf8l")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=1139634036]
+texture_filter = 1
+layout_mode = 0
+offset_left = 332.0
+offset_top = 14.0
+offset_right = 372.0
+offset_bottom = 54.0
+texture = SubResource("CompressedTexture2D_f5yxm")
+expand_mode = 1
+
+[node name="Return to terminall Button" type="Button" parent="Main level page panel/main level page panel" unique_id=351553559]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 920.0
+offset_right = 494.0
+offset_bottom = 961.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_f5yxm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "<-- RETURN TO TERMINAL "
+
+[node name="Footer Label" type="Label" parent="Main level page panel" unique_id=1418824621]
+texture_filter = 1
+layout_mode = 0
+offset_left = 804.0
+offset_top = 980.0
+offset_right = 1111.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0.60784316, 0.69803923, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("7_f5yxm")
+theme_override_font_sizes/font_size = 35
+text = "LEVEL 02 / 03"
