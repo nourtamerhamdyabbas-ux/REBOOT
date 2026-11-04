@@ -213,7 +213,7 @@ shadow_color = Color(0.15686275, 0.3764706, 0.47058824, 1)
 shadow_size = 2
 shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6uar"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3h8hv"]
 corner_radius_top_left = 45
 corner_radius_top_right = 45
 corner_radius_bottom_right = 45
@@ -615,7 +615,7 @@ custom_minimum_size = Vector2(40, 4)
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
 
 [node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer" unique_id=173382779]
 custom_minimum_size = Vector2(40, 4)
@@ -629,7 +629,7 @@ custom_minimum_size = Vector2(40, 4)
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
 
 [node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer2" unique_id=76617076]
 custom_minimum_size = Vector2(40, 4)
@@ -643,7 +643,7 @@ custom_minimum_size = Vector2(40, 4)
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
 
 [node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer3" unique_id=810543647]
 custom_minimum_size = Vector2(40, 4)
@@ -657,7 +657,7 @@ custom_minimum_size = Vector2(40, 4)
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
 
 [node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer4" unique_id=1285172634]
 custom_minimum_size = Vector2(40, 4)
@@ -671,7 +671,7 @@ custom_minimum_size = Vector2(40, 4)
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
 
 [node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer5" unique_id=1085369069]
 custom_minimum_size = Vector2(40, 4)
@@ -700,9 +700,9 @@ offset_bottom = 41.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0.9411765, 0.98039216, 1, 1)
-theme_override_fonts/font = ExtResource("5_pv5cw")
+theme_override_fonts/font = ExtResource("4_be2f2")
 theme_override_font_sizes/font_size = 30
-text = "Difficulty :"
+text = "DIFFICULTY :"
 
 [node name="Difficulty level panel" type="Panel" parent="Panel" unique_id=203511908]
 layout_mode = 0
@@ -720,6 +720,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_fonts/font = ExtResource("7_q0u5u")
 theme_override_font_sizes/font_size = 20
 text = "NORMAL"
 horizontal_alignment = 1
