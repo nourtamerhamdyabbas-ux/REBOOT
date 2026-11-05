@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cmakj0fsmcsoe" path="res://Scripts/initiate_mission_button.gd" id="10_4kjny"]
 [ext_resource type="Texture2D" uid="uid://bj1b4j00usoif" path="res://Assets/icons/chevron-right (1).png" id="10_b03ua"]
 [ext_resource type="Script" uid="uid://eku4do2ohvam" path="res://Scripts/panel.gd" id="12_b03ua"]
+[ext_resource type="Script" uid="uid://b22ggn8bvkvtn" path="res://Scripts/footer_button.gd" id="12_q0u5u"]
 [ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="12_yqfl8"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xy3vr"]
@@ -588,6 +589,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "<-- RETURN TO TERMINAL"
+script = ExtResource("12_q0u5u")
 
 [node name="Panel" type="Panel" parent="." unique_id=675835634]
 layout_mode = 0
