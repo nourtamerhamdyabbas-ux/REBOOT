@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://du1eqd1iqoikq"
-path="res://.godot/imported/Rajdhani-Regular.ttf-90c0270e73e36f29f6fe7439ddeae53b.fontdata"
+path="res://.godot/imported/Rajdhani-Regular.ttf-55b48c530bf56962135ec4690e42453e.fontdata"
 
 [deps]
 
-source_file="res://Assets/Rajdhani/Rajdhani-Regular.ttf"
-dest_files=["res://.godot/imported/Rajdhani-Regular.ttf-90c0270e73e36f29f6fe7439ddeae53b.fontdata"]
+source_file="res://Scripts/Rajdhani-Regular.ttf"
+dest_files=["res://.godot/imported/Rajdhani-Regular.ttf-55b48c530bf56962135ec4690e42453e.fontdata"]
 
 [params]
 

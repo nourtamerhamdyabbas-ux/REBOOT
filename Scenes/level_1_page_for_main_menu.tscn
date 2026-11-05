@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://de830gwrn1t4h"]
 
 [ext_resource type="Script" uid="uid://d1xee2c1rs2x8" path="res://Scripts/level_1_page_for_main_menu.gd" id="1_b03ua"]
-[ext_resource type="Texture2D" uid="uid://d3ppnwq6bduan" path="res://Assets/images (1).jpg" id="1_kkxn4"]
 [ext_resource type="FontFile" uid="uid://c3gqgjpdlnspa" path="res://Assets/Orbitron/static/Orbitron-ExtraBold.ttf" id="2_4xeep"]
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="3_pv5cw"]
 [ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="4_be2f2"]
@@ -10,8 +9,13 @@
 [ext_resource type="Script" uid="uid://bwsuoakafu0ec" path="res://Scripts/initiate_mission_button_control.gd" id="8_v7scm"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="9_eqsjm"]
 [ext_resource type="Script" uid="uid://cmakj0fsmcsoe" path="res://Scripts/initiate_mission_button.gd" id="10_4kjny"]
-[ext_resource type="Texture2D" uid="uid://dvnsxs63r5iol" path="res://Assets/icons/play.png" id="11_it8ma"]
-[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani/Rajdhani-Regular.ttf" id="12_yqfl8"]
+[ext_resource type="Texture2D" uid="uid://bj1b4j00usoif" path="res://Assets/icons/chevron-right (1).png" id="10_b03ua"]
+[ext_resource type="Script" uid="uid://eku4do2ohvam" path="res://Scripts/panel.gd" id="12_b03ua"]
+[ext_resource type="Script" uid="uid://b22ggn8bvkvtn" path="res://Scripts/footer_button.gd" id="12_q0u5u"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="12_yqfl8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xy3vr"]
+load_path = "res://.godot/imported/control room .jpg-57f92f5c41c753d93db97163127b920e.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
 bg_color = Color(0, 0, 0.07016479, 0.70000005)
@@ -74,6 +78,9 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b03ua"]
+load_path = "res://.godot/imported/control room .jpg-57f92f5c41c753d93db97163127b920e.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
 bg_color = Color(1, 1, 1, 1)
@@ -188,6 +195,31 @@ expand_margin_bottom = 6.0
 shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
 shadow_size = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oamur"]
+bg_color = Color(0.043137256, 0.105882354, 0.16862746, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.15686275, 0.3764706, 0.47058824, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.15686275, 0.3764706, 0.47058824, 1)
+shadow_size = 2
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3h8hv"]
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
 [node name="Level1 Page for main menu" type="Control" unique_id=1349275319]
 texture_filter = 1
 layout_mode = 3
@@ -207,7 +239,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_kkxn4")
+texture = SubResource("CompressedTexture2D_xy3vr")
 expand_mode = 1
 
 [node name="DarkOverLay" type="ColorRect" parent="." unique_id=1290294310]
@@ -354,7 +386,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_j4oh2")
 
 [node name="TextureRect" type="TextureRect" parent="Main container/Main level page panel/perview panel/PanelContainer" unique_id=654352083]
 layout_mode = 2
-texture = ExtResource("1_kkxn4")
+texture = SubResource("CompressedTexture2D_b03ua")
 expand_mode = 1
 stretch_mode = 6
 
@@ -423,30 +455,16 @@ text = "MISSION 01"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Mission 1Label4" type="Label" parent="Main container/Main level page panel" unique_id=1413385378]
-layout_mode = 0
-offset_left = 999.0
-offset_top = 535.0
-offset_right = 1220.0
-offset_bottom = 624.0
-theme_override_colors/font_color = Color(0.27058825, 1, 1, 1)
-theme_override_fonts/font = ExtResource("7_q0u5u")
-theme_override_font_sizes/font_size = 33
-text = "DIFFICULTY
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Mission 1Label6" type="Label" parent="Main container/Main level page panel" unique_id=150114787]
 layout_mode = 0
 offset_left = 999.0
-offset_top = 635.0
+offset_top = 685.0
 offset_right = 1242.0
-offset_bottom = 678.0
+offset_bottom = 728.0
 theme_override_colors/font_color = Color(0.27058825, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_q0u5u")
 theme_override_font_sizes/font_size = 25
-text = "MISSION STATUS"
+text = "MISSION STATUS :"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -476,23 +494,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Mission 1Label5" type="Label" parent="Main container/Main level page panel" unique_id=1198001235]
-layout_mode = 0
-offset_left = 1013.0
-offset_top = 587.0
-offset_right = 1189.0
-offset_bottom = 632.0
-theme_override_fonts/font = ExtResource("4_be2f2")
-theme_override_font_sizes/font_size = 35
-text = "NORMAL"
-
 [node name="availability active status3" type="Panel" parent="Main container/Main level page panel" unique_id=1024233903]
 texture_filter = 1
 layout_mode = 0
-offset_left = 1011.0
-offset_top = 686.0
-offset_right = 1147.0
-offset_bottom = 737.0
+offset_left = 1356.0
+offset_top = 684.0
+offset_right = 1492.0
+offset_bottom = 735.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
 
 [node name="availability activeLabel" type="Label" parent="Main container/Main level page panel/availability active status3" unique_id=1104298864]
@@ -512,9 +520,9 @@ vertical_alignment = 1
 [node name="Initiate mission Button Control" type="Control" parent="Main container/Main level page panel" unique_id=1164685735]
 anchors_preset = 0
 offset_left = 1130.0
-offset_top = 747.0
+offset_top = 767.0
 offset_right = 1170.0
-offset_bottom = 787.0
+offset_bottom = 807.0
 script = ExtResource("8_v7scm")
 
 [node name="Initiate mission Button" type="Button" parent="Main container/Main level page panel/Initiate mission Button Control" unique_id=169867496]
@@ -539,7 +547,7 @@ offset_left = 33.0
 offset_top = 15.0
 offset_right = 73.0
 offset_bottom = 55.0
-texture = ExtResource("11_it8ma")
+texture = ExtResource("10_b03ua")
 expand_mode = 1
 stretch_mode = 5
 
@@ -549,7 +557,7 @@ offset_left = 390.0
 offset_top = 15.0
 offset_right = 430.0
 offset_bottom = 55.0
-texture = ExtResource("11_it8ma")
+texture = ExtResource("10_b03ua")
 expand_mode = 1
 stretch_mode = 5
 
@@ -581,5 +589,143 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "<-- RETURN TO TERMINAL"
+script = ExtResource("12_q0u5u")
+
+[node name="Panel" type="Panel" parent="." unique_id=675835634]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 634.0
+offset_right = 1793.0
+offset_bottom = 749.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oamur")
+script = ExtResource("12_b03ua")
+
+[node name="Hbox container" type="HBoxContainer" parent="Panel" unique_id=2138360669]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -5.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/Hbox container" unique_id=1672973358]
+clip_children = 1
+custom_minimum_size = Vector2(40, 4)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
+
+[node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer" unique_id=173382779]
+custom_minimum_size = Vector2(40, 4)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.33333334, 0.9019608, 0.64705884, 1)
+
+[node name="PanelContainer2" type="PanelContainer" parent="Panel/Hbox container" unique_id=734061163]
+clip_children = 1
+custom_minimum_size = Vector2(40, 4)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
+
+[node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer2" unique_id=76617076]
+custom_minimum_size = Vector2(40, 4)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.14901961, 0.21568628, 0.27450982, 1)
+
+[node name="PanelContainer3" type="PanelContainer" parent="Panel/Hbox container" unique_id=485562953]
+clip_children = 1
+custom_minimum_size = Vector2(40, 4)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
+
+[node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer3" unique_id=810543647]
+custom_minimum_size = Vector2(40, 4)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.14901961, 0.21568628, 0.27450982, 1)
+
+[node name="PanelContainer4" type="PanelContainer" parent="Panel/Hbox container" unique_id=263932736]
+clip_children = 1
+custom_minimum_size = Vector2(40, 4)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
+
+[node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer4" unique_id=1285172634]
+custom_minimum_size = Vector2(40, 4)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.14901961, 0.21568628, 0.27450982, 1)
+
+[node name="PanelContainer5" type="PanelContainer" parent="Panel/Hbox container" unique_id=696881219]
+clip_children = 1
+custom_minimum_size = Vector2(40, 4)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3h8hv")
+
+[node name="Bar 1" type="ColorRect" parent="Panel/Hbox container/PanelContainer5" unique_id=1085369069]
+custom_minimum_size = Vector2(40, 4)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.14901961, 0.21568628, 0.27450982, 1)
+
+[node name="Difficulty description label" type="Label" parent="Panel" unique_id=75418956]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+offset_right = 349.0
+offset_bottom = -6.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5686275, 0.6627451, 0.7411765, 1)
+text = "1 / 5 — Basic navigation and simple obstacles"
+
+[node name="Difficulty Title label" type="Label" parent="Panel" unique_id=990055349]
+texture_filter = 1
+layout_mode = 1
+offset_top = 2.0
+offset_right = 123.0
+offset_bottom = 41.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.9411765, 0.98039216, 1, 1)
+theme_override_fonts/font = ExtResource("4_be2f2")
+theme_override_font_sizes/font_size = 30
+text = "DIFFICULTY :"
+
+[node name="Difficulty level panel" type="Panel" parent="Panel" unique_id=203511908]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 4.0
+offset_right = 688.0
+offset_bottom = 46.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="Difficulty level label" type="Label" parent="Panel/Difficulty level panel" unique_id=301015104]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_fonts/font = ExtResource("7_q0u5u")
+theme_override_font_sizes/font_size = 20
+text = "NORMAL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Main container/Main level page panel/FooterButton" to="." method="_on_footer_button_pressed"]
