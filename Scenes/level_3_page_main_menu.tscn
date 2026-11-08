@@ -2131,6 +2131,20 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6nq2"]
+bg_color = Color(0.03137255, 0.039215688, 0.0627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.14901961, 0.23137255, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(1, 0.14901961, 0.23137255, 1)
+shadow_size = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3h8hv"]
 corner_radius_top_left = 45
 corner_radius_top_right = 45
@@ -2193,6 +2207,379 @@ expand_margin_bottom = 6.0
 shadow_color = Color(0.6313726, 0, 0, 1)
 shadow_size = 12
 
+[sub_resource type="Animation" id="Animation_ugnb1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main level page container/main panel level page container:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main level page container/main panel level page container/SYSTEM alert Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main level page container/main panel level page container/Decorative Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main level page container/main panel level page container/Preview PanelContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("main level page container/main panel level page container/Difficulty Panel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer5:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("main level page container/main panel level page container/Mission objective Panel2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("main level page container/main panel level page container/ECHO DIAGNOSTIC Panel3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("main level page container/main panel level page container/RTM Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("main level page container/main panel level page container/IFM Button control:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("main level page container/main panel level page container/Decorative Panel2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5tnse"]
+resource_name = "level 3 animation"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main level page container/main panel level page container:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main level page container/main panel level page container/SYSTEM alert Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main level page container/main panel level page container/Decorative Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main level page container/main panel level page container/Preview PanelContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("main level page container/main panel level page container/Difficulty Panel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("main level page container/main panel level page container/Difficulty Panel/HBoxContainer/PanelContainer5:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.8, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("main level page container/main panel level page container/Mission objective Panel2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2, 2.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("main level page container/main panel level page container/ECHO DIAGNOSTIC Panel3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("main level page container/main panel level page container/RTM Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(3, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("main level page container/main panel level page container/IFM Button control:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(3.1, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("main level page container/main panel level page container/Decorative Panel2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(2.8, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dqj6k"]
+_data = {
+&"RESET": SubResource("Animation_ugnb1"),
+&"level 3 animation": SubResource("Animation_5tnse")
+}
+
 [node name="Level 3 page main menu" type="Control" unique_id=1265387950]
 layout_mode = 3
 anchors_preset = 15
@@ -2232,6 +2619,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="main panel level page container" type="Panel" parent="main level page container" unique_id=35625826]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -2247,6 +2635,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
 
 [node name="IFM Button control" type="Control" parent="main level page container/main panel level page container" unique_id=2076365350]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_left = 1199.0
 offset_top = 931.0
@@ -2323,6 +2712,7 @@ texture = ExtResource("2_5x0sq")
 expand_mode = 1
 
 [node name="SYSTEM alert Panel" type="Panel" parent="main level page container/main panel level page container" unique_id=485698135]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 0
 offset_left = 1390.5
@@ -2347,6 +2737,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Decorative Panel" type="Panel" parent="main level page container/main panel level page container" unique_id=1717104432]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -2360,6 +2751,7 @@ grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
 
 [node name="Decorative Panel2" type="Panel" parent="main level page container/main panel level page container" unique_id=1370205346]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -2433,6 +2825,7 @@ theme_override_font_sizes/font_size = 50
 text = "THE LAST SIGNAL"
 
 [node name="Preview PanelContainer" type="PanelContainer" parent="main level page container/main panel level page container" unique_id=1335552514]
+modulate = Color(1, 1, 1, 0)
 clip_children = 2
 clip_contents = true
 layout_mode = 1
@@ -2457,6 +2850,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="ECHO DIAGNOSTIC Panel3" type="Panel" parent="main level page container/main panel level page container" unique_id=939671071]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 466.5
 offset_top = 781.5
@@ -2538,6 +2932,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Mission objective Panel2" type="Panel" parent="main level page container/main panel level page container" unique_id=1393923800]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 874.5
 offset_top = 624.5
@@ -2571,12 +2966,13 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Difficulty Panel" type="Panel" parent="main level page container/main panel level page container" unique_id=689715583]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 29.5
 offset_top = 625.5
 offset_right = 821.5
 offset_bottom = 761.5
-theme_override_styles/panel = SubResource("StyleBoxFlat_25baw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_d6nq2")
 
 [node name="Difficulty Label" type="Label" parent="main level page container/main panel level page container/Difficulty Panel" unique_id=1593365267]
 layout_mode = 0
@@ -2613,6 +3009,7 @@ offset_right = 767.0
 offset_bottom = 84.5
 
 [node name="PanelContainer" type="PanelContainer" parent="main level page container/main panel level page container/Difficulty Panel/HBoxContainer" unique_id=1907282452]
+modulate = Color(1, 1, 1, 0)
 clip_children = 1
 clip_contents = true
 layout_mode = 2
@@ -2624,6 +3021,7 @@ layout_mode = 2
 color = Color(1, 0.14901961, 0.23137255, 1)
 
 [node name="PanelContainer2" type="PanelContainer" parent="main level page container/main panel level page container/Difficulty Panel/HBoxContainer" unique_id=485866864]
+modulate = Color(1, 1, 1, 0)
 clip_children = 1
 clip_contents = true
 layout_mode = 2
@@ -2635,6 +3033,7 @@ layout_mode = 2
 color = Color(1, 0.14901961, 0.23137255, 1)
 
 [node name="PanelContainer3" type="PanelContainer" parent="main level page container/main panel level page container/Difficulty Panel/HBoxContainer" unique_id=61889096]
+modulate = Color(1, 1, 1, 0)
 clip_children = 1
 clip_contents = true
 layout_mode = 2
@@ -2646,6 +3045,7 @@ layout_mode = 2
 color = Color(1, 0.14901961, 0.23137255, 1)
 
 [node name="PanelContainer4" type="PanelContainer" parent="main level page container/main panel level page container/Difficulty Panel/HBoxContainer" unique_id=1621942643]
+modulate = Color(1, 1, 1, 0)
 clip_children = 1
 clip_contents = true
 layout_mode = 2
@@ -2657,6 +3057,7 @@ layout_mode = 2
 color = Color(1, 0.14901961, 0.23137255, 1)
 
 [node name="PanelContainer5" type="PanelContainer" parent="main level page container/main panel level page container/Difficulty Panel/HBoxContainer" unique_id=2006390366]
+modulate = Color(1, 1, 1, 0)
 clip_children = 1
 clip_contents = true
 layout_mode = 2
@@ -2680,6 +3081,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RTM Button" type="Button" parent="main level page container/main panel level page container" unique_id=318837745]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 65.0
 offset_top = 931.0
@@ -2692,5 +3094,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_5tnse")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dqj6k")
 text = "<-- RETURN TO TERMINAL"
 script = ExtResource("6_1yk7r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1332242606]
+libraries/ = SubResource("AnimationLibrary_dqj6k")
+autoplay = &"level 3 animation"
 
 [connection signal="pressed" from="main level page container/main panel level page container/RTM Button" to="." method="_on_rtm_button_pressed"]
