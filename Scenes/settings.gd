@@ -1,4 +1,3 @@
-
 extends Control
 
 var audio_button: Button
@@ -64,16 +63,22 @@ func _show_audio_page() -> void:
 	display_page.visible = false
 	$SFX/SFXClickPlayer.play()
 
+
 func _show_display_page() -> void:
 	audio_page.visible = false
 	display_page.visible = true
 	$SFX/SFXClickPlayer.play()
 
+
 func _on_apply_pressed() -> void:
 	_apply_audio_settings()
 	_apply_display_settings()
+
 	print("ECHO // SETTINGS APPLIED")
+
 	$SFX/SFXClickPlayer.play()
+	$"Saved changes Panel".show()
+	$AnimationPlayer.play("apply animation")
 
 
 func _apply_audio_settings() -> void:
@@ -144,10 +149,13 @@ func _on_reset_pressed() -> void:
 	var music := find_child("MusicVolumeSlider", true, false) as HSlider
 	var sfx := find_child("SFXVolumeSlider", true, false) as HSlider
 	var mute := find_child("MuteCheckButton", true, false) as CheckButton
-	$SFX/SFXClickPlayer.play()
 	var resolution := find_child("ResolutionOption", true, false) as OptionButton
 	var brightness := find_child("BrightnessSlider", true, false) as HSlider
 	var vsync := find_child("VSyncCheckButton", true, false) as CheckButton
+
+	$SFX/SFXClickPlayer.play()
+	$"Reset changes Panel".show()
+	$AnimationPlayer.play("reset animation")
 
 	if master:
 		master.value = DEFAULT_MASTER_VOLUME
@@ -171,7 +179,8 @@ func _on_reset_pressed() -> void:
 		vsync.button_pressed = DEFAULT_VSYNC
 
 	_update_value_labels()
-	_on_apply_pressed()
+	_apply_audio_settings()
+	_apply_display_settings()
 
 	print("ECHO // DEFAULT SETTINGS RESTORED")
 
@@ -203,23 +212,13 @@ func _update_value_labels() -> void:
 func _on_back_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
 	get_tree().change_scene_to_file("res://Scenes/levels.tscn")
-
-
 func _on_v_sync_check_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-
-
 func _on_display_mode_option_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-
-
 func _on_display_mode_option_item_selected(index: int) -> void:
 	$SFX/SFXClickPlayer.play()
-
-
 func _on_resolution_option_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-
-
 func _on_resolution_option_item_selected(index: int) -> void:
 	$SFX/SFXClickPlayer.play()
