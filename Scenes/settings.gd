@@ -211,7 +211,7 @@ func _update_value_labels() -> void:
 
 func _on_back_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file("res://Scenes/levels.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 func _on_v_sync_check_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
 func _on_display_mode_option_pressed() -> void:

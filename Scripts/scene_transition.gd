@@ -4,9 +4,9 @@ extends Control
 
 var transitioning := false
 
-const FADE_OUT_DURATION := 1.0
+const FADE_OUT_DURATION := 1
 const BLACK_SCREEN_DURATION := 0.5
-const FADE_IN_DURATION := 1.0
+const FADE_IN_DURATION := 1
 
 
 func _ready() -> void:
