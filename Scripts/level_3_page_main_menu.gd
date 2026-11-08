@@ -261,11 +261,8 @@ func stop_all_animations() -> void:
 
 
 func _on_rtm_button_pressed() -> void:
-
-	get_tree().change_scene_to_file(
-		"res://Scenes/levels.tscn"
-	)
-
+	$SFX/SFXClickPlayer.play()
+	get_tree().change_scene_to_file("res://Scenes/levels.tscn")
 
 func _apply_review_mode() -> void:
 
@@ -284,3 +281,7 @@ func _apply_review_mode() -> void:
 		initiate_button.disabled = review_mode
 
 	get_tree().set_meta("level_review_mode", false)
+
+
+func _on_ifm_button_2_pressed() -> void:
+	$SFX/SFXClickPlayer.play()

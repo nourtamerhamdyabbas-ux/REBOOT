@@ -239,7 +239,11 @@ func _apply_review_mode() -> void:
 
 
 func _on_return_to_terminall_button_pressed() -> void:
-
+	$SFX/SFXClickPlayer.play()
 	get_tree().change_scene_to_file(
 		"res://Scenes/levels.tscn"
 	)
+
+
+func _on_initiate_button_pressed() -> void:
+	$SFX/SFXClickPlayer.play()
