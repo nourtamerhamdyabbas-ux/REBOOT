@@ -41,6 +41,8 @@
 [ext_resource type="Script" uid="uid://db3yfjk5ulkut" path="res://Scripts/not_yet_button.gd" id="39_3533h"]
 [ext_resource type="Texture2D" uid="uid://c35vnk8ajn2ad" path="res://Assets/icons/circle-x (1).png" id="40_dp8uv"]
 [ext_resource type="Texture2D" uid="uid://can1bjurm5kwp" path="res://Assets/icons/circle-x.png" id="41_uu0lx"]
+[ext_resource type="Script" uid="uid://no0emvhtcnas" path="res://Scenes/guidance_control.gd" id="42_uu0lx"]
+[ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="44_aj2v6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_opfnp")
@@ -365,7 +367,7 @@ tracks/20/keys = {
 
 [sub_resource type="Animation" id="Animation_cp0ys"]
 resource_name = "Main menu animation"
-length = 1.5
+length = 2.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -389,6 +391,42 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Guidance Control/Echo icon Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.7, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Guidance Control/Guidance message Panel:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.9, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(954, 173)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Guidance Control/Guidance message Panel:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.9, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(135.5, 85), Vector2(135.5, 85)]
 }
 
 [sub_resource type="Animation" id="Animation_yhxw7"]
@@ -741,10 +779,58 @@ tracks/28/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Guidance Control/Echo icon Panel:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Guidance Control/Guidance message Panel:size")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Guidance Control/Guidance message Panel:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(135.5, 85)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Guidance Control:modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_trj04"]
 resource_name = "press appearance button anim"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -753,6 +839,18 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Guidance Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -914,6 +1012,80 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp8uv"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu0lx"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujm45"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 6.0
+expand_margin_right = 21.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj2v6"]
+bg_color = Color(0.029506553, 0.029506562, 0.029506536, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+shadow_size = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
 bg_color = Color(0, 0.4862745, 0.5686275, 1)
 border_color = Color(0, 0.4862745, 0.5686275, 1)
@@ -928,6 +1100,32 @@ expand_margin_bottom = 7.0
 shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
 shadow_size = 8
 shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.08627451, 0.050980393, 0.1882353, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(1, 0.17923622, 0.6704099, 0.2)
+shadow_size = 10
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dp8uv"]
+load_path = "res://.godot/imported/cpu.png-b0a3b16338e6b75626cd82a08f3e3765.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h57o"]
+bg_color = Color(0.12941177, 0.08627451, 0.21960784, 1)
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_right = 80
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 80
+shadow_color = Color(1, 0.18039216, 0.67058825, 1)
+shadow_size = 8
 
 [node name="Main menu" type="Control" unique_id=29520096]
 layout_mode = 3
@@ -999,9 +1197,9 @@ texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = -110.0
+offset_left = -122.0
 offset_top = -232.0
-offset_right = -110.0
+offset_right = -122.0
 offset_bottom = -232.0
 grow_horizontal = 2
 
@@ -1089,11 +1287,18 @@ color = Color(0, 0, 0, 0.3137255)
 [node name="first appearance button" type="Button" parent="." unique_id=812990427]
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
-layout_mode = 0
-offset_left = 807.0
-offset_top = 476.0
-offset_right = 1110.0
-offset_bottom = 557.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.5
+offset_top = -40.5
+offset_right = 151.5
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -1709,9 +1914,10 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("9_vr1f0")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
-theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dp8uv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uu0lx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ujm45")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_aj2v6")
 text = "PREVIOUS"
 script = ExtResource("31_xcoo4")
 
@@ -1872,6 +2078,79 @@ mouse_filter = 2
 texture = ExtResource("41_uu0lx")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Guidance Control" type="Control" parent="." unique_id=466998185]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -619.5
+offset_top = 122.0
+offset_right = 481.0
+offset_bottom = 405.0
+grow_horizontal = 2
+script = ExtResource("42_uu0lx")
+
+[node name="Echo icon Panel" type="Panel" parent="Guidance Control" unique_id=633267877]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 117.5
+offset_bottom = 110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="ECHO ICON" type="TextureRect" parent="Guidance Control/Echo icon Panel" unique_id=296373540]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_dp8uv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Guidance message Panel" type="Panel" parent="Guidance Control" unique_id=832443510]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 135.5
+offset_top = 85.0
+offset_right = -965.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1h57o")
+
+[node name="title guidance message Label" type="Label" parent="Guidance Control/Guidance message Panel" unique_id=1590673400]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_right = 452.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(1, 0.18039216, 0.67058825, 1)
+theme_override_fonts/font = ExtResource("44_aj2v6")
+theme_override_font_sizes/font_size = 27
+text = "ECHO // GUIDANCE SYSTEM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="core guidance message Label2" type="Label" parent="Guidance Control/Guidance message Panel" unique_id=728198711]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 52.0
+offset_right = 948.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("29_6vfk8")
+theme_override_font_sizes/font_size = 23
+text = "HI, OPERATOR. I AM ECHO, YOUR IN-GAME GUIDANCE SYSTEM. I'M HERE TO HELP YOU NAVIGATE THE GAME AND OPERATE ITS SYSTEMS. TO ACCESS THE MAIN MENU, PRESS THE BUTTON BELOW."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
 [connection signal="pressed" from="MainPanel/Start Button Control/Start Button" to="." method="_on_start_button_pressed"]
