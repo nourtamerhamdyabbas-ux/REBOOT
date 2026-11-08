@@ -26,54 +26,6 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krxxg"]
-bg_color = Color(1, 0.33333334, 0.46666667, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.9098039, 0.3019608, 0.52156866, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0.4, 0.101960786, 0.22745098, 1)
-shadow_size = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4oh2"]
-bg_color = Color(0.39215687, 0.105882354, 0.23921569, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.7882353, 0.21176471, 0.4392157, 1)
-corner_radius_top_left = 22
-corner_radius_top_right = 22
-corner_radius_bottom_right = 22
-corner_radius_bottom_left = 22
-shadow_color = Color(0.23921569, 0.0627451, 0.15294118, 1)
-shadow_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ps6"]
-bg_color = Color(0.7882353, 0.21176471, 0.4392157, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 0.5019608, 0.6784314, 1)
-corner_radius_top_left = 19
-corner_radius_top_right = 19
-corner_radius_bottom_right = 19
-corner_radius_bottom_left = 19
-shadow_color = Color(0.6392157, 0.13725491, 0.32941177, 1)
-shadow_size = 9
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fvf8l"]
-load_path = "res://.godot/imported/play.png-e55f92690377c76b12b6c017bdf4df18.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f5yxm"]
-load_path = "res://.godot/imported/play.png-e55f92690377c76b12b6c017bdf4df18.ctex"
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic1xj"]
 bg_color = Color(0, 0.9920456, 0, 0.23300001)
 corner_radius_top_left = 20
@@ -244,6 +196,68 @@ expand_margin_right = 21.0
 expand_margin_bottom = 6.0
 shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
 shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krxxg"]
+bg_color = Color(1, 0.33333334, 0.46666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9098039, 0.3019608, 0.52156866, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.4, 0.101960786, 0.22745098, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4oh2"]
+bg_color = Color(0.39215687, 0.105882354, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7882353, 0.21176471, 0.4392157, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.23921569, 0.0627451, 0.15294118, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ps6"]
+bg_color = Color(0.7882353, 0.21176471, 0.4392157, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.5019608, 0.6784314, 1)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+shadow_color = Color(0.6392157, 0.13725491, 0.32941177, 1)
+shadow_size = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugnb1"]
+bg_color = Color(0.03876, 0.03876, 0.03876, 0.892)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.23921569, 0.0627451, 0.15294118, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.23921569, 0.0627451, 0.15294118, 1)
+shadow_size = 9
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fvf8l"]
+load_path = "res://.godot/imported/play.png-e55f92690377c76b12b6c017bdf4df18.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f5yxm"]
+load_path = "res://.godot/imported/play.png-e55f92690377c76b12b6c017bdf4df18.ctex"
 
 [sub_resource type="Animation" id="Animation_8ira0"]
 length = 0.001
@@ -782,45 +796,6 @@ offset_top = 60.0
 offset_right = 1828.0
 offset_bottom = 1054.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
-
-[node name="Initiate page 2Control" type="Control" parent="Main level page panel/main level page panel" unique_id=551224895]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 0
-offset_left = 1276.0
-offset_top = 907.0
-offset_right = 1316.0
-offset_bottom = 947.0
-script = ExtResource("9_3h8hv")
-
-[node name="Initiate Button" type="Button" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=879357312]
-layout_mode = 0
-offset_right = 428.0
-offset_bottom = 66.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_krxxg")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_j4oh2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h2ps6")
-text = "INITIATE MISSION"
-script = ExtResource("10_2gls1")
-
-[node name="TextureRect" type="TextureRect" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=1778772169]
-texture_filter = 1
-layout_mode = 0
-offset_left = 54.0
-offset_top = 14.0
-offset_right = 94.0
-offset_bottom = 54.0
-texture = SubResource("CompressedTexture2D_fvf8l")
-expand_mode = 1
-
-[node name="TextureRect2" type="TextureRect" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=1139634036]
-texture_filter = 1
-layout_mode = 0
-offset_left = 332.0
-offset_top = 14.0
-offset_right = 372.0
-offset_bottom = 54.0
-texture = SubResource("CompressedTexture2D_f5yxm")
-expand_mode = 1
 
 [node name="Main level page title" type="Label" parent="Main level page panel/main level page panel" unique_id=1900729643]
 layout_mode = 0
@@ -1420,6 +1395,46 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "<-- RETURN TO TERMINAL "
 script = ExtResource("13_f5yxm")
+
+[node name="Initiate page 2Control" type="Control" parent="Main level page panel/main level page panel" unique_id=551224895]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 1276.0
+offset_top = 907.0
+offset_right = 1316.0
+offset_bottom = 947.0
+script = ExtResource("9_3h8hv")
+
+[node name="Initiate Button" type="Button" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=879357312]
+layout_mode = 0
+offset_right = 428.0
+offset_bottom = 66.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_krxxg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j4oh2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h2ps6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ugnb1")
+text = "INITIATE MISSION"
+script = ExtResource("10_2gls1")
+
+[node name="TextureRect" type="TextureRect" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=1778772169]
+texture_filter = 1
+layout_mode = 0
+offset_left = 54.0
+offset_top = 14.0
+offset_right = 94.0
+offset_bottom = 54.0
+texture = SubResource("CompressedTexture2D_fvf8l")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Main level page panel/main level page panel/Initiate page 2Control" unique_id=1139634036]
+texture_filter = 1
+layout_mode = 0
+offset_left = 332.0
+offset_top = 14.0
+offset_right = 372.0
+offset_bottom = 54.0
+texture = SubResource("CompressedTexture2D_f5yxm")
+expand_mode = 1
 
 [node name="Footer Label" type="Label" parent="Main level page panel" unique_id=1418824621]
 texture_filter = 1
