@@ -11,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="8_rhcsy"]
 [ext_resource type="Script" uid="uid://dsfr30rbv01x0" path="res://Scripts/initiate_page_2_control.gd" id="9_3h8hv"]
 [ext_resource type="Script" uid="uid://lgcyn075ngh8" path="res://Scripts/initiate_button.gd" id="10_2gls1"]
-[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="12_f5yxm"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Rajdhani-Regular.ttf" id="12_f5yxm"]
 [ext_resource type="Script" uid="uid://clbctsth4qewb" path="res://Scripts/return_to_terminall_button.gd" id="13_f5yxm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]

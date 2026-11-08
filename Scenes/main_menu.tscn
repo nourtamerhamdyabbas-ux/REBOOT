@@ -9,7 +9,7 @@
 [ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="5_yhxw7"]
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_cp0ys"]
 [ext_resource type="Script" uid="uid://bj53jxx0im5ux" path="res://Scripts/first_appearance_button.gd" id="9_16hvj"]
-[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="9_vr1f0"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Rajdhani-Regular.ttf" id="9_vr1f0"]
 [ext_resource type="Script" uid="uid://df1q6qvsb2y8o" path="res://Scripts/start_button_control.gd" id="11_8dnnj"]
 [ext_resource type="Script" uid="uid://dklu8t2vfbduc" path="res://Scripts/start_button.gd" id="11_t1dhk"]
 [ext_resource type="Shader" uid="uid://cfl0oci7ro5q" path="res://Scripts/Bar.gdshader" id="11_vr1f0"]
@@ -41,7 +41,6 @@
 [ext_resource type="Script" uid="uid://db3yfjk5ulkut" path="res://Scripts/not_yet_button.gd" id="39_3533h"]
 [ext_resource type="Texture2D" uid="uid://c35vnk8ajn2ad" path="res://Assets/icons/circle-x (1).png" id="40_dp8uv"]
 [ext_resource type="Texture2D" uid="uid://can1bjurm5kwp" path="res://Assets/icons/circle-x.png" id="41_uu0lx"]
-[ext_resource type="Script" uid="uid://no0emvhtcnas" path="res://Scenes/guidance_control.gd" id="42_uu0lx"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="44_aj2v6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
@@ -1101,6 +1100,80 @@ shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
 shadow_size = 8
 shadow_offset = Vector2(0, 4)
 
+[sub_resource type="GDScript" id="GDScript_3533h"]
+script/source = "extends Control
+
+@export_group(\"Guidance Text\")
+@export var guidance_title: String = \"ECHO // GUIDANCE SYSTEM\"
+@export_multiline var guidance_message: String = \"HI, OPERATOR. I AM ECHO, YOUR IN-GAME GUIDANCE SYSTEM. I'M HERE TO HELP YOU NAVIGATE THE GAME AND OPERATE ITS SYSTEMS. TO ACCESS THE MAIN MENU, PRESS THE BUTTON BELOW.\"
+
+@export_group(\"Typing Animation\")
+@export var typing_speed: float = 0.035
+@export var title_typing_speed: float = 0.05
+@export var start_delay: float = 2.1
+
+@onready var title_label: Label = $\"Guidance message Panel/title guidance message Label\"
+@onready var guidance_label: Label = $\"Guidance message Panel/core guidance message Label2\"
+
+
+func _ready() -> void:
+	title_label.text = guidance_title
+	guidance_label.text = guidance_message
+
+	title_label.visible_characters = 0
+	guidance_label.visible_characters = 0
+
+	await get_tree().create_timer(start_delay).timeout
+
+	await play_title_animation()
+	await play_typing_animation()
+
+
+func play_title_animation() -> void:
+	title_label.visible_characters = 0
+
+	var character_count := guidance_title.length()
+	var tween := create_tween()
+
+	tween.tween_property(
+		title_label,
+		\"visible_characters\",
+		character_count,
+		character_count * title_typing_speed
+	).set_trans(Tween.TRANS_LINEAR)
+
+	await tween.finished
+
+
+func play_typing_animation() -> void:
+	guidance_label.visible_characters = 0
+
+	var character_count := guidance_message.length()
+	var tween := create_tween()
+
+	tween.tween_property(
+		guidance_label,
+		\"visible_characters\",
+		character_count,
+		character_count * typing_speed
+	).set_trans(Tween.TRANS_LINEAR)
+
+	await tween.finished
+
+
+func replay_guidance() -> void:
+	title_label.visible_characters = 0
+	guidance_label.visible_characters = 0
+
+	await play_title_animation()
+	await play_typing_animation()
+
+
+func show_complete_message() -> void:
+	title_label.visible_characters = -1
+	guidance_label.visible_characters = -1
+"
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
 bg_color = Color(0.08627451, 0.050980393, 0.1882353, 1)
 border_width_left = 3
@@ -1690,8 +1763,8 @@ stretch_mode = 5
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 offset_left = 133.0
-offset_top = 943.0
-offset_right = 143.0
+offset_top = 353.0
+offset_right = 135.0
 offset_bottom = 943.0
 color = Color(0.6627451, 0.92941177, 0.99607843, 1)
 
@@ -1699,8 +1772,8 @@ color = Color(0.6627451, 0.92941177, 0.99607843, 1)
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 offset_left = 635.0
-offset_top = 943.0
-offset_right = 649.0
+offset_top = 353.0
+offset_right = 637.0
 offset_bottom = 943.0
 color = Color(1, 0.1764706, 0.58431375, 1)
 
@@ -2089,7 +2162,7 @@ offset_top = 122.0
 offset_right = 481.0
 offset_bottom = 405.0
 grow_horizontal = 2
-script = ExtResource("42_uu0lx")
+script = SubResource("GDScript_3533h")
 
 [node name="Echo icon Panel" type="Panel" parent="Guidance Control" unique_id=633267877]
 modulate = Color(1, 1, 1, 0)
@@ -2120,8 +2193,8 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_left = 135.5
 offset_top = 85.0
-offset_right = -965.0
-offset_bottom = 85.0
+offset_right = -11.0
+offset_bottom = 258.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1h57o")
 

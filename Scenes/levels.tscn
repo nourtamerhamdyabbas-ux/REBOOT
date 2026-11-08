@@ -8,7 +8,7 @@
 [ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="5_c4nq2"]
 [ext_resource type="Texture2D" uid="uid://cusunotbr36j7" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/front.png" id="6_dlt5w"]
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_bku7o"]
-[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="8_c4nq2"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Rajdhani-Regular.ttf" id="8_c4nq2"]
 [ext_resource type="Script" uid="uid://c1sj4dxqxuqda" path="res://Scripts/hind_button_control.gd" id="10_x2875"]
 [ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="11_byaam"]
 [ext_resource type="Script" uid="uid://cj4kxmg6an1pf" path="res://Scripts/hint_button.gd" id="12_iolxa"]
@@ -32,7 +32,7 @@
 [ext_resource type="Script" uid="uid://dhf8pfiaqepxb" path="res://Scripts/power_off_button.gd" id="29_eiuxy"]
 [ext_resource type="Texture2D" uid="uid://d3tkl1p1v6yc0" path="res://Assets/icons/globe-x.png" id="30_nh00u"]
 [ext_resource type="Script" uid="uid://duvispwipnw28" path="res://Scripts/level_page_transition.gd" id="32_tgh34"]
-[ext_resource type="Script" uid="uid://baqkybfllc7nv" path="res://Scenes/guidance_control_2.gd" id="33_sowmt"]
+[ext_resource type="Script" uid="uid://baqkybfllc7nv" path="res://Scripts/guidance_control_2.gd" id="33_sowmt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
 shader = ExtResource("1_uotyi")
