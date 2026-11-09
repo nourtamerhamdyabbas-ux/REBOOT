@@ -1,0 +1,1633 @@
+[gd_scene format=3 uid="uid://8fmgpbewi2e4"]
+
+[ext_resource type="Script" uid="uid://c36bogqvmrmhx" path="res://Scripts/levels.gd" id="1_byaam"]
+[ext_resource type="Shader" uid="uid://mlavm373mqkc" path="res://Scripts/Far Back.gdshader" id="1_uotyi"]
+[ext_resource type="Texture2D" uid="uid://doik1xvox17tl" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/back.png" id="2_p1uqq"]
+[ext_resource type="Shader" uid="uid://cv8vaiyjmfyr8" path="res://Scripts/Mid Back.gdshader" id="3_j0k6p"]
+[ext_resource type="Texture2D" uid="uid://dubsdv8knat7g" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/buildings.png" id="4_bku7o"]
+[ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="5_c4nq2"]
+[ext_resource type="Texture2D" uid="uid://cusunotbr36j7" path="res://Assets/cyberpunk-street-files/Assets/city skyline/Layers/front.png" id="6_dlt5w"]
+[ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_bku7o"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Scripts/Rajdhani-Regular.ttf" id="8_c4nq2"]
+[ext_resource type="Script" uid="uid://c1sj4dxqxuqda" path="res://Scripts/hind_button_control.gd" id="10_x2875"]
+[ext_resource type="FontFile" uid="uid://b2annuu6a8vlp" path="res://Assets/Orbitron/static/Orbitron-SemiBold.ttf" id="11_byaam"]
+[ext_resource type="Script" uid="uid://cj4kxmg6an1pf" path="res://Scripts/hint_button.gd" id="12_iolxa"]
+[ext_resource type="Texture2D" uid="uid://lpj5347lmd56" path="res://Assets/icons/lightbulb.png" id="13_88fv2"]
+[ext_resource type="Texture2D" uid="uid://bttcurossddma" path="res://Assets/icons/lightbulb (1).png" id="14_l7l1h"]
+[ext_resource type="Texture2D" uid="uid://iu1syoi7n4e7" path="res://Assets/icons/user-key.png" id="16_i0ogj"]
+[ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="17_40tkv"]
+[ext_resource type="Script" uid="uid://p27nahdiiruu" path="res://Scripts/back_button_control_2.gd" id="17_e1hhb"]
+[ext_resource type="Texture2D" uid="uid://bj1b4j00usoif" path="res://Assets/icons/chevron-right (1).png" id="17_gtydc"]
+[ext_resource type="FontFile" uid="uid://c33uaxgqjtxmg" path="res://Assets/Orbitron/static/Orbitron-Regular.ttf" id="18_1hb6l"]
+[ext_resource type="Texture2D" uid="uid://s4fenw8frbxf" path="res://Assets/icons/chevron-left (1).png" id="18_dupmk"]
+[ext_resource type="Texture2D" uid="uid://ew7ddtnx0eu3" path="res://Assets/icons/power (1).png" id="19_e1hhb"]
+[ext_resource type="FontFile" uid="uid://byqgy07qgv003" path="res://Assets/Rajdhani/Rajdhani-Light.ttf" id="19_mgyhi"]
+[ext_resource type="Script" uid="uid://vukmepkmkvae" path="res://Scripts/power_button_control_3.gd" id="20_jwu1x"]
+[ext_resource type="Texture2D" uid="uid://cop3eqwvm3tuo" path="res://Assets/icons/box.png" id="20_yf5lt"]
+[ext_resource type="Script" uid="uid://dplpx3xh17830" path="res://Scripts/open_terminal_button.gd" id="21_eiuxy"]
+[ext_resource type="Texture2D" uid="uid://b800uak53w7ny" path="res://Assets/icons/square-letter-i.png" id="21_mgyhi"]
+[ext_resource type="Texture2D" uid="uid://bjrwwtpbry6t4" path="res://Assets/icons/command.png" id="22_yf5lt"]
+[ext_resource type="Script" uid="uid://dsqgvr75gkt18" path="res://Scripts/hide_button2.gd" id="23_gtydc"]
+[ext_resource type="Texture2D" uid="uid://ddp38nfgdhvl7" path="res://Assets/icons/cyan square.png" id="29_7faff"]
+[ext_resource type="Script" uid="uid://dhf8pfiaqepxb" path="res://Scripts/power_off_button.gd" id="29_eiuxy"]
+[ext_resource type="Texture2D" uid="uid://d3tkl1p1v6yc0" path="res://Assets/icons/globe-x.png" id="30_nh00u"]
+[ext_resource type="Script" uid="uid://duvispwipnw28" path="res://Scripts/level_page_transition.gd" id="32_tgh34"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4r6"]
+shader = ExtResource("1_uotyi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kuey"]
+shader = ExtResource("3_j0k6p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ralei"]
+shader = ExtResource("5_c4nq2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_al4r6"]
+bg_color = Color(0.086104214, 0.050708726, 0.1897483, 1)
+border_color = Color(0.8509804, 0, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.4, 0, 0.6666667, 1)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kuey"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsxxd"]
+bg_color = Color(0, 0.9920456, 0, 0.112)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_636m2"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ralei"]
+bg_color = Color(0.06666667, 0, 0.73333335, 0.13333334)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28627452, 0.19215687, 0.42745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 16.0
+expand_margin_top = 14.0
+expand_margin_right = 16.0
+expand_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6uar"]
+bg_color = Color(0.09985284, 0.07016479, 0.19641912, 0.731)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28707156, 0.67263305, 0.7923846, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 18.0
+expand_margin_top = 10.0
+expand_margin_right = 18.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oamur"]
+bg_color = Color(0.09985284, 0.07016479, 0.19641912, 0.836)
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiuxy"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 25.0
+expand_margin_top = 7.0
+expand_margin_right = 25.0
+expand_margin_bottom = 7.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1dhk"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 6.0
+expand_margin_right = 21.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1h57o"]
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_left = 12.0
+expand_margin_top = 8.0
+expand_margin_right = 12.0
+expand_margin_bottom = 8.0
+shadow_size = 5
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krxxg"]
+bg_color = Color(0, 0.6509804, 0.72156864, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.36078432, 0.92156863, 0.98039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0.7490196, 0.8392157, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdnm8"]
+bg_color = Color(0.0627451, 0.043137256, 0.16470589, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.9843137, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.5529412, 0.96862745, 1, 1)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ps6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 1, 1, 0.739)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgh34"]
+bg_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.16470589, 0.09411765, 0.23921569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 14.0
+expand_margin_top = 5.0
+expand_margin_right = 14.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sowmt"]
+bg_color = Color(0, 0.3647059, 0.4392157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.3647059, 0.4392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 17.0
+expand_margin_top = 5.0
+expand_margin_right = 17.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.025840001, 0.012920001, 0.050708726, 0.65000004)
+shadow_size = 10
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e30r"]
+bg_color = Color(0, 0.6509804, 0.7372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.6509804, 0.7372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 21.0
+expand_margin_top = 5.0
+expand_margin_right = 21.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.02745098, 0.011764706, 0.050980393, 0.6509804)
+shadow_size = 12
+
+[sub_resource type="Animation" id="Animation_mgyhi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hind Button Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1507, 493)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hint Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hint Panel/Hint main title:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hint Panel/White decorative bar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hint Panel/Level access control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hint Panel/White decorative bar2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hint Panel/System commands control:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Hint Panel/HideButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Hint Panel:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(420, 26)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Hint Panel:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1446, 795)]
+}
+
+[sub_resource type="Animation" id="Animation_gtydc"]
+resource_name = "hide button animation"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hint Panel/Hint main title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hint Panel/White decorative bar:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hint Panel/Level access control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hint Panel/White decorative bar2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hint Panel/System commands control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hint Panel:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(420, 461), Vector2(420, 12)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hint Panel:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1446, 360), Vector2(1446, 809)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Hint Panel:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Hint Panel/HideButton:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.5, 2.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Hind Button Control:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.1, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1507, 261), Vector2(1507, 493)]
+}
+
+[sub_resource type="Animation" id="Animation_yf5lt"]
+resource_name = "hint panel animation"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hind Button Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1507, 493), Vector2(1507, 261)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hint Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hint Panel/Hint main title:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hint Panel/White decorative bar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hint Panel/Level access control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Hint Panel/White decorative bar2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hint Panel/System commands control:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Hint Panel/HideButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Hint Panel:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(420, 26), Vector2(420, 461)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Hint Panel:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1446, 795), Vector2(1446, 360)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gtydc"]
+_data = {
+&"RESET": SubResource("Animation_mgyhi"),
+&"hide button animation": SubResource("Animation_gtydc"),
+&"hint panel animation": SubResource("Animation_yf5lt")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg1du"]
+bg_color = Color(0.72156864, 0, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.32156864, 0.47843137, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 21
+shadow_color = Color(1, 0.09320182, 0.30943933, 0.45000002)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hl1e"]
+bg_color = Color(0.52156866, 0, 0.14117648, 1)
+border_color = Color(1, 0.09019608, 0.30980393, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(1, 0, 0.23529412, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57lgl"]
+bg_color = Color(1, 0.09019608, 0.30980393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.60784316, 0.69803923, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(1, 0.09019608, 0.30980393, 1)
+shadow_size = 20
+
+[node name="Levels" type="Control" unique_id=1037239281]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_byaam")
+
+[node name="Backgrounds" type="Control" parent="." unique_id=2096801402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background further" type="TextureRect" parent="Backgrounds" unique_id=1621352384]
+modulate = Color(0.6627451, 0.6117647, 0.7490196, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_al4r6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_p1uqq")
+expand_mode = 1
+
+[node name="Background mid" type="TextureRect" parent="Backgrounds" unique_id=1592736976]
+modulate = Color(0.6627451, 0.6117647, 0.7490196, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5kuey")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_bku7o")
+expand_mode = 1
+
+[node name="Background closer" type="TextureRect" parent="Backgrounds" unique_id=1409088535]
+modulate = Color(0.6627451, 0.6117647, 0.7490196, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ralei")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_dlt5w")
+expand_mode = 1
+
+[node name="Scene title" type="Control" parent="." unique_id=588314051]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+
+[node name="glow outer" type="Label" parent="Scene title" unique_id=1108233274]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.8509804, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0.8509804, 0, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 65
+text = "Terminal
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="glow inner" type="Label" parent="Scene title" unique_id=408944679]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_shadow_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_colors/font_outline_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 65
+text = "Terminal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main title" type="Label" parent="Scene title" unique_id=989229864]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_outline_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 65
+text = "Terminal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Terminal" type="Panel" parent="." unique_id=541891591]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -280.0
+offset_right = 425.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Title label" type="Label" parent="Terminal" unique_id=1242104491]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 24.0
+offset_right = 387.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 23
+text = "ECHO // TERMINAL >>"
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Terminal" unique_id=280649260]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 52.0
+offset_right = 372.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.26479155, 0.3133042, 0.66668326, 1)
+theme_override_fonts/font = ExtResource("8_c4nq2")
+theme_override_font_sizes/font_size = 22
+text = "System-Critical Operations !!"
+
+[node name="white bar" type="Panel" parent="Terminal" unique_id=2081337025]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 97.0
+offset_right = 300.0
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kuey")
+
+[node name="Terminal Icon" type="TextureRect" parent="Terminal" unique_id=554565163]
+texture_filter = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 100.0
+offset_bottom = 89.0
+texture = ExtResource("29_7faff")
+expand_mode = 1
+
+[node name="status panel" type="Panel" parent="Terminal" unique_id=2018837775]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -141.0
+offset_top = 24.0
+offset_right = -39.0
+offset_bottom = 77.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsxxd")
+
+[node name="status title" type="Label" parent="Terminal/status panel" unique_id=850476078]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.29748532, 1)
+theme_override_font_sizes/font_size = 13
+text = "ONLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node" type="Control" parent="Terminal" unique_id=917590791]
+anchors_preset = 0
+offset_left = -535.0
+offset_top = -260.0
+offset_right = -535.0
+offset_bottom = -260.0
+
+[node name="ColorRect" type="ColorRect" parent="Terminal/Node" unique_id=879734803]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 379.0
+offset_right = 613.0
+offset_bottom = 479.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Terminal/Node" unique_id=748394309]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 696.0
+offset_right = 613.0
+offset_bottom = 796.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Terminal/Node" unique_id=1388105079]
+layout_mode = 0
+offset_left = 1303.0
+offset_top = 695.0
+offset_right = 1307.0
+offset_bottom = 795.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Terminal/Node" unique_id=991251464]
+layout_mode = 0
+offset_left = 1303.0
+offset_top = 379.0
+offset_right = 1307.0
+offset_bottom = 479.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Terminal/Node" unique_id=1644775145]
+layout_mode = 0
+offset_left = 1206.0
+offset_top = 379.0
+offset_right = 1306.0
+offset_bottom = 383.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Terminal/Node" unique_id=2046679362]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 379.0
+offset_right = 713.0
+offset_bottom = 383.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Terminal/Node" unique_id=707444577]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 795.0
+offset_right = 709.0
+offset_bottom = 799.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Terminal/Node" unique_id=769966812]
+layout_mode = 0
+offset_left = 1207.0
+offset_top = 795.0
+offset_right = 1307.0
+offset_bottom = 799.0
+color = Color(0.4, 0, 0.6666667, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Terminal/Node" unique_id=1128165401]
+layout_mode = 0
+offset_left = 1189.0
+offset_top = 805.0
+offset_right = 1289.0
+offset_bottom = 809.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Terminal/Node" unique_id=732942314]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 805.0
+offset_right = 729.0
+offset_bottom = 809.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Terminal/Node" unique_id=182773524]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 368.0
+offset_right = 727.0
+offset_bottom = 372.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Terminal/Node" unique_id=664016540]
+layout_mode = 0
+offset_left = 1187.0
+offset_top = 369.0
+offset_right = 1287.0
+offset_bottom = 373.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Terminal/Node" unique_id=1940185548]
+layout_mode = 0
+offset_left = 1313.0
+offset_top = 398.0
+offset_right = 1317.0
+offset_bottom = 498.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Terminal/Node" unique_id=1346083275]
+layout_mode = 0
+offset_left = 1314.0
+offset_top = 677.0
+offset_right = 1318.0
+offset_bottom = 777.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Terminal/Node" unique_id=1769362342]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 680.0
+offset_right = 604.0
+offset_bottom = 780.0
+color = Color(1, 0, 1, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Terminal/Node" unique_id=968035050]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 397.0
+offset_right = 602.0
+offset_bottom = 497.0
+color = Color(1, 0, 1, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="Terminal" unique_id=1558611129]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 127.0
+offset_right = 764.0
+offset_bottom = 531.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_636m2")
+
+[node name="Chat History" type="RichTextLabel" parent="Terminal/PanelContainer" unique_id=1187152103]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 0.8)
+theme_override_constants/table_h_separation = 6
+theme_override_constants/table_v_separation = 7
+theme_override_fonts/normal_font = ExtResource("18_1hb6l")
+theme_override_font_sizes/normal_font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_ralei")
+bbcode_enabled = true
+scroll_following = true
+
+[node name="Command Line" type="LineEdit" parent="Terminal" unique_id=1415971446]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 0
+offset_left = 207.0
+offset_top = 563.0
+offset_right = 639.0
+offset_bottom = 615.0
+theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_colors/caret_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_b6uar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_oamur")
+placeholder_text = "Enter command...."
+clear_button_enabled = true
+
+[node name="Hind Button Control" type="Control" parent="." unique_id=1851782621]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 1507.0
+offset_top = 493.0
+offset_right = 1547.0
+offset_bottom = 533.0
+script = ExtResource("10_x2875")
+
+[node name="HintButton" type="Button" parent="Hind Button Control" unique_id=1522937405]
+texture_filter = 1
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "COMMAND HELP "
+script = ExtResource("12_iolxa")
+
+[node name="Left icon" type="TextureRect" parent="Hind Button Control" unique_id=2143681513]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 45.0
+offset_bottom = 53.0
+texture = ExtResource("13_88fv2")
+
+[node name="Right icon" type="TextureRect" parent="Hind Button Control" unique_id=1640264773]
+texture_filter = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 53.0
+texture = ExtResource("14_l7l1h")
+
+[node name="Back Button Control2" type="Control" parent="." unique_id=624205964]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 105.0
+offset_top = 493.0
+offset_right = 145.0
+offset_bottom = 533.0
+script = ExtResource("17_e1hhb")
+
+[node name="BackButton" type="Button" parent="Back Button Control2" unique_id=1605934495]
+texture_filter = 1
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiuxy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vr1f0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "BACK TO MAIN"
+script = ExtResource("12_iolxa")
+
+[node name="Left icon1" type="TextureRect" parent="Back Button Control2" unique_id=1591546963]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 45.0
+offset_bottom = 53.0
+texture = ExtResource("17_gtydc")
+
+[node name="Right icon1" type="TextureRect" parent="Back Button Control2" unique_id=699925272]
+texture_filter = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 53.0
+texture = ExtResource("18_dupmk")
+
+[node name="Open Terminal Button control" type="Control" parent="." unique_id=951004053]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 813.0
+offset_top = 720.0
+offset_right = 853.0
+offset_bottom = 760.0
+script = ExtResource("20_jwu1x")
+
+[node name="Open Terminal Button" type="Button" parent="Open Terminal Button control" unique_id=519248593]
+texture_filter = 1
+custom_minimum_size = Vector2(170, 48)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1h57o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_krxxg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xdnm8")
+text = "POWER ON"
+script = ExtResource("21_eiuxy")
+
+[node name="Left icon2" type="TextureRect" parent="Open Terminal Button control" unique_id=2070986556]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 45.0
+offset_bottom = 53.0
+texture = ExtResource("19_e1hhb")
+
+[node name="Right icon2" type="TextureRect" parent="Open Terminal Button control" unique_id=1230118238]
+texture_filter = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 53.0
+texture = ExtResource("19_e1hhb")
+
+[node name="Hint Panel" type="Panel" parent="." unique_id=171465074]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1446.0
+offset_top = 795.0
+offset_right = 1866.0
+offset_bottom = 821.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Hint main title" type="Label" parent="Hint Panel" unique_id=494858197]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 20
+text = "Commands index"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="White decorative bar" type="Panel" parent="Hint Panel" unique_id=1699287283]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 30.0
+offset_top = 32.0
+offset_right = -40.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2ps6")
+
+[node name="White decorative bar2" type="Panel" parent="Hint Panel" unique_id=1064420328]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 30.0
+offset_top = 208.0
+offset_right = -40.0
+offset_bottom = 210.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2ps6")
+
+[node name="Level access control" type="Control" parent="Hint Panel" unique_id=959593649]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 19.0
+offset_top = 41.0
+offset_right = 402.0
+offset_bottom = 195.0
+
+[node name="access icon" type="TextureRect" parent="Hint Panel/Level access control" unique_id=2099333591]
+texture_filter = 1
+layout_mode = 0
+offset_left = 156.0
+offset_right = 179.0
+offset_bottom = 22.0
+texture = ExtResource("16_i0ogj")
+expand_mode = 1
+
+[node name="Level access label" type="Label" parent="Hint Panel/Level access control" unique_id=939596886]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_right = 151.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("17_40tkv")
+text = "LEVEL ACCESS"
+vertical_alignment = 1
+
+[node name="Open level 1 command" type="Label" parent="Hint Panel/Level access control" unique_id=1433706100]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = 162.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "OPEN LEVEL 01"
+
+[node name="Open level 1 command2" type="Label" parent="Hint Panel/Level access control" unique_id=1086562826]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 67.0
+offset_right = 162.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "OPEN LEVEL 02"
+
+[node name="Open level 1 command3" type="Label" parent="Hint Panel/Level access control" unique_id=492351474]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 106.0
+offset_right = 169.0
+offset_bottom = 129.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "OPEN LEVEL 03"
+
+[node name="open leve; 1 command sub" type="Label" parent="Hint Panel/Level access control" unique_id=1273234939]
+texture_filter = 1
+layout_mode = 0
+offset_left = 30.0
+offset_top = 46.0
+offset_right = 129.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Access the first level"
+
+[node name="open leve; 1 command sub2" type="Label" parent="Hint Panel/Level access control" unique_id=498688182]
+texture_filter = 1
+layout_mode = 0
+offset_left = 30.0
+offset_top = 86.0
+offset_right = 144.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Access the second level"
+
+[node name="open leve; 1 command sub3" type="Label" parent="Hint Panel/Level access control" unique_id=189845377]
+texture_filter = 1
+layout_mode = 0
+offset_left = 30.0
+offset_top = 127.0
+offset_right = 144.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Access the third level"
+
+[node name="open level icon" type="TextureRect" parent="Hint Panel/Level access control" unique_id=81447601]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_top = 31.0
+offset_right = 23.0
+offset_bottom = 57.0
+texture = ExtResource("20_yf5lt")
+expand_mode = 1
+
+[node name="open level icon2" type="TextureRect" parent="Hint Panel/Level access control" unique_id=487717221]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_top = 72.0
+offset_right = 23.0
+offset_bottom = 98.0
+texture = ExtResource("20_yf5lt")
+expand_mode = 1
+
+[node name="open level icon3" type="TextureRect" parent="Hint Panel/Level access control" unique_id=561431734]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_top = 113.0
+offset_right = 23.0
+offset_bottom = 139.0
+texture = ExtResource("20_yf5lt")
+expand_mode = 1
+
+[node name="System commands control" type="Control" parent="Hint Panel" unique_id=548409639]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 224.0
+offset_bottom = 443.0
+grow_horizontal = 2
+
+[node name="system commands main title" type="Label" parent="Hint Panel/System commands control" unique_id=1361900829]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -5.0
+offset_right = 212.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("17_40tkv")
+text = "SYSTEM COMMANDS"
+
+[node name="system icon" type="TextureRect" parent="Hint Panel/System commands control" unique_id=518156349]
+texture_filter = 1
+layout_mode = 0
+offset_left = 217.0
+offset_top = -4.0
+offset_right = 240.0
+offset_bottom = 18.0
+texture = ExtResource("21_mgyhi")
+expand_mode = 1
+
+[node name="list levels command" type="Label" parent="Hint Panel/System commands control" unique_id=117311265]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 21.0
+offset_right = 181.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "LIST LEVELS"
+
+[node name="System status command" type="Label" parent="Hint Panel/System commands control" unique_id=446858257]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 68.0
+offset_right = 181.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "SYSTEM STATUS"
+
+[node name="Player information command" type="Label" parent="Hint Panel/System commands control" unique_id=137654090]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 114.0
+offset_right = 208.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "PLAYER INFO"
+
+[node name="Player information command2" type="Label" parent="Hint Panel/System commands control" unique_id=1449750809]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 158.0
+offset_right = 208.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0, 1, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("18_1hb6l")
+text = "CLEAR"
+
+[node name="list levels command sub" type="Label" parent="Hint Panel/System commands control" unique_id=565245364]
+texture_filter = 1
+layout_mode = 0
+offset_left = 49.0
+offset_top = 43.0
+offset_right = 148.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Display all three levels"
+
+[node name="system status command sub" type="Label" parent="Hint Panel/System commands control" unique_id=1622615863]
+texture_filter = 1
+layout_mode = 0
+offset_left = 49.0
+offset_top = 88.0
+offset_right = 157.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Check ECHO system status"
+
+[node name="Player information command sub" type="Label" parent="Hint Panel/System commands control" unique_id=1867247998]
+texture_filter = 1
+layout_mode = 0
+offset_left = 49.0
+offset_top = 135.0
+offset_right = 179.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Display player information"
+
+[node name="Clear command sub" type="Label" parent="Hint Panel/System commands control" unique_id=1527905934]
+texture_filter = 1
+layout_mode = 0
+offset_left = 49.0
+offset_top = 177.0
+offset_right = 179.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0.6262097, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_mgyhi")
+theme_override_font_sizes/font_size = 15
+text = "Clear terminal history"
+
+[node name="command icon" type="TextureRect" parent="Hint Panel/System commands control" unique_id=130049622]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 27.0
+offset_right = 43.0
+offset_bottom = 55.0
+texture = ExtResource("22_yf5lt")
+
+[node name="command icon2" type="TextureRect" parent="Hint Panel/System commands control" unique_id=342026560]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 72.0
+offset_right = 43.0
+offset_bottom = 100.0
+texture = ExtResource("22_yf5lt")
+
+[node name="command icon3" type="TextureRect" parent="Hint Panel/System commands control" unique_id=500396205]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 117.0
+offset_right = 43.0
+offset_bottom = 145.0
+texture = ExtResource("22_yf5lt")
+
+[node name="command icon4" type="TextureRect" parent="Hint Panel/System commands control" unique_id=456639845]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 162.0
+offset_right = 43.0
+offset_bottom = 190.0
+texture = ExtResource("22_yf5lt")
+
+[node name="HideButton" type="Button" parent="Hint Panel" unique_id=1643597634]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = 188.0
+offset_top = 423.0
+offset_right = 239.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.67058825, 1)
+theme_override_colors/font_disabled_color = Color(0.54509807, 0.5137255, 0.6745098, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_tgh34")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sowmt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0e30r")
+text = "HIDE"
+script = ExtResource("23_gtydc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1663559518]
+libraries/ = SubResource("AnimationLibrary_gtydc")
+
+[node name="Offline system Panel" type="Panel" parent="." unique_id=1675065455]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 240.0
+offset_right = 1368.0
+offset_bottom = 672.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_al4r6")
+
+[node name="Offline icon" type="TextureRect" parent="Offline system Panel" unique_id=199393909]
+texture_filter = 1
+layout_mode = 0
+offset_left = 306.0
+offset_top = 37.0
+offset_right = 480.0
+offset_bottom = 188.0
+texture = ExtResource("30_nh00u")
+expand_mode = 1
+
+[node name="Name label" type="Label" parent="Offline system Panel" unique_id=81310665]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 232.0
+offset_right = 579.0
+offset_bottom = 283.0
+theme_override_fonts/font = ExtResource("7_bku7o")
+theme_override_font_sizes/font_size = 40
+text = "ECHO TERMINAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Offline label" type="Label" parent="Offline system Panel" unique_id=289444945]
+texture_filter = 1
+layout_mode = 0
+offset_left = 220.0
+offset_top = 390.0
+offset_right = 553.0
+offset_bottom = 429.0
+theme_override_colors/font_color = Color(0.3882353, 0.34117648, 0.52156866, 1)
+theme_override_fonts/font = ExtResource("11_byaam")
+theme_override_font_sizes/font_size = 30
+text = "TERMINAL OFFLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Power Off Button" type="Button" parent="." unique_id=922590535]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1321.0
+offset_top = 574.0
+offset_right = 1372.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bg1du")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4hl1e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_57lgl")
+text = "⏻"
+script = ExtResource("29_eiuxy")
+
+[node name="Level Page Transition" type="Node" parent="." unique_id=1698321129]
+script = ExtResource("32_tgh34")
+
+[connection signal="pressed" from="Hind Button Control/HintButton" to="." method="_on_hint_button_pressed"]
+[connection signal="pressed" from="Back Button Control2/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Hint Panel/HideButton" to="." method="_on_hide_button_pressed"]

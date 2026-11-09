@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 VisualEffects="*uid://dbgxgyprcf6f0"
 PlayerHud="*uid://j1a5aori5eul"
 Messsages="*uid://bgq1qpqpjbpxe"
+SceneTransition="*uid://6k6ox0c1kfnl"
 
 [display]
 
