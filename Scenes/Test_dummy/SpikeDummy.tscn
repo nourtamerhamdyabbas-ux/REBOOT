@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://c0871ofr7ivq2"]
+
+[ext_resource type="Script" uid="uid://cqqf3gxn1bc3y" path="res://Scripts/test_dummy.gd" id="1_20t6g"]
+[ext_resource type="Script" uid="uid://dcxhc3c8gsyne" path="res://Scripts/hit_particle_settings.gd" id="2_kttau"]
+[ext_resource type="Resource" uid="uid://dx3yrninkjviu" path="res://Scripts/hit_magic_red.tres" id="3_44e88"]
+[ext_resource type="Texture2D" uid="uid://4i6ynv10jf3i" path="res://Assets/props_destructible.png" id="4_akrvr"]
+[ext_resource type="Script" uid="uid://bs3f202rvla4j" path="res://Scripts/damage_area.gd" id="5_2oe6q"]
+[ext_resource type="Script" uid="uid://cum82plcsrjbf" path="res://Scripts/hazard_area.gd" id="5_kttau"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_32snk"]
+load_path = "res://.godot/imported/props_destructible.png-c7d0323189359c2a4e241283906e0fd9.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wx8y1"]
+size = Vector2(14, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nv6n"]
+size = Vector2(14, 27)
+
+[node name="SpikeDummy" type="Node2D" unique_id=2060469178]
+position = Vector2(0, -7)
+script = ExtResource("1_20t6g")
+particles = Array[ExtResource("2_kttau")]([ExtResource("3_44e88")])
+
+[node name="BaseSprite2D" type="Sprite2D" parent="." unique_id=453407674]
+texture = ExtResource("4_akrvr")
+region_enabled = true
+region_rect = Rect2(16, 52, 16, 11)
+
+[node name="BodySprite" type="Sprite2D" parent="." unique_id=861429757]
+position = Vector2(0, -1)
+texture = SubResource("CompressedTexture2D_32snk")
+offset = Vector2(0, -19)
+region_enabled = true
+region_rect = Rect2(33, 16, 14, 33)
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=718873405]
+position = Vector2(0, -17)
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("5_2oe6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1319403959]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_wx8y1")
+debug_color = Color(0.33690244, 0.008924858, 0.029233746, 0.41960785)
+
+[node name="HazardArea" type="Area2D" parent="." unique_id=1633029457]
+position = Vector2(0, -1)
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("5_kttau")
+metadata/_custom_type_script = "uid://cum82plcsrjbf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea" unique_id=1701800365]
+position = Vector2(0, -20.5)
+shape = SubResource("RectangleShape2D_6nv6n")

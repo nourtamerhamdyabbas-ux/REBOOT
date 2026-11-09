@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HitParticleSettings" format=3 uid="uid://dx3yrninkjviu"]
+
+[ext_resource type="Script" uid="uid://dcxhc3c8gsyne" path="res://Scripts/hit_particle_settings.gd" id="1_ofk8y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j36a"]
+
+[resource]
+script = ExtResource("1_ofk8y")
+texture = SubResource("AtlasTexture_4j36a")
+metadata/_custom_type_script = "uid://dcxhc3c8gsyne"

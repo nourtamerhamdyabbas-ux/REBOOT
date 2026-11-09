@@ -1,0 +1,30 @@
+class_name DamageArea
+extends Area2D
+
+signal damage_taken(attack_area)
+
+
+
+func take_damage(attack_area: AttackArea)->void:
+	damage_taken.emit(attack_area)
+	pass
+
+
+
+func make_invulnerable(duration: float = 1.0)->void:
+	process_mode = Node.PROCESS_MODE_DISABLED
+	await get_tree().create_timer(duration).timeout
+	process_mode = Node.PROCESS_MODE_INHERIT
+	pass
+
+
+func start_invulnerable()->void:
+	process_mode = Node.PROCESS_MODE_DISABLED
+
+
+
+
+
+
+func end_invulnerable()->void:
+	process_mode = Node.PROCESS_MODE_INHERIT

@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://j1a5aori5eul"]
+
+[ext_resource type="Script" uid="uid://cohksvidncoow" path="res://Scripts/player_hud.gd" id="1_ngaci"]
+[ext_resource type="Texture2D" uid="uid://dgvdjw30i8807" path="res://Assets/health_bar_frame.png" id="1_tw0xk"]
+
+[sub_resource type="Gradient" id="Gradient_ngaci"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6nv6n"]
+gradient = SubResource("Gradient_ngaci")
+height = 18
+
+[sub_resource type="Gradient" id="Gradient_p8v4e"]
+colors = PackedColorArray(1, 0.27902907, 0.27902907, 1, 1, 0.3579473, 0.3579473, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cpdn7"]
+gradient = SubResource("Gradient_p8v4e")
+
+[node name="PlayerHud" type="CanvasLayer" unique_id=948873464]
+process_mode = 3
+layer = 2
+script = ExtResource("1_ngaci")
+
+[node name="Control" type="Control" parent="." unique_id=1335956111]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HPMarginContainer" type="MarginContainer" parent="Control" unique_id=478589058]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 20)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 84.0
+offset_bottom = 24.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/HPMarginContainer" unique_id=980507001]
+layout_mode = 2
+texture = ExtResource("1_tw0xk")
+region_rect = Rect2(0, 0, 40, 20)
+patch_margin_left = 27
+patch_margin_right = 7
+axis_stretch_horizontal = 1
+
+[node name="HPBar" type="TextureProgressBar" parent="Control/HPMarginContainer/NinePatchRect" unique_id=9422874]
+unique_name_in_owner = true
+show_behind_parent = true
+layout_mode = 0
+offset_left = 19.0
+offset_top = 5.0
+offset_right = 78.0
+offset_bottom = 13.0
+value = 50.0
+rounded = true
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_6nv6n")
+texture_progress = SubResource("GradientTexture2D_cpdn7")
+
+[node name="GameOver" type="Control" parent="Control" unique_id=26087627]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/GameOver" unique_id=1664126255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5686275)
+
+[node name="Label" type="Label" parent="Control/GameOver" unique_id=161644249]
+modulate = Color(0.47843137, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47734374
+anchor_top = 0.48935184
+anchor_right = 0.52265626
+anchor_bottom = 0.51064813
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/GameOver" unique_id=309761367]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.564
+anchor_right = 0.5
+anchor_bottom = 0.564
+offset_left = -152.0
+offset_top = -20.119995
+offset_right = 152.0
+offset_bottom = 20.880005
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenuButton" type="Button" parent="Control/GameOver/HBoxContainer" unique_id=1252382269]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Main Menu"
+
+[node name="ReplayButton" type="Button" parent="Control/GameOver/HBoxContainer" unique_id=2038907304]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Replay"
