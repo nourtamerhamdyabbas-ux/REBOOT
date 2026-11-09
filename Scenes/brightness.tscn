@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brora2jptrg33"]
 
-[ext_resource type="Script" uid="uid://fvbdj312dude" path="res://Scenes/brightness.gd" id="1_6xywr"]
+[ext_resource type="Script" uid="uid://fvbdj312dude" path="res://Scripts/brightness.gd" id="1_6xywr"]
 
 [node name="Brightness" type="Node" unique_id=1456815950]
 script = ExtResource("1_6xywr")

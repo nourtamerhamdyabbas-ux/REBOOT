@@ -4,9 +4,8 @@
 [ext_resource type="Shader" uid="uid://mlavm373mqkc" path="res://Scripts/Far Back.gdshader" id="2_7emq5"]
 [ext_resource type="Shader" uid="uid://cv8vaiyjmfyr8" path="res://Scripts/Mid Back.gdshader" id="3_803yc"]
 [ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="4_1wbrc"]
-[ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="5_j6nef"]
 [ext_resource type="FontFile" uid="uid://gc4rvnot4xll" path="res://Assets/Orbitron/static/Orbitron-Medium.ttf" id="6_fdv4u"]
-[ext_resource type="Script" uid="uid://ygsm7ufrn4j" path="res://Scenes/back_button.gd" id="7_7emq5"]
+[ext_resource type="Script" uid="uid://ygsm7ufrn4j" path="res://Scripts/back_button.gd" id="7_7emq5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ae0tj"]
 shader = ExtResource("2_7emq5")
@@ -1475,88 +1474,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.7019608)
-
-[node name="glow title9" type="Control" parent="." unique_id=2000803592]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -122.0
-offset_top = -232.0
-offset_right = -122.0
-offset_bottom = -232.0
-grow_horizontal = 2
-
-[node name="GlowOuter" type="Label" parent="glow title9" unique_id=1249096354]
-modulate = Color(1, 1, 1, 0.25100002)
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 154.0
-offset_top = 246.0
-offset_right = 80.0
-offset_bottom = 325.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.8509804, 0, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.8509804, 0, 1, 1)
-theme_override_colors/font_outline_color = Color(0.8509804, 0, 1, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 4
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("5_j6nef")
-theme_override_font_sizes/font_size = 65
-text = "CREDITS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="GlowInner" type="Label" parent="glow title9" unique_id=522549382]
-modulate = Color(1, 1, 1, 0.549)
-z_index = 1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 154.0
-offset_top = 246.0
-offset_right = 72.0
-offset_bottom = 323.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
-theme_override_colors/font_shadow_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
-theme_override_colors/font_outline_color = Color(1, 0.17923622, 0.6704099, 0.70000005)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 4
-theme_override_constants/shadow_outline_size = 4
-theme_override_fonts/font = ExtResource("5_j6nef")
-theme_override_font_sizes/font_size = 65
-text = "CREDITS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Title Label9" type="Label" parent="glow title9" unique_id=2085326133]
-z_index = 2
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 154.0
-offset_top = 246.0
-offset_right = 64.0
-offset_bottom = 322.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.96862745, 0.9882353, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.96862745, 0.9882353, 1, 1)
-theme_override_colors/font_outline_color = Color(0.96862745, 0.9882353, 1, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 0
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("5_j6nef")
-theme_override_font_sizes/font_size = 65
-text = "CREDITS"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2045934234]
 texture_filter = 1

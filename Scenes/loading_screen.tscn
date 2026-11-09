@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://djamd6s8gg6sh"]
+
+[ext_resource type="Script" uid="uid://c2u4qe2cstfws" path="res://loading_screen.gd" id="1_0t5xw"]
+[ext_resource type="Script" uid="uid://blnditk08r1es" path="res://spinner.gd" id="2_nfm0g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7htg"]
+bg_color = Color(7.5505113e-07, 0.009070707, 0.07854194, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.5529412, 0.96862745, 1, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsbv2"]
+bg_color = Color(0.5529412, 0.96862745, 1, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[node name="Loading Screen" type="CanvasLayer" unique_id=790488891]
+layer = 100
+script = ExtResource("1_0t5xw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1196125542]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03137255, 0.023529412, 0.06666667, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1322759296]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoadingVBox" type="VBoxContainer" parent="CenterContainer" unique_id=244300348]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Spinner" type="Control" parent="CenterContainer/LoadingVBox" unique_id=1185193757]
+layout_mode = 2
+script = ExtResource("2_nfm0g")
+
+[node name="LoadingLabel" type="Label" parent="CenterContainer/LoadingVBox" unique_id=711482460]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5529412, 0.96862745, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "ECHO // LOADING SYSTEM..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CenterContainer/LoadingVBox" unique_id=712964604]
+custom_minimum_size = Vector2(300, 12)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.40584272, 0, 0.77970624, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_h7htg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fsbv2")

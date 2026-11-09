@@ -689,9 +689,8 @@ func _on_hide_button_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file(
-		"res://Scenes/main_menu.tscn"
-	)
+	LoadingScreen.change_scene("res://Scenes/main_menu.tscn")
+
 
 
 func _on_open_terminal_button_pressed() -> void:

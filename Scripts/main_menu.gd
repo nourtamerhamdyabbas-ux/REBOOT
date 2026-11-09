@@ -35,24 +35,21 @@ func _on_not_yet_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
 
 func _on_start_button_pressed() -> void:
-	SceneTransition.change_scene_with_transition(
-		"res://Scenes/levels.tscn"
-	)
+	LoadingScreen.change_scene("res://Scenes/levels.tscn")
 	$SFX/SFXClickPlayer.play()
 
 
 
 func _on_settings_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file("res://Scenes/settings.tscn")
-
+	LoadingScreen.change_scene("res://Scenes/settings.tscn")
 
 func _on_guide_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file("res://Scenes/guide.tscn")
+	LoadingScreen.change_scene("res://Scenes/guide.tscn")
 func _on_credits_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file("res://Scenes/credits.tscn")
+	LoadingScreen.change_scene("res://Scenes/credits.tscn")
 func _on_previous_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
 
