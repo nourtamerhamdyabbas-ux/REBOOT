@@ -364,7 +364,7 @@ func _on_open_terminal_pressed() -> void:
 
 
 func _on_power_off_button_pressed() -> void:
-
+	$"SFX/Power off player".play()
 	if not terminal_started:
 		return
 
@@ -680,16 +680,20 @@ func _on_hint_button_pressed() -> void:
 
 	if animation_player:
 		animation_player.play("hint panel animation")
-
+	$SFX/SFXClickPlayer.play()
 
 func _on_hide_button_pressed() -> void:
-
 	if animation_player:
 		animation_player.play("hide button animation")
-
+	$SFX/SFXClickPlayer.play()
 
 func _on_back_button_pressed() -> void:
-
+	$SFX/SFXClickPlayer.play()
 	get_tree().change_scene_to_file(
 		"res://Scenes/main_menu.tscn"
 	)
+
+
+func _on_open_terminal_button_pressed() -> void:
+	$"SFX/Terminal power on player".play()
+	$AnimationPlayer.play("power on button pressed")
