@@ -262,7 +262,7 @@ func stop_all_animations() -> void:
 
 func _on_rtm_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file("res://Scenes/levels.tscn")
+	LoadingScreen.change_scene("res://Scenes/levels.tscn")
 
 func _apply_review_mode() -> void:
 

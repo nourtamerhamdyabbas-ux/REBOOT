@@ -16,4 +16,4 @@ func _process(delta: float) -> void:
 		scrolling = false
 func _on_skip_pressed() -> void:
 	scrolling = false
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	LoadingScreen.change_scene("res://Scenes/main_menu.tscn")

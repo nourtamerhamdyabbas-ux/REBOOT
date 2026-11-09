@@ -141,9 +141,8 @@ func stop_all_animations() -> void:
 
 func _on_footer_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
-	get_tree().change_scene_to_file(
-		"res://Scenes/levels.tscn"
-	)
+	LoadingScreen.change_scene("res://Scenes/levels.tscn")
+
 
 
 func _on_initiate_mission_button_pressed() -> void:
