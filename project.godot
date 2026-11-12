@@ -15,9 +15,16 @@ run/main_scene="uid://cysoyobus45ho"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://cerbjjvvh76f3"
+
 [autoload]
 
 SceneTransition="*uid://6k6ox0c1kfnl"
+Brightness="*uid://brora2jptrg33"
+LoadingScreen="*uid://djamd6s8gg6sh"
+Audio="*uid://b1so5sbaiuax6"
 
 [display]
 

@@ -9,7 +9,7 @@
 [ext_resource type="Shader" uid="uid://4y3cp3jqp0jt" path="res://Scripts/Near Back.gdshader" id="5_yhxw7"]
 [ext_resource type="FontFile" uid="uid://d0tqlh83egprt" path="res://Assets/Orbitron/static/Orbitron-Bold.ttf" id="7_cp0ys"]
 [ext_resource type="Script" uid="uid://bj53jxx0im5ux" path="res://Scripts/first_appearance_button.gd" id="9_16hvj"]
-[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Rajdhani-Regular.ttf" id="9_vr1f0"]
+[ext_resource type="FontFile" uid="uid://du1eqd1iqoikq" path="res://Assets/Rajdhani-Regular.ttf" id="9_vr1f0"]
 [ext_resource type="Script" uid="uid://df1q6qvsb2y8o" path="res://Scripts/start_button_control.gd" id="11_8dnnj"]
 [ext_resource type="Script" uid="uid://dklu8t2vfbduc" path="res://Scripts/start_button.gd" id="11_t1dhk"]
 [ext_resource type="Shader" uid="uid://cfl0oci7ro5q" path="res://Scripts/Bar.gdshader" id="11_vr1f0"]
@@ -2242,9 +2242,11 @@ bus = &"SFX"
 
 [node name="Terminal power on player" type="AudioStreamPlayer" parent="SFX" unique_id=697968549]
 stream = SubResource("AudioStreamMP3_dp8uv")
+bus = &"SFX"
 
 [node name="Power off player" type="AudioStreamPlayer" parent="SFX" unique_id=456213604]
 stream = SubResource("AudioStreamMP3_uu0lx")
+bus = &"SFX"
 
 [connection signal="pressed" from="first appearance button" to="first appearance button" method="_on_pressed"]
 [connection signal="pressed" from="MainPanel/Start Button Control/Start Button" to="." method="_on_start_button_pressed"]
