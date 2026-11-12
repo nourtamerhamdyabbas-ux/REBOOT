@@ -34,3 +34,8 @@
   
 ## AI Use 
 - It was only for solving some code errors, and technical bugs.
+
+
+
+## Important note
+- We merged the folders and files of the main menu UI and the game together in this repository ("https://github.com/Ahmedhany-alt/please-upload") to avoid any collapse in the main repository. 
