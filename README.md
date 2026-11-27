@@ -16,7 +16,7 @@
 - When the player enter the settings scene by pressing on the settings button, the player can toggle between two buttons (audio & display), which control the settings of the audio and display. Moreover, after the player make his changes he can apply those changes or reset them.
 - When the player enters the guide scene will find buttons for the type of action, after pressing on these buttons an animation will run and the correct key should be used will appear.
 - At the last scene the credits scene, the player will find a scroll up credits for everyone contributed to this project.
-
+- Additionally, an EchoVoice system transcribes the text to speech helping the player to go through the vibes of the main menu.
 
 # Game's core
 - LEVELS: we have completed 3 levels of the game each level contains differant numbers of enemies and interactable components.
