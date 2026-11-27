@@ -2,6 +2,7 @@ extends Control
 
 signal level_open_requested(level_number: int)
 
+
 @export_group("Terminal Colors")
 
 @export var terminal_background: Color = Color("#160D30")
@@ -16,19 +17,23 @@ signal level_open_requested(level_number: int)
 @export var error_color: Color = Color("#FF3D67")
 @export var success_color: Color = Color("#00E89B")
 
+
 @export_group("Terminal Settings")
 
 @export var typing_speed: float = 0.025
 @export var output_font_size: int = 16
 
+
 @export_group("Fonts")
 
 @export var terminal_font: Font
+
 
 @export_group("Terminal Animation")
 
 @export var terminal_open_duration: float = 0.45
 @export var terminal_close_duration: float = 0.40
+
 
 @onready var terminal: Panel = $Terminal
 
@@ -364,9 +369,13 @@ func _on_open_terminal_pressed() -> void:
 
 
 func _on_power_off_button_pressed() -> void:
+
 	$"SFX/Power off player".play()
+
 	if not terminal_started:
 		return
+
+	EchoVoice.stop_speaking()
 
 	if terminal_opening or terminal_powering_off:
 		return
@@ -454,20 +463,31 @@ func _run_startup_sequence() -> void:
 		"[color=#00E89B][/color] Type a command."
 	]
 
+	var voice_messages := PackedStringArray()
+
+	for message in startup_messages:
+
+		var clean_message := EchoVoice.remove_bbcode(message).strip_edges()
+
+		if not clean_message.is_empty():
+			voice_messages.append(clean_message)
+
+	EchoVoice.speak_batch(voice_messages)
+
 	for message in startup_messages:
 
 		if not terminal_started:
+			EchoVoice.stop_speaking()
 			return
 
-		await _type_message(message)
+		await _type_message(message, false)
 
 		if not terminal_started:
+			EchoVoice.stop_speaking()
 			return
 
-		await get_tree().create_timer(0.15).timeout
 
-
-func _type_message(message: String) -> void:
+func _type_message(message: String, play_voice: bool = true) -> void:
 
 	if terminal_powering_off or not terminal_started:
 		return
@@ -481,6 +501,9 @@ func _type_message(message: String) -> void:
 	var new_count := chat_history.get_total_character_count()
 
 	chat_history.visible_characters = previous_count
+
+	if play_voice:
+		EchoVoice.speak(message)
 
 	for i in range(previous_count, new_count):
 
@@ -498,6 +521,31 @@ func _type_message(message: String) -> void:
 
 	chat_history.scroll_to_line(chat_history.get_line_count())
 
+func _type_response(messages: Array[String]) -> void:
+
+	if terminal_powering_off or not terminal_started:
+		return
+
+	var voice_messages := PackedStringArray()
+
+	for message in messages:
+
+		var clean_message := EchoVoice.remove_bbcode(message).strip_edges()
+
+		if not clean_message.is_empty():
+			voice_messages.append(clean_message)
+
+	if not voice_messages.is_empty():
+		EchoVoice.speak_batch(voice_messages)
+
+	for message in messages:
+
+		if terminal_powering_off or not terminal_started:
+			EchoVoice.stop_speaking()
+			return
+
+		await _type_message(message, false)
+
 
 func _on_command_submitted(command: String) -> void:
 
@@ -514,7 +562,8 @@ func _on_command_submitted(command: String) -> void:
 	command_history.append(clean_command)
 
 	await _type_message(
-		"[color=#8DF7FF]player@echo:~$ [/color]" + clean_command
+		"[color=#8DF7FF]player@echo:~$ [/color]" + clean_command,
+		false
 	)
 
 	if not terminal_started:
@@ -524,7 +573,6 @@ func _on_command_submitted(command: String) -> void:
 
 	if terminal_started and not terminal_powering_off:
 		command_line.grab_focus()
-
 
 
 func _process_command(command: String) -> void:
@@ -553,21 +601,23 @@ func _process_command(command: String) -> void:
 			await _open_level(3)
 
 		_:
-			await _type_message(
-				"[color=#FF3D67]ECHO ERROR: Unknown command.[/color]"
-			)
-
-			await _type_message(
+			var error_messages: Array[String] = [
+				"[color=#FF3D67]ECHO ERROR: Unknown command.[/color]",
 				"[color=#8B83AC]Check the command and try again.[/color]"
-			)
+			]
+
+			await _type_response(error_messages)
+
 
 func _list_levels() -> void:
 
-	await _type_message(
+	var response_messages: Array[String] = []
+
+	response_messages.append(
 		"[color=#FF2EAB]AVAILABLE MISSIONS[/color]"
 	)
 
-	await _type_message("")
+	response_messages.append("")
 
 	for level_number in level_status:
 
@@ -582,7 +632,7 @@ func _list_levels() -> void:
 		else:
 			status_color = "#FF3D67"
 
-		await _type_message(
+		response_messages.append(
 			"LEVEL %02d  [color=%s]%s[/color]" % [
 				level_number,
 				status_color,
@@ -590,83 +640,73 @@ func _list_levels() -> void:
 			]
 		)
 
-	await _type_message("")
+	response_messages.append("")
 
-	await _type_message(
+	response_messages.append(
 		"[color=#8B83AC]Use OPEN LEVEL 01 to access an available mission.[/color]"
 	)
+
+	await _type_response(response_messages)
 
 
 func _system_status() -> void:
 
-	await _type_message(
-		"[color=#FF2EAB]SYSTEM DIAGNOSTICS[/color]"
-	)
-
-	await _type_message(
-		"[color=#00E89B][OK][/color] ECHO Core: ONLINE"
-	)
-
-	await _type_message(
-		"[color=#00E89B][OK][/color] Terminal: ACTIVE"
-	)
-
-	await _type_message(
-		"[color=#00E89B][OK][/color] Security: ENABLED"
-	)
-
-	await _type_message(
+	var response_messages: Array[String] = [
+		"[color=#FF2EAB]SYSTEM DIAGNOSTICS[/color]",
+		"[color=#00E89B][OK][/color] ECHO Core: ONLINE",
+		"[color=#00E89B][OK][/color] Terminal: ACTIVE",
+		"[color=#00E89B][OK][/color] Security: ENABLED",
 		"[color=#00E89B][OK][/color] Connection: SECURE"
-	)
+	]
+
+	await _type_response(response_messages)
 
 
 func _player_info() -> void:
 
-	await _type_message(
-		"[color=#FF2EAB]OPERATOR INFORMATION[/color]"
-	)
+	var response_messages: Array[String] = [
+		"[color=#FF2EAB]OPERATOR INFORMATION[/color]",
+		"Operator: PLAYER",
+		"Access level: STANDARD",
+		"Connection: ACTIVE",
+		"Mission access: RESTRICTED"
+	]
 
-	await _type_message("Operator: PLAYER")
-	await _type_message("Access level: STANDARD")
-	await _type_message("Connection: ACTIVE")
-	await _type_message("Mission access: RESTRICTED")
+	await _type_response(response_messages)
 
 
 func _open_level(level_number: int) -> void:
 
 	if not level_status.has(level_number):
 
-		await _type_message(
+		var error_messages: Array[String] = [
 			"[color=#FF3D67]ECHO ERROR: Level does not exist.[/color]"
-		)
+		]
+
+		await _type_response(error_messages)
 
 		return
 
 	var status: String = level_status[level_number]
 
+	var response_messages: Array[String] = []
+
 	if status == "AVAILABLE":
 
-		await _type_message(
-			"[color=#00E89B]ACCESS GRANTED[/color]"
-		)
-
-		await _type_message(
+		response_messages = [
+			"[color=#00E89B]ACCESS GRANTED[/color]",
 			"[color=#8DF7FF]Opening LEVEL %02d...[/color]" % level_number
-		)
+		]
 
 	else:
 
-		await _type_message(
-			"[color=#FF3D67]ACCESS DENIED[/color]"
-		)
-
-		await _type_message(
-			"[color=#FF3D67]Level is locked. Only reviewing is allowed.[/color]"
-		)
-
-		await _type_message(
+		response_messages = [
+			"[color=#FF3D67]ACCESS DENIED[/color]",
+			"[color=#FF3D67]Level is locked. Only reviewing is allowed.[/color]",
 			"[color=#8DF7FF]Reviewing LEVEL %02d...[/color]" % level_number
-		)
+		]
+
+	await _type_response(response_messages)
 
 	await get_tree().create_timer(0.5).timeout
 
@@ -680,19 +720,29 @@ func _on_hint_button_pressed() -> void:
 
 	if animation_player:
 		animation_player.play("hint panel animation")
+
 	$SFX/SFXClickPlayer.play()
+
 
 func _on_hide_button_pressed() -> void:
+
 	if animation_player:
 		animation_player.play("hide button animation")
+
 	$SFX/SFXClickPlayer.play()
 
+
 func _on_back_button_pressed() -> void:
+
 	$SFX/SFXClickPlayer.play()
+
+	EchoVoice.stop_speaking()
+
 	LoadingScreen.change_scene("res://Scenes/main_menu.tscn")
 
 
-
 func _on_open_terminal_button_pressed() -> void:
+
 	$"SFX/Terminal power on player".play()
+
 	$AnimationPlayer.play("power on button pressed")
