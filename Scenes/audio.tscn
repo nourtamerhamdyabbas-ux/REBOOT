@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b1so5sbaiuax6"]
+
+[ext_resource type="AudioStream" uid="uid://dxp7myqb1ut8l" path="res://Assets/sounds/usefulpix-retro-synthwave-background-soundtrack-341853.mp3" id="1_l04ps"]
+
+[node name="Audio" type="Node" unique_id=204067228]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1005064844]
+stream = ExtResource("1_l04ps")
+autoplay = true
+bus = &"Music"
+parameters/looping = true

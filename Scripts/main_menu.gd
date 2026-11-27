@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 func _on_first_appearance_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
 	$AnimationPlayer.play("press appearance button anim")
-
 func _on_message_show_button_pressed() -> void:
 	message_panel.open_panel()
 	$SFX/SFXClickPlayer.play()
